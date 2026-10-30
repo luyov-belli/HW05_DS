@@ -1,0 +1,235 @@
+# Toda ruta, modelo, umbral y prompt vive aquí. El código no tiene valores fijos.
+# Las credenciales (HF_TOKEN, LLM_API_KEY) van en .env, nunca en este archivo.
+
+paths:
+  ground_truth:
+    entrevista: data/entrevistas.yaml
+    pedido: data/llamadas.yaml
+  audio_real: data/audio/real          # tus grabaciones: E01.m4a, L03.wav, ... (no se suben al repo)
+  audio_tts: data/audio/tts            # clips sintéticos: data/audio/tts/<locale>/<id>.wav
+  audio_ladder: data/audio/ladder      # escalera: data/audio/ladder/<corpus>/<nivel>/<id>.wav
+  transcripts: results/transcripts     # transcripciones cacheadas (sí se suben)
+  records: results/records             # registros extraídos cacheados (sí se suben)
+  metrics: results/metrics.json
+  summary: results/summary.md
+
+asr:
+  model: small              # modelo por defecto del motor y de la app
+  device: auto              # auto | cpu | cuda
+  compute_type: auto        # auto => float16 en cuda, int8 en cpu
+  language: es
+  beam_size: 5
+  vad_filter: true
+  use_glossary: true        # el glosario se pasa como `hotwords` (ver README: por qué no initial_prompt)
+
+# Glosario de dominio que se pasa al decodificador de Whisper.
+glossary:
+  entrevista: "Python, SQL, Power BI, Azure, Java, Spring Boot, PostgreSQL, Docker, Kubernetes, AWS, Jira, Excel, SAP, Airflow, Spark, Snowflake, React, TypeScript, Node.js, Figma, C1, B2"
+  pedido: "La Brasa Real, pollo a la brasa, chicha morada, anticuchos, Yape, Plin, POS, martes brasero, combo familiar, cupón de bienvenida, jirón"
+
+# Rejilla de la comparación en GPU (se corre en Colab: ver README).
+benchmark:
+  task: entrevista
+  runs:
+    - {model: small, device: cuda, compute_type: float16}
+    - {model: small, device: cuda, compute_type: int8}
+    - {model: large-v3, device: cuda, compute_type: float16}
+    - {model: large-v3, device: cuda, compute_type: int8}
+    - {model: large-v3, device: cuda, compute_type: float16, glossary: false}
+    - {model: small, device: cpu, compute_type: int8}
+  vram_poll_seconds: 0.05
+
+llm:
+  base_url: http://localhost:11434/v1   # Ollama local (API compatible con OpenAI)
+  model: qwen2.5:3b
+  api_key_env: LLM_API_KEY              # Ollama no la usa; otro proveedor sí
+  temperature: 0
+  timeout_seconds: 300
+  prompt: |
+    Eres un sistema que llena un registro a partir de la transcripción de una conversación grabada.
+    Reglas:
+    - Usa solo información dicha en la transcripción. Si un dato no se menciona, usa null.
+    - Si alguien se corrige, guarda el valor final, no el primero.
+    - Responde solo con un objeto JSON con exactamente estas claves:
+    {fields}
+
+    Transcripción:
+    """{transcript}"""
+
+# Esquemas: un mismo motor sirve ambos registros leyendo esta sección.
+schemas:
+  entrevista:
+    fields:
+      anios_experiencia:
+        type: number
+        describe: "número total de años de experiencia laboral del candidato (ej. 5.5)"
+        cues: [experiencia, trabajando, llevo, llevas]
+        unit: anos?
+      ultimo_puesto:
+        type: text
+        describe: "último puesto o cargo del candidato, en minúsculas (ej. 'analista de datos')"
+        cues: ["ultimo puesto fue", "ultimo cargo fue", "actualmente soy", "soy", "mi puesto es"]
+      tecnologias:
+        type: list
+        describe: "lista de tecnologías o herramientas que el candidato dice usar (nombres propios)"
+        vocabulary:
+          Python: [python]
+          SQL: [sql]
+          Power BI: [power bi, powerbi]
+          Azure: [azure]
+          Java: [java]
+          Spring Boot: [spring boot, springboot]
+          PostgreSQL: [postgresql, postgres, postgre sql]
+          Docker: [docker]
+          Kubernetes: [kubernetes]
+          AWS: [aws]
+          Jira: [jira]
+          Excel: [excel]
+          SAP: [sap]
+          Airflow: [airflow]
+          Spark: [spark]
+          Snowflake: [snowflake]
+          React: [react]
+          TypeScript: [typescript, type script]
+          Node.js: [node js, nodejs, node]
+          Figma: [figma]
+      pretension_salarial:
+        type: money
+        describe: "objeto {monto: número, moneda: 'PEN' o 'USD'} con la pretensión salarial mensual final"
+        cues: [pretension, aspiro, apuntando, pidiendo, buscando, alrededor]
+        currencies:
+          PEN: [soles, sol]
+          USD: [dolares, dolar]
+      disponibilidad:
+        type: category
+        describe: "una de: inmediata, 2_semanas, 1_mes, 2_meses"
+        cues: [empezar, incorporarte, disponible, disponibilidad, libre]
+        classes:
+          inmediata: [de inmediato, inmediato, inmediata, ya mismo]
+          2_semanas: [15 dias, 2 semanas]
+          1_mes: [1 mes, 30 dias]
+          2_meses: [2 meses, 60 dias]
+      nivel_ingles:
+        type: category
+        describe: "una de: basico, intermedio, avanzado"
+        cues: [ingles]
+        classes:
+          basico: [basico, a1, a2]
+          intermedio: [intermedio, b1, b2]
+          avanzado: [avanzado, c1, c2, fluido, nativo]
+
+  pedido:
+    catalog:                     # carta de referencia (precios en soles)
+      pollo a la brasa:
+        aliases: [pollo, pollos]
+        sizes: {cuarto: 22, medio: 38, entero: 69}
+        size_aliases: {cuarto: [cuarto, cuartos], medio: [medio, medios], entero: [entero, enteros]}
+      papas fritas:
+        aliases: [papas, papa]
+        sizes: {personal: 10, familiar: 18}
+        size_aliases: {personal: [personal, personales], familiar: [familiar, familiares]}
+      chicha morada:
+        aliases: [chicha, chichas]
+        sizes: {vaso: 6, jarra: 16}
+        size_aliases: {vaso: [vaso, vasos], jarra: [jarra, jarras]}
+      gaseosa:
+        aliases: [gaseosa, gaseosas]
+        sizes: {personal: 4, grande: 12}
+        size_aliases: {personal: [personal, personales], grande: [2 litros, grande]}
+      ensalada:
+        aliases: [ensalada, ensaladas]
+        sizes: {null: 9}
+      anticuchos:
+        aliases: [anticuchos, anticucho]
+        sizes: {null: 24}
+    promotions:                  # descuento: porcentaje o monto fijo
+      martes brasero: {aliases: [martes brasero], percent: 10}
+      combo familiar: {aliases: [combo familiar], amount: 12}
+      cupon de bienvenida: {aliases: [cupon de bienvenida], amount: 15}
+    remove_cues: [quiteme, quitame, quita, sin, cancela, cancele, "no"]
+    fields:
+      items:
+        type: items
+        describe: "lista final de objetos {producto, tamano, cantidad, precio_unitario}; producto y tamano en minúsculas, tamano null si no aplica"
+      promocion:
+        type: category
+        describe: "nombre de la promoción aplicada o null"
+        classes_from: promotions
+      direccion_entrega:
+        type: text
+        describe: "dirección de entrega en minúsculas, con su número (sin referencias)"
+        cues: [direccion de entrega, enviamos, direccion]
+        max_words: 8
+      metodo_pago:
+        type: category
+        describe: "una de: efectivo, tarjeta, yape, plin"
+        cues: [pagar, pago, pagara]
+        classes:
+          efectivo: [efectivo]
+          tarjeta: [tarjeta, pos]
+          yape: [yape]
+          plin: [plin]
+      total_dicho:
+        type: number
+        describe: "total que se dice en voz alta al final (número), aunque no cuadre"
+        cues: [total]
+        unit: null
+
+# Verificación literal de campos de texto: se ignoran estos conectores a ambos lados.
+verification:
+  ignore_words: [en, de, del, la, el, los, las, y, a, al]
+
+# Comparación de campos de texto: similitud mínima y dígitos idénticos.
+matching:
+  text_min_similarity: 0.85
+  number_tolerance: 0.01
+
+# Validación aritmética de pedidos y diagnóstico de la causa.
+validation:
+  tolerance: 0.5               # soles de diferencia aceptables entre total calculado y dicho
+  low_word_probability: 0.6    # palabra numérica con prob. menor => sospecha de ASR
+
+# Escalera de degradación (Tarea 2, Fase 2).
+ladder:
+  levels:
+    L0: {}
+    L1: {codec: libopus, bitrate: 12000, sample_rate: 16000}            # nota de voz de WhatsApp
+    L2: {band_hz: [300, 3400], sample_rate: 8000}                       # llamada telefónica
+    L3: {base: L1, snr_db: 5, noise: babble, babble_voices: 4}          # L1 + ruido ambiente
+  seed: 7
+
+# Corpus que alimenta las tablas principales. Cambia a "real" cuando tengas tus grabaciones.
+evaluation:
+  main_corpus: tts-es-PE
+  bootstrap_samples: 2000
+  confidence: 0.95
+  seed: 7
+
+# Clips sintéticos (grupo separado, nunca mezclado con el corpus real).
+tts:
+  rate: "+0%"
+  pause_ms: 350
+  voices:                      # A y B por locale
+    es-PE: [es-PE-AlexNeural, es-PE-CamilaNeural]
+    es-MX: [es-MX-JorgeNeural, es-MX-DaliaNeural]
+    es-ES: [es-ES-AlvaroNeural, es-ES-ElviraNeural]
+    es-AR: [es-AR-TomasNeural, es-AR-ElenaNeural]
+    es-CO: [es-CO-GonzaloNeural, es-CO-SalomeNeural]
+
+diarization:
+  enabled: false               # requiere HF_TOKEN en .env y aceptar los términos del modelo
+  model: pyannote/speaker-diarization-community-1
+  num_speakers: 2
+  correction_cues: [mejor, cambieme, quiteme, perdon, me equivoque, en lugar de, que sean]
+
+# Umbrales del gate de regresión (GitHub Actions).
+gate:
+  max_wer: 0.20
+  min_field_accuracy:
+    entrevista: 0.60
+    pedido: 0.50
+  min_validator_recall: 0.66
+
+app:
+  model: base                  # modelo liviano para el probador interactivo
+  max_upload_mb: 25

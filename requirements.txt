@@ -1,0 +1,18 @@
+# Python 3.12. Núcleo: motor, pipeline, app, servidor MCP y gate de CI.
+faster-whisper==1.2.1
+ctranslate2==4.8.4
+av==16.1.0            # PyAV 19 rompe faster-whisper 1.2.1 (quitó metadata_errors de av.open)
+jiwer==4.0.0
+rapidfuzz==3.14.6
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+soundfile==0.14.0
+pyyaml==6.0.3
+python-dotenv==1.2.4
+tabulate==0.10.0
+openai==3.41.0        # cliente compatible con Ollama (ruta LLM)
+streamlit==1.66.1
+edge-tts==7.3.1
+mcp==2.3.0
+nvidia-ml-py==13.615.71

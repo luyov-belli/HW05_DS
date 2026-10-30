@@ -1,0 +1,157 @@
+# Tarea 2 — Guiones de llamadas de venta (dominio: restaurante, pollería inventada "La Brasa Real").
+# Todo es inventado: direcciones, montos y personas no corresponden a nadie real.
+# El "guion" es también la transcripción de referencia: si al grabar alguien se desvía,
+# corrige aquí el texto para que diga exactamente lo que se escucha en el audio.
+# A = vendedor(a), B = cliente.
+#
+# trampas:
+#   correccion     -> el cliente cambia el pedido a mitad de la llamada (el registro debe tener el final)
+#   total_erroneo  -> el total dicho en voz alta NO cuadra a propósito (el validador debe atraparlo)
+# La carta y las promociones (precios de referencia) están en config.yaml -> schemas.pedido.
+
+- id: L01
+  trampas: [correccion]
+  nota: "Medio pollo -> pollo entero. Total correcto: 69 + 18 + 16 = 103."
+  campos:
+    items:
+      - {producto: pollo a la brasa, tamano: entero, cantidad: 1, precio_unitario: 69}
+      - {producto: papas fritas, tamano: familiar, cantidad: 1, precio_unitario: 18}
+      - {producto: chicha morada, tamano: jarra, cantidad: 1, precio_unitario: 16}
+    promocion: null
+    direccion_entrega: avenida los proceres 845 santiago de surco
+    metodo_pago: yape
+    total_dicho: 103
+  guion: |
+    A: Pollería La Brasa Real, buenas noches, le habla Adrián. ¿Qué le gustaría pedir?
+    B: Hola, buenas noches. Quería medio pollo a la brasa, por favor.
+    A: Claro, medio pollo. ¿Con qué lo acompaña?
+    B: Con unas papas fritas familiares y una jarra de chicha morada.
+    A: Perfecto. ¿Algo más?
+    B: Espere, acaban de llegar mis primos. Mejor cámbieme el medio pollo por un pollo entero.
+    A: No hay problema, entonces queda un pollo entero en lugar del medio. ¿Las papas y la chicha se mantienen?
+    B: Sí, eso se mantiene igual.
+    A: Muy bien. ¿A qué dirección se lo enviamos?
+    B: Avenida Los Próceres ochocientos cuarenta y cinco, en Santiago de Surco. Es una casa con la puerta verde.
+    A: Avenida Los Próceres ochocientos cuarenta y cinco, Surco, anotado. ¿Cómo va a pagar?
+    B: Con Yape, por favor.
+    A: Listo. Le confirmo el pedido: un pollo entero a sesenta y nueve soles, unas papas fritas familiares a dieciocho soles y una jarra de chicha morada a dieciséis soles. El total sería ciento tres soles.
+    B: Perfecto. ¿Cuánto se demora?
+    A: Unos cuarenta minutos aproximadamente. Le llega un mensaje cuando el motorizado salga.
+    B: Genial, muchas gracias.
+    A: Gracias a usted, buen provecho.
+
+- id: L02
+  trampas: [correccion, total_erroneo]
+  nota: "Quita las gaseosas, pone dos vasos de chicha. 44 + 12 + 9 = 65, menos 10 % = 58,50. Se dice 62,50."
+  campos:
+    items:
+      - {producto: pollo a la brasa, tamano: cuarto, cantidad: 2, precio_unitario: 22}
+      - {producto: chicha morada, tamano: vaso, cantidad: 2, precio_unitario: 6}
+      - {producto: ensalada, tamano: null, cantidad: 1, precio_unitario: 9}
+    promocion: martes brasero
+    direccion_entrega: jiron huascar 1450 departamento 302 jesus maria
+    metodo_pago: tarjeta
+    total_dicho: 62.5
+  guion: |
+    A: La Brasa Real, buenas tardes. ¿En qué le puedo ayudar?
+    B: Buenas tardes. Quisiera hacer un pedido para dos personas.
+    A: Claro, dígame.
+    B: Dos cuartos de pollo a la brasa, dos gaseosas personales y una ensalada.
+    A: Perfecto. Le comento que hoy tenemos la promoción martes brasero, que le da diez por ciento de descuento en todo el pedido.
+    B: Ah, qué bien. Oiga, y pensándolo mejor, quíteme las gaseosas y póngame dos vasos de chicha morada.
+    A: Entendido, sin gaseosas y con dos vasos de chicha. Entonces son dos cuartos de pollo, dos vasos de chicha y una ensalada. ¿La dirección de entrega?
+    B: Jirón Huáscar mil cuatrocientos cincuenta, departamento trescientos dos, en Jesús María.
+    A: Jirón Huáscar mil cuatrocientos cincuenta, departamento trescientos dos. ¿Alguna referencia?
+    B: Está al costado de una farmacia.
+    A: Gracias. ¿Cómo desea pagar?
+    B: Con tarjeta, por favor. Que el motorizado lleve el POS.
+    A: Perfecto, con tarjeta. Le confirmo: dos cuartos de pollo a veintidós soles cada uno, dos vasos de chicha morada a seis soles cada uno y una ensalada a nueve soles. Con el descuento del martes brasero, el total sería sesenta y dos con cincuenta.
+    B: Muy bien, gracias.
+    A: Gracias a usted, en unos treinta y cinco minutos le llega.
+
+- id: L03
+  trampas: [total_erroneo]
+  nota: "69 + 2x24 + 12 = 129, menos 12 del combo = 117. Se dice 127. Distractores: billete de 200, papas ofrecidas y rechazadas."
+  campos:
+    items:
+      - {producto: pollo a la brasa, tamano: entero, cantidad: 1, precio_unitario: 69}
+      - {producto: anticuchos, tamano: null, cantidad: 2, precio_unitario: 24}
+      - {producto: gaseosa, tamano: grande, cantidad: 1, precio_unitario: 12}
+    promocion: combo familiar
+    direccion_entrega: calle las begonias 2280 san isidro
+    metodo_pago: efectivo
+    total_dicho: 127
+  guion: |
+    A: Buenas noches, La Brasa Real, le saluda Adrián. ¿Qué va a pedir?
+    B: Buenas noches. Un pollo entero, dos porciones de anticuchos y una gaseosa de dos litros.
+    A: Perfecto. Con el pollo entero y la gaseosa de dos litros aplica el combo familiar, que le descuenta doce soles.
+    B: Ah, excelente, aplíquelo por favor.
+    A: Claro. ¿Le agrego unas papas fritas?
+    B: No, papas no, gracias. Así está bien.
+    A: Muy bien. ¿Dirección de entrega?
+    B: Calle Las Begonias dos mil doscientos ochenta, en San Isidro. Es un edificio, piso cuatro.
+    A: Calle Las Begonias dos mil doscientos ochenta, San Isidro. ¿Forma de pago?
+    B: En efectivo. Voy a pagar con un billete de doscientos, para que el motorizado lleve vuelto.
+    A: Anotado, efectivo con billete de doscientos. Le confirmo su pedido: un pollo entero a sesenta y nueve soles, dos porciones de anticuchos a veinticuatro soles cada una y una gaseosa de dos litros a doce soles. Con el combo familiar, el total es ciento veintisiete soles.
+    B: Perfecto. ¿Demora mucho?
+    A: Unos cuarenta y cinco minutos, porque a esta hora hay bastante pedido.
+    B: Está bien, gracias.
+    A: Gracias a usted, que lo disfrute.
+
+- id: L04
+  trampas: [correccion, total_erroneo]
+  nota: "Tres medios pollos -> dos. 2x38 + 2x10 + 16 = 112, menos 15 del cupón = 97. Se dice 91."
+  campos:
+    items:
+      - {producto: pollo a la brasa, tamano: medio, cantidad: 2, precio_unitario: 38}
+      - {producto: papas fritas, tamano: personal, cantidad: 2, precio_unitario: 10}
+      - {producto: chicha morada, tamano: jarra, cantidad: 1, precio_unitario: 16}
+    promocion: cupon de bienvenida
+    direccion_entrega: avenida brasil 3021 pueblo libre
+    metodo_pago: plin
+    total_dicho: 91
+  guion: |
+    A: La Brasa Real, buenas tardes. ¿Qué desea ordenar?
+    B: Hola. Es mi primera vez pidiendo con ustedes. Quiero tres medios pollos a la brasa.
+    A: Bienvenido. Como es su primer pedido, tiene el cupón de bienvenida de quince soles de descuento.
+    B: Ah, buenísimo. Y además dos papas personales y una jarra de chicha.
+    A: Perfecto, tres medios pollos, dos papas personales y una jarra de chicha.
+    B: No, perdón, me equivoqué. Somos menos de lo que pensaba. Que sean solo dos medios pollos, no tres.
+    A: Corregido, dos medios pollos. ¿A dónde lo enviamos?
+    B: Avenida Brasil tres mil veintiuno, en Pueblo Libre.
+    A: Avenida Brasil tres mil veintiuno. ¿Cómo va a pagar?
+    B: Con Plin.
+    A: Listo, con Plin. Le confirmo: dos medios pollos a treinta y ocho soles cada uno, dos papas personales a diez soles cada una y una jarra de chicha morada a dieciséis soles. Con su cupón de bienvenida, el total es noventa y un soles.
+    B: Muy bien. ¿Me pueden llamar cuando estén cerca? Mi timbre no funciona.
+    A: Claro, el motorizado lo llama al llegar. Llega en unos treinta minutos.
+    B: Gracias.
+    A: A usted, buen provecho.
+
+- id: L05
+  trampas: [correccion]
+  nota: "Llamada de control: el total cuadra (22 + 9 + 4 = 35). Corrige el método de pago: efectivo -> Yape."
+  campos:
+    items:
+      - {producto: pollo a la brasa, tamano: cuarto, cantidad: 1, precio_unitario: 22}
+      - {producto: ensalada, tamano: null, cantidad: 1, precio_unitario: 9}
+      - {producto: gaseosa, tamano: personal, cantidad: 1, precio_unitario: 4}
+    promocion: null
+    direccion_entrega: calle tarata 160 miraflores
+    metodo_pago: yape
+    total_dicho: 35
+  guion: |
+    A: Buenas noches, La Brasa Real. ¿Qué le provoca hoy?
+    B: Buenas noches. Algo sencillo, es solo para mí. Un cuarto de pollo con una ensalada.
+    A: Muy bien. ¿Alguna bebida?
+    B: Sí, una gaseosa personal.
+    A: Perfecto. ¿Cuál es su dirección?
+    B: Calle Tarata ciento sesenta, en Miraflores. Frente al parque.
+    A: Calle Tarata ciento sesenta, Miraflores. ¿Cómo pagará?
+    B: En efectivo.
+    A: ¿Necesita vuelto?
+    B: Ah, no, mejor pago con Yape, así no se complica el motorizado.
+    A: Perfecto, entonces con Yape. Le confirmo: un cuarto de pollo a veintidós soles, una ensalada a nueve soles y una gaseosa personal a cuatro soles. En total son treinta y cinco soles.
+    B: Correcto.
+    A: Su pedido llega en unos veinticinco minutos. ¿Algo más en lo que le pueda ayudar?
+    B: No, eso es todo. Gracias.
+    A: Gracias a usted, buenas noches.

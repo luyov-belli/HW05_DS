@@ -1,0 +1,148 @@
+# Tarea 1 — Guiones de entrevista y verdad de campo.
+# Todo es inventado: nombres, empresas, salarios y fechas no corresponden a nadie real.
+# El "guion" es también la transcripción de referencia: si al grabar alguien se desvía,
+# corrige aquí el texto para que diga exactamente lo que se escucha en el audio.
+# A = entrevistador(a), B = candidato(a).
+
+- id: E01
+  variacion: "Pretensión salarial al inicio, con un número distractor (sueldo anterior). Inglés al final."
+  campos:
+    anios_experiencia: 4
+    ultimo_puesto: analista de datos
+    tecnologias: [Python, SQL, Power BI]
+    pretension_salarial: {monto: 6500, moneda: PEN}
+    disponibilidad: 2_semanas
+    nivel_ingles: intermedio
+  guion: |
+    A: Buenas tardes, gracias por conectarte. Antes de empezar con tu experiencia quiero aclarar un tema práctico. ¿Cuál es tu pretensión salarial para este puesto?
+    B: Buenas tardes. Bueno, actualmente gano cinco mil ochocientos soles, pero por las responsabilidades que tiene esta posición yo estaría apuntando a unos seis mil quinientos soles mensuales.
+    A: Seis mil quinientos, perfecto, lo anoto. Ahora sí, cuéntame un poco de tu trayectoria.
+    B: Claro. Estudié estadística en la universidad y desde que egresé he trabajado con datos. En total tengo cuatro años de experiencia, primero en una empresa de seguros y luego en una cadena de farmacias.
+    A: ¿Y cuál fue tu último puesto en esa cadena de farmacias?
+    B: Mi último puesto fue analista de datos en el área comercial. Me encargaba de los reportes de ventas por tienda y de las proyecciones de inventario.
+    A: Interesante. ¿Con qué herramientas trabajabas día a día?
+    B: Principalmente con Python para limpiar la información y armar los modelos. Las consultas las hacía en SQL, sobre una base bastante grande, y los tableros para gerencia los construía en Power BI.
+    A: ¿Has trabajado alguna vez con herramientas de nube, por ejemplo Azure?
+    B: No, la verdad Azure todavía no lo he usado. Todo estaba en servidores propios de la empresa.
+    A: Entiendo. Cuéntame de algún proyecto del que te sientas orgulloso.
+    B: Armé un modelo que anticipaba qué productos se iban a agotar en cada local. Con eso bajamos las roturas de stock casi a la mitad en seis meses.
+    A: Muy bien. Si te seleccionamos, ¿cuándo podrías incorporarte?
+    B: Tengo que avisar en mi trabajo actual, así que podría empezar en quince días.
+    A: Perfecto. Última pregunta, ¿cómo está tu nivel de inglés?
+    B: Diría que intermedio. Leo documentación técnica sin problema, pero en una conversación larga todavía me cuesta un poco.
+    A: Muchas gracias, te escribimos esta semana con los siguientes pasos.
+    B: Gracias a ustedes, que tengan buena tarde.
+
+- id: E02
+  variacion: "Los años nunca se dicen como total (3 + 2,5). Tecnologías al final, con una negada (AWS). Salario en dólares."
+  campos:
+    anios_experiencia: 5.5
+    ultimo_puesto: desarrollador backend
+    tecnologias: [Java, Spring Boot, PostgreSQL, Docker, Kubernetes]
+    pretension_salarial: {monto: 3000, moneda: USD}
+    disponibilidad: 1_mes
+    nivel_ingles: avanzado
+  guion: |
+    A: Hola, buenos días. Gracias por tu tiempo. Para empezar, ¿me cuentas dónde has trabajado?
+    B: Buenos días. Empecé en una consultora pequeña donde estuve tres años haciendo sistemas para bancos. Después me cambié a una empresa de logística, donde llevo dos años y medio.
+    A: ¿Y qué haces actualmente en la empresa de logística?
+    B: Soy desarrollador backend. Estoy en el equipo que maneja el seguimiento de los envíos, que son como cuarenta mil paquetes al día.
+    A: Bastante volumen. ¿Cómo está tu inglés? Este equipo trabaja con un cliente de Canadá.
+    B: Avanzado. Todas las reuniones con nuestro proveedor son en inglés y no tengo problema en presentar.
+    A: Muy bien. ¿Qué esperas en cuanto a compensación?
+    B: Estoy buscando algo alrededor de tres mil dólares al mes. Sé que es una posición remota para un cliente de afuera, por eso lo planteo en dólares.
+    A: Tres mil dólares, entendido. ¿Y en cuánto tiempo podrías estar disponible?
+    B: Mi contrato pide un mes de preaviso, así que en un mes estaría libre.
+    A: Ok. Ahora pasemos a lo técnico. ¿Has usado AWS?
+    B: No, AWS no lo he usado en producción. Donde sí tengo experiencia es en otras cosas.
+    A: Cuéntame cuáles.
+    B: Mi lenguaje principal es Java, con Spring Boot para los servicios. La base de datos es PostgreSQL, y todo lo empaquetamos con Docker. El despliegue lo hacemos en Kubernetes, que lo administramos nosotros mismos.
+    A: ¿Tuviste algún incidente difícil en producción?
+    B: Sí, una vez se cayó el servicio de rastreo un viernes en la noche. Encontramos que una consulta no tenía índice, la corregimos en dos horas y desde entonces revisamos los planes de ejecución antes de cada despliegue.
+    A: Excelente respuesta. Eso es todo por hoy, gracias.
+    B: Gracias a ti, quedo atento.
+
+- id: E03
+  variacion: "Disponibilidad primero. Salario dicho como rango antes de fijarlo. Inglés en medio."
+  campos:
+    anios_experiencia: 8
+    ultimo_puesto: jefe de proyectos
+    tecnologias: [Jira, Excel, SAP]
+    pretension_salarial: {monto: 9000, moneda: PEN}
+    disponibilidad: inmediata
+    nivel_ingles: basico
+  guion: |
+    A: Buenas tardes, bienvenida. Como el proyecto arranca pronto, te pregunto de frente, ¿desde cuándo podrías empezar?
+    B: Buenas tardes. Puedo empezar de inmediato, terminé mi último contrato la semana pasada.
+    A: Excelente. Cuéntame de tu experiencia en gestión.
+    B: Llevo ocho años gestionando proyectos, casi todos de implementación de sistemas en empresas de manufactura y de consumo masivo.
+    A: ¿Cuál fue tu último cargo?
+    B: Mi último cargo fue jefe de proyectos en una empresa de alimentos. Tenía a cargo dos equipos, en total unas doce personas.
+    A: ¿Y qué tal tu inglés?
+    B: Básico. Lo leo, los correos los entiendo, pero hablarlo me cuesta bastante. Es algo que estoy trabajando.
+    A: Ok, lo tomo en cuenta. ¿Qué herramientas usabas para hacer seguimiento?
+    B: Para el día a día usaba Jira, con tableros por cada frente. Los presupuestos y los cronogramas detallados los llevaba en Excel. Y el último proyecto fue la implementación de SAP en el área de compras, así que conozco bien el módulo.
+    A: Muy bien. ¿Y tu expectativa salarial?
+    B: Estaba pensando en un rango entre ocho mil quinientos y nueve mil soles. Siendo concreta, mi pretensión es nueve mil soles mensuales.
+    A: Nueve mil, entendido. ¿Algún proyecto que no salió como esperabas?
+    B: Sí, uno en el que el proveedor entregó tarde el hardware. Aprendí a tener un plan alternativo desde el inicio y a escalar los riesgos en la primera semana, no en la quinta.
+    A: Gracias por la sinceridad. Te contactamos pronto.
+    B: Muchas gracias, quedo a la espera.
+
+- id: E04
+  variacion: "Inglés dicho como certificación (C1). Disponibilidad relativa a un evento (dos meses). Experiencia incluye prácticas."
+  campos:
+    anios_experiencia: 2
+    ultimo_puesto: ingeniera de datos junior
+    tecnologias: [Python, Airflow, Spark, AWS]
+    pretension_salarial: {monto: 4200, moneda: PEN}
+    disponibilidad: 2_meses
+    nivel_ingles: avanzado
+  guion: |
+    A: Hola, buenos días. Empecemos por lo básico. ¿Cuánta experiencia tienes trabajando con datos?
+    B: Hola, buenos días. Tengo dos años de experiencia, contando un año de prácticas preprofesionales y uno ya contratada.
+    A: ¿Y cuál es tu puesto actual?
+    B: Actualmente soy ingeniera de datos junior en una fintech. Mantengo los flujos que cargan las transacciones al almacén de datos.
+    A: ¿Qué tecnologías usan en ese equipo?
+    B: Los flujos están escritos en Python y los orquestamos con Airflow. Para los procesos pesados usamos Spark, y toda la infraestructura está en AWS.
+    A: ¿Has usado Snowflake?
+    B: Lo he visto en un curso, pero no lo he usado en el trabajo.
+    A: Ok. ¿Cómo te defiendes con el inglés?
+    B: Tengo el C1, lo saqué el año pasado. Hice un intercambio de seis meses, así que hablo con fluidez.
+    A: Muy bien. En cuanto a disponibilidad, ¿cuándo podrías empezar?
+    B: Recién en dos meses, porque estoy terminando un proyecto de migración y me comprometí a cerrarlo.
+    A: Entiendo, es razonable. ¿Cuál es tu expectativa salarial?
+    B: Ahora gano tres mil ochocientos. Para este puesto estaría pidiendo cuatro mil doscientos soles.
+    A: Cuatro mil doscientos, perfecto. ¿Qué te gustaría aprender en los próximos años?
+    B: Me gustaría pasar a arquitectura de datos y diseñar las plataformas, no solo mantenerlas.
+    A: Muy bien, gracias por tu tiempo.
+    B: Gracias, hasta luego.
+
+- id: E05
+  variacion: "Tecnologías al inicio. Inglés como 'intermedio alto, B2'. Disponibilidad en días. Salario con cifra difícil (7250)."
+  campos:
+    anios_experiencia: 3
+    ultimo_puesto: desarrollador frontend
+    tecnologias: [React, TypeScript, Node.js, Figma]
+    pretension_salarial: {monto: 7250, moneda: PEN}
+    disponibilidad: 1_mes
+    nivel_ingles: intermedio
+  guion: |
+    A: Buenas noches, gracias por aceptar la entrevista a esta hora. Vi tu portafolio. ¿Qué tecnologías dominas?
+    B: Buenas noches. Trabajo sobre todo con React y TypeScript en el frontend. Para algunos servicios pequeños uso Node.js, y con los diseñadores nos coordinamos en Figma.
+    A: ¿Y cuánto tiempo llevas en desarrollo?
+    B: Tres años. Empecé en una agencia haciendo páginas para clientes y luego pasé a producto.
+    A: ¿Cuál es tu puesto actual?
+    B: Soy desarrollador frontend en una startup de educación. Hice casi toda la aplicación que usan los profesores para calificar.
+    A: ¿Qué fue lo más difícil de ese proyecto?
+    B: Que funcionara bien con conexiones lentas. Muchos profesores la usan desde provincias, así que tuvimos que reducir el peso de la página a menos de la mitad.
+    A: Muy bien. ¿Tu nivel de inglés?
+    B: Intermedio alto, tengo el B2. Entiendo todo en las reuniones, aunque a veces me falta vocabulario.
+    A: ¿Y cuándo podrías incorporarte?
+    B: Dentro de treinta días, que es lo que pide mi contrato.
+    A: Perfecto. ¿Cuál sería tu pretensión salarial?
+    B: Siete mil doscientos cincuenta soles al mes. Sé que es una cifra específica, pero la calculé con lo que ofrecen puestos parecidos.
+    A: Siete mil doscientos cincuenta, anotado. ¿Alguna pregunta para nosotros?
+    B: Sí, ¿cómo está organizado el equipo de frontend?
+    A: Son cinco personas y trabajan en ciclos de dos semanas. Te contamos más en la siguiente etapa.
+    B: Genial, muchas gracias.
