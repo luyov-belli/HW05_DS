@@ -1,0 +1,6 @@
+# Opcional: separación de hablantes. Va aparte porque trae torch (~1 GB) y
+# no debe instalarse en la app pública ni en GitHub Actions.
+-r requirements.txt
+pyannote.audio==4.0.7
+torch==2.15.0
+torchaudio==2.11.1
