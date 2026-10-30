@@ -1,0 +1,237 @@
+{
+ "meta": {
+  "corpus": "tts-es-PE",
+  "task": "pedido",
+  "level": "L2",
+  "model": "small",
+  "glossary": true,
+  "device_requested": "cpu",
+  "compute_type_requested": "int8",
+  "device_runtime": "cpu",
+  "compute_type_runtime": "int8_float32",
+  "gpu": null,
+  "vram_peak_mb": null,
+  "load_seconds": 2.24,
+  "audio_seconds": 476.1,
+  "asr_seconds": 55.1,
+  "seconds_per_audio_minute": 6.94,
+  "faster_whisper": "1.2.1",
+  "ctranslate2": "4.8.4",
+  "created": "2026-10-30T13:54:19+00:00",
+  "vad_threshold": 0.5,
+  "run": "tts-es-PE__pedido__L2__small__cpu__int8__glosario__vad0.5",
+  "extractor": "rules",
+  "llm": null
+ },
+ "clips": {
+  "L01": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "entero",
+      "cantidad": 1,
+      "precio_unitario": null
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "jarra",
+      "cantidad": 1,
+      "precio_unitario": null
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": null,
+    "metodo_pago": null,
+    "total_dicho": null
+   },
+   "verified": {
+    "items": "sin_verificar",
+    "promocion": "vacio",
+    "direccion_entrega": "vacio",
+    "metodo_pago": "vacio",
+    "total_dicho": "vacio"
+   },
+   "validation": {
+    "estado": "incompleto",
+    "motivos": [
+     "no hay ítems o no se escuchó el total"
+    ]
+   },
+   "error": null,
+   "seconds": 0.0
+  },
+  "L02": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "cuarto",
+      "cantidad": 2,
+      "precio_unitario": null
+     },
+     {
+      "producto": "ensalada",
+      "tamano": null,
+      "cantidad": 1,
+      "precio_unitario": null
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "vaso",
+      "cantidad": 5,
+      "precio_unitario": null
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": null,
+    "metodo_pago": null,
+    "total_dicho": null
+   },
+   "verified": {
+    "items": "sin_verificar",
+    "promocion": "vacio",
+    "direccion_entrega": "vacio",
+    "metodo_pago": "vacio",
+    "total_dicho": "vacio"
+   },
+   "validation": {
+    "estado": "incompleto",
+    "motivos": [
+     "no hay ítems o no se escuchó el total"
+    ]
+   },
+   "error": null,
+   "seconds": 0.0
+  },
+  "L03": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "entero",
+      "cantidad": 1,
+      "precio_unitario": null
+     },
+     {
+      "producto": "anticuchos",
+      "tamano": null,
+      "cantidad": 2,
+      "precio_unitario": null
+     },
+     {
+      "producto": "gaseosa",
+      "tamano": "grande",
+      "cantidad": 1,
+      "precio_unitario": null
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": null,
+    "metodo_pago": "efectivo",
+    "total_dicho": null
+   },
+   "verified": {
+    "items": "sin_verificar",
+    "promocion": "vacio",
+    "direccion_entrega": "vacio",
+    "metodo_pago": "verificado",
+    "total_dicho": "vacio"
+   },
+   "validation": {
+    "estado": "incompleto",
+    "motivos": [
+     "no hay ítems o no se escuchó el total"
+    ]
+   },
+   "error": null,
+   "seconds": 0.0
+  },
+  "L04": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "medio",
+      "cantidad": 2,
+      "precio_unitario": null
+     },
+     {
+      "producto": "papas fritas",
+      "tamano": "personal",
+      "cantidad": 2,
+      "precio_unitario": null
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "jarra",
+      "cantidad": 1,
+      "precio_unitario": null
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": null,
+    "metodo_pago": null,
+    "total_dicho": null
+   },
+   "verified": {
+    "items": "sin_verificar",
+    "promocion": "vacio",
+    "direccion_entrega": "vacio",
+    "metodo_pago": "vacio",
+    "total_dicho": "vacio"
+   },
+   "validation": {
+    "estado": "incompleto",
+    "motivos": [
+     "no hay ítems o no se escuchó el total"
+    ]
+   },
+   "error": null,
+   "seconds": 0.0
+  },
+  "L05": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "cuarto",
+      "cantidad": 1,
+      "precio_unitario": null
+     },
+     {
+      "producto": "ensalada",
+      "tamano": null,
+      "cantidad": 1,
+      "precio_unitario": null
+     },
+     {
+      "producto": "gaseosa",
+      "tamano": null,
+      "cantidad": 1,
+      "precio_unitario": null
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": null,
+    "metodo_pago": "yape",
+    "total_dicho": null
+   },
+   "verified": {
+    "items": "sin_verificar",
+    "promocion": "vacio",
+    "direccion_entrega": "vacio",
+    "metodo_pago": "verificado",
+    "total_dicho": "vacio"
+   },
+   "validation": {
+    "estado": "incompleto",
+    "motivos": [
+     "falta precio o cantidad de gaseosa"
+    ]
+   },
+   "error": null,
+   "seconds": 0.0
+  }
+ }
+}

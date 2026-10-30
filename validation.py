@@ -52,12 +52,11 @@ def check_order(record, segments, schema, cfg):
 def diagnose(record, segments, schema, cfg):
     """¿Error del reconocimiento (ASR) o error de quien habló?
 
-    Regla: es 'error_asr' si hay evidencia de que algo se oyó mal:
-      (a) un precio unitario no coincide con la carta, o
-      (b) Whisper dio baja probabilidad a una palabra numérica en un segmento donde
-          aparece alguno de los números del pedido.
-    Si no hay ninguna de esas señales, los números se oyeron con confianza y coinciden
-    con la carta: el error lo cometió quien habló -> 'error_hablante'.
+    Los precios tienen una referencia externa (la carta); el total dicho no. Regla:
+      (a) si un precio unitario no coincide con la carta, se oyó mal -> 'error_asr';
+      (b) si los precios cuadran con la carta, lo único sin comprobar es el total: si
+          Whisper le dio baja probabilidad a esa palabra -> 'error_asr';
+      (c) si no, todo se oyó con confianza y coincide con la carta -> 'error_hablante'.
     """
     reasons = []
     for item in record.get("items") or []:
@@ -67,13 +66,10 @@ def diagnose(record, segments, schema, cfg):
             reasons.append(f"precio de {item['producto']} ({heard}) distinto a la carta ({reference})")
 
     threshold = cfg["validation"]["low_word_probability"]
-    money = [record.get("total_dicho")] + [it.get("precio_unitario") for it in record.get("items") or []]
-    order_numbers = {float(v) for v in money if v is not None}
+    total = float(record["total_dicho"])
+    targets = {total, float(int(total))}          # "62 con 50" llega como palabras sueltas: basta el entero
     for seg in segments or []:
-        if not numbers_in(normalize(seg["text"])) & order_numbers:
-            continue
-        doubtful = [w["word"].strip() for w in seg.get("words", [])
-                    if w["probability"] < threshold and numbers_in(normalize(w["word"]))]
-        if doubtful:
-            reasons.append(f"números con baja confianza en '{seg['text'].strip()}': {', '.join(doubtful)}")
+        for w in seg.get("words", []):
+            if targets & numbers_in(normalize(w["word"])) and w["probability"] < threshold:
+                reasons.append(f"el total '{w['word'].strip()}' se oyó con probabilidad {w['probability']}")
     return ("error_asr" if reasons else "error_hablante"), reasons

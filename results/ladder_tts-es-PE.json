@@ -1,0 +1,40 @@
+{
+ "levels": {
+  "L0": {},
+  "L1": {
+   "codec": "libopus",
+   "bitrate": 12000,
+   "sample_rate": 16000
+  },
+  "L2": {
+   "band_hz": [
+    300,
+    3400
+   ],
+   "sample_rate": 8000
+  },
+  "L3": {
+   "base": "L1",
+   "snr_db": 5,
+   "noise": "babble",
+   "babble_voices": 4
+  }
+ },
+ "clips": {
+  "L01": {
+   "snr_db_medido": 5.0
+  },
+  "L02": {
+   "snr_db_medido": 5.0
+  },
+  "L03": {
+   "snr_db_medido": 5.0
+  },
+  "L04": {
+   "snr_db_medido": 5.0
+  },
+  "L05": {
+   "snr_db_medido": 5.0
+  }
+ }
+}

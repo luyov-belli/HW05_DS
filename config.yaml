@@ -20,6 +20,7 @@ asr:
   language: es
   beam_size: 5
   vad_filter: true
+  vad_threshold: 0.25       # el 0.5 por defecto de Silero borra voz de banda telefónica (ver README)
   use_glossary: true        # el glosario se pasa como `hotwords` (ver README: por qué no initial_prompt)
 
 # Glosario de dominio que se pasa al decodificador de Whisper.
@@ -102,7 +103,7 @@ schemas:
           USD: [dolares, dolar]
       disponibilidad:
         type: category
-        describe: "una de: inmediata, 2_semanas, 1_mes, 2_meses"
+        describe: "cuándo puede empezar el candidato; una de: inmediata, 2_semanas (15 días), 1_mes (30 días), 2_meses"
         cues: [empezar, incorporarte, disponible, disponibilidad, libre]
         classes:
           inmediata: [de inmediato, inmediato, inmediata, ya mismo]
@@ -150,14 +151,14 @@ schemas:
     fields:
       items:
         type: items
-        describe: "lista final de objetos {producto, tamano, cantidad, precio_unitario}; producto y tamano en minúsculas, tamano null si no aplica"
+        describe: "pedido FINAL tras las correcciones: un objeto por producto distinto {producto, tamano, cantidad, precio_unitario}; precio_unitario es el precio por unidad en soles que dice el vendedor (número); producto y tamano en minúsculas, tamano null si no aplica"
       promocion:
         type: category
         describe: "nombre de la promoción aplicada o null"
         classes_from: promotions
       direccion_entrega:
         type: text
-        describe: "dirección de entrega en minúsculas, con su número (sin referencias)"
+        describe: "dirección de entrega copiada tal como se dijo (tipo de vía, nombre, número y distrito), en minúsculas, sin referencias ni piso"
         cues: [direccion de entrega, enviamos, direccion]
         max_words: 8
       metodo_pago:
@@ -217,7 +218,7 @@ tts:
     es-CO: [es-CO-GonzaloNeural, es-CO-SalomeNeural]
 
 diarization:
-  enabled: false               # requiere HF_TOKEN en .env y aceptar los términos del modelo
+  enabled: true                # solo actúa si hay HF_TOKEN en .env (y términos del modelo aceptados)
   model: pyannote/speaker-diarization-community-1
   num_speakers: 2
   correction_cues: [mejor, cambieme, quiteme, perdon, me equivoque, en lugar de, que sean]

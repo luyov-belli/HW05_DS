@@ -1,0 +1,4699 @@
+{
+ "generated": "2026-10-30T16:05:12+00:00",
+ "main_corpus": "tts-es-PE",
+ "asr": [
+  {
+   "run": "tts-es-AR__entrevista__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-AR",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 26.13,
+   "load_seconds": 4.44,
+   "n_clips": 5,
+   "wer": 0.0137,
+   "wer_ci": [
+    0.0088,
+    0.0191
+   ],
+   "cer": 0.0046,
+   "cer_ci": [
+    0.0025,
+    0.0065
+   ],
+   "glossary_recall": 0.875,
+   "clips": {
+    "E01": {
+     "wer": 0.0232,
+     "cer": 0.0074
+    },
+    "E02": {
+     "wer": 0.0072,
+     "cer": 0.0038
+    },
+    "E03": {
+     "wer": 0.0127,
+     "cer": 0.0037
+    },
+    "E04": {
+     "wer": 0.0146,
+     "cer": 0.0067
+    },
+    "E05": {
+     "wer": 0.0091,
+     "cer": 0.0008
+    }
+   }
+  },
+  {
+   "run": "tts-es-AR__pedido__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-AR",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 25.64,
+   "load_seconds": 2.47,
+   "n_clips": 5,
+   "wer": 0.0108,
+   "wer_ci": [
+    0.0,
+    0.0261
+   ],
+   "cer": 0.0018,
+   "cer_ci": [
+    0.0,
+    0.0049
+   ],
+   "glossary_recall": 0.9474,
+   "clips": {
+    "L01": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "L02": {
+     "wer": 0.0108,
+     "cer": 0.001
+    },
+    "L03": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "L04": {
+     "wer": 0.0405,
+     "cer": 0.0078
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-CO__entrevista__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-CO",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 23.71,
+   "load_seconds": 4.27,
+   "n_clips": 5,
+   "wer": 0.0694,
+   "wer_ci": [
+    0.0233,
+    0.1392
+   ],
+   "cer": 0.0468,
+   "cer_ci": [
+    0.0081,
+    0.1163
+   ],
+   "glossary_recall": 0.75,
+   "clips": {
+    "E01": {
+     "wer": 0.0464,
+     "cer": 0.0187
+    },
+    "E02": {
+     "wer": 0.1986,
+     "cer": 0.1712
+    },
+    "E03": {
+     "wer": 0.0169,
+     "cer": 0.0044
+    },
+    "E04": {
+     "wer": 0.0194,
+     "cer": 0.0075
+    },
+    "E05": {
+     "wer": 0.0411,
+     "cer": 0.0135
+    }
+   }
+  },
+  {
+   "run": "tts-es-CO__pedido__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-CO",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 22.61,
+   "load_seconds": 1.84,
+   "n_clips": 5,
+   "wer": 0.047,
+   "wer_ci": [
+    0.0375,
+    0.0589
+   ],
+   "cer": 0.0114,
+   "cer_ci": [
+    0.0097,
+    0.0128
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.0395,
+     "cer": 0.0125
+    },
+    "L02": {
+     "wer": 0.0324,
+     "cer": 0.0091
+    },
+    "L03": {
+     "wer": 0.0698,
+     "cer": 0.0134
+    },
+    "L04": {
+     "wer": 0.0462,
+     "cer": 0.0122
+    },
+    "L05": {
+     "wer": 0.0488,
+     "cer": 0.0093
+    }
+   }
+  },
+  {
+   "run": "tts-es-ES__entrevista__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-ES",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 23.68,
+   "load_seconds": 2.72,
+   "n_clips": 5,
+   "wer": 0.0371,
+   "wer_ci": [
+    0.0031,
+    0.0973
+   ],
+   "cer": 0.0317,
+   "cer_ci": [
+    0.0014,
+    0.0881
+   ],
+   "glossary_recall": 0.875,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "cer": 0.0023
+    },
+    "E02": {
+     "wer": 0.1408,
+     "cer": 0.1338
+    },
+    "E03": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "E04": {
+     "wer": 0.0097,
+     "cer": 0.0075
+    },
+    "E05": {
+     "wer": 0.0183,
+     "cer": 0.0024
+    }
+   }
+  },
+  {
+   "run": "tts-es-ES__pedido__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-ES",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 24.68,
+   "load_seconds": 2.07,
+   "n_clips": 5,
+   "wer": 0.012,
+   "wer_ci": [
+    0.0039,
+    0.0193
+   ],
+   "cer": 0.003,
+   "cer_ci": [
+    0.0015,
+    0.0043
+   ],
+   "glossary_recall": 0.9474,
+   "clips": {
+    "L01": {
+     "wer": 0.0056,
+     "cer": 0.0021
+    },
+    "L02": {
+     "wer": 0.0216,
+     "cer": 0.005
+    },
+    "L03": {
+     "wer": 0.0058,
+     "cer": 0.0022
+    },
+    "L04": {
+     "wer": 0.0231,
+     "cer": 0.0045
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-MX__entrevista__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-MX",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 20.37,
+   "load_seconds": 3.45,
+   "n_clips": 5,
+   "wer": 0.0056,
+   "wer_ci": [
+    0.0017,
+    0.0095
+   ],
+   "cer": 0.0027,
+   "cer_ci": [
+    0.0007,
+    0.0045
+   ],
+   "glossary_recall": 0.875,
+   "clips": {
+    "E01": {
+     "wer": 0.0066,
+     "cer": 0.0028
+    },
+    "E02": {
+     "wer": 0.0108,
+     "cer": 0.0051
+    },
+    "E03": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "E04": {
+     "wer": 0.0097,
+     "cer": 0.005
+    },
+    "E05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-MX__pedido__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-MX",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 21.25,
+   "load_seconds": 1.75,
+   "n_clips": 5,
+   "wer": 0.0072,
+   "wer_ci": [
+    0.0014,
+    0.0126
+   ],
+   "cer": 0.0018,
+   "cer_ci": [
+    0.0002,
+    0.0036
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.0169,
+     "cer": 0.0052
+    },
+    "L02": {
+     "wer": 0.0108,
+     "cer": 0.001
+    },
+    "L03": {
+     "wer": 0.0058,
+     "cer": 0.0022
+    },
+    "L04": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__base__cpu__int8__glosario",
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "base",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 9.85,
+   "load_seconds": 1.79,
+   "n_clips": 5,
+   "wer": 0.1089,
+   "wer_ci": [
+    0.0345,
+    0.1998
+   ],
+   "cer": 0.084,
+   "cer_ci": [
+    0.01,
+    0.1745
+   ],
+   "glossary_recall": 0.7083,
+   "clips": {
+    "E01": {
+     "wer": 0.0232,
+     "cer": 0.0068
+    },
+    "E02": {
+     "wer": 0.0361,
+     "cer": 0.0101
+    },
+    "E03": {
+     "wer": 0.2288,
+     "cer": 0.2045
+    },
+    "E04": {
+     "wer": 0.0631,
+     "cer": 0.0193
+    },
+    "E05": {
+     "wer": 0.2329,
+     "cer": 0.2154
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__float32__glosario",
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "float32",
+   "compute_type_runtime": "float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 37.45,
+   "load_seconds": 5.97,
+   "n_clips": 5,
+   "wer": 0.0363,
+   "wer_ci": [
+    0.0031,
+    0.1036
+   ],
+   "cer": 0.0314,
+   "cer_ci": [
+    0.0017,
+    0.0953
+   ],
+   "glossary_recall": 0.7917,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "cer": 0.0023
+    },
+    "E02": {
+     "wer": 0.0108,
+     "cer": 0.0057
+    },
+    "E03": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "E04": {
+     "wer": 0.0097,
+     "cer": 0.0042
+    },
+    "E05": {
+     "wer": 0.1781,
+     "cer": 0.1639
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 25.94,
+   "load_seconds": 3.16,
+   "n_clips": 5,
+   "wer": 0.0056,
+   "wer_ci": [
+    0.0025,
+    0.0089
+   ],
+   "cer": 0.0029,
+   "cer_ci": [
+    0.0015,
+    0.0043
+   ],
+   "glossary_recall": 0.7917,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "cer": 0.0023
+    },
+    "E02": {
+     "wer": 0.0072,
+     "cer": 0.0044
+    },
+    "E03": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "E04": {
+     "wer": 0.0097,
+     "cer": 0.0042
+    },
+    "E05": {
+     "wer": 0.0091,
+     "cer": 0.004
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario__vad0.5",
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.5,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 17.46,
+   "load_seconds": 3.32,
+   "n_clips": 5,
+   "wer": 0.0056,
+   "wer_ci": [
+    0.0025,
+    0.0089
+   ],
+   "cer": 0.0029,
+   "cer_ci": [
+    0.0015,
+    0.0043
+   ],
+   "glossary_recall": 0.7917,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "cer": 0.0023
+    },
+    "E02": {
+     "wer": 0.0072,
+     "cer": 0.0044
+    },
+    "E03": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "E04": {
+     "wer": 0.0097,
+     "cer": 0.0042
+    },
+    "E05": {
+     "wer": 0.0091,
+     "cer": 0.004
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__plano",
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": false,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 23.51,
+   "load_seconds": 5.43,
+   "n_clips": 5,
+   "wer": 0.0113,
+   "wer_ci": [
+    0.0059,
+    0.0177
+   ],
+   "cer": 0.0049,
+   "cer_ci": [
+    0.0023,
+    0.0077
+   ],
+   "glossary_recall": 0.7083,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "cer": 0.0023
+    },
+    "E02": {
+     "wer": 0.0144,
+     "cer": 0.0082
+    },
+    "E03": {
+     "wer": 0.0042,
+     "cer": 0.0007
+    },
+    "E04": {
+     "wer": 0.0194,
+     "cer": 0.0059
+    },
+    "E05": {
+     "wer": 0.0183,
+     "cer": 0.0079
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L0__small__cpu__int8__glosario",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 25.45,
+   "load_seconds": 2.79,
+   "n_clips": 5,
+   "wer": 0.006,
+   "wer_ci": [
+    0.0014,
+    0.01
+   ],
+   "cer": 0.0014,
+   "cer_ci": [
+    0.0002,
+    0.0024
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "cer": 0.0031
+    },
+    "L02": {
+     "wer": 0.0108,
+     "cer": 0.001
+    },
+    "L03": {
+     "wer": 0.0058,
+     "cer": 0.0022
+    },
+    "L04": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L0__small__cpu__int8__glosario__vad0.5",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.5,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 17.23,
+   "load_seconds": 1.63,
+   "n_clips": 5,
+   "wer": 0.006,
+   "wer_ci": [
+    0.0014,
+    0.01
+   ],
+   "cer": 0.0014,
+   "cer_ci": [
+    0.0002,
+    0.0024
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "cer": 0.0031
+    },
+    "L02": {
+     "wer": 0.0108,
+     "cer": 0.001
+    },
+    "L03": {
+     "wer": 0.0058,
+     "cer": 0.0022
+    },
+    "L04": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L0__small__cpu__int8__plano",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "glossary": false,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 30.76,
+   "load_seconds": 4.17,
+   "n_clips": 5,
+   "wer": 0.0181,
+   "wer_ci": [
+    0.0084,
+    0.0249
+   ],
+   "cer": 0.0041,
+   "cer_ci": [
+    0.0021,
+    0.0059
+   ],
+   "glossary_recall": 0.7368,
+   "clips": {
+    "L01": {
+     "wer": 0.0282,
+     "cer": 0.0073
+    },
+    "L02": {
+     "wer": 0.0216,
+     "cer": 0.003
+    },
+    "L03": {
+     "wer": 0.0116,
+     "cer": 0.0045
+    },
+    "L04": {
+     "wer": 0.0231,
+     "cer": 0.0045
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L1__small__cpu__int8__glosario",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L1",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 23.48,
+   "load_seconds": 3.84,
+   "n_clips": 5,
+   "wer": 0.0096,
+   "wer_ci": [
+    0.0014,
+    0.0199
+   ],
+   "cer": 0.002,
+   "cer_ci": [
+    0.0005,
+    0.0033
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "cer": 0.0031
+    },
+    "L02": {
+     "wer": 0.027,
+     "cer": 0.004
+    },
+    "L03": {
+     "wer": 0.0058,
+     "cer": 0.0022
+    },
+    "L04": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L1__small__cpu__int8__glosario__vad0.5",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L1",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.5,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 17.71,
+   "load_seconds": 6.53,
+   "n_clips": 5,
+   "wer": 0.0096,
+   "wer_ci": [
+    0.0014,
+    0.0199
+   ],
+   "cer": 0.002,
+   "cer_ci": [
+    0.0005,
+    0.0033
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "cer": 0.0031
+    },
+    "L02": {
+     "wer": 0.027,
+     "cer": 0.004
+    },
+    "L03": {
+     "wer": 0.0058,
+     "cer": 0.0022
+    },
+    "L04": {
+     "wer": 0.0,
+     "cer": 0.0
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L2__small__cpu__int8__glosario",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L2",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 25.97,
+   "load_seconds": 1.91,
+   "n_clips": 5,
+   "wer": 0.0133,
+   "wer_ci": [
+    0.0056,
+    0.0211
+   ],
+   "cer": 0.0046,
+   "cer_ci": [
+    0.0023,
+    0.0068
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "cer": 0.0031
+    },
+    "L02": {
+     "wer": 0.027,
+     "cer": 0.004
+    },
+    "L03": {
+     "wer": 0.0116,
+     "cer": 0.0056
+    },
+    "L04": {
+     "wer": 0.0116,
+     "cer": 0.0089
+    },
+    "L05": {
+     "wer": 0.0,
+     "cer": 0.0
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L2__small__cpu__int8__glosario__vad0.5",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L2",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.5,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 6.94,
+   "load_seconds": 2.24,
+   "n_clips": 5,
+   "wer": 0.6145,
+   "wer_ci": [
+    0.5735,
+    0.6595
+   ],
+   "cer": 0.5934,
+   "cer_ci": [
+    0.5612,
+    0.6333
+   ],
+   "glossary_recall": 0.6842,
+   "clips": {
+    "L01": {
+     "wer": 0.6045,
+     "cer": 0.589
+    },
+    "L02": {
+     "wer": 0.6649,
+     "cer": 0.6129
+    },
+    "L03": {
+     "wer": 0.5814,
+     "cer": 0.573
+    },
+    "L04": {
+     "wer": 0.5491,
+     "cer": 0.5345
+    },
+    "L05": {
+     "wer": 0.6911,
+     "cer": 0.6801
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L3__small__cpu__int8__glosario",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L3",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 23.64,
+   "load_seconds": 2.83,
+   "n_clips": 5,
+   "wer": 0.212,
+   "wer_ci": [
+    0.1576,
+    0.2715
+   ],
+   "cer": 0.1361,
+   "cer_ci": [
+    0.087,
+    0.1991
+   ],
+   "glossary_recall": 0.8947,
+   "clips": {
+    "L01": {
+     "wer": 0.1864,
+     "cer": 0.1238
+    },
+    "L02": {
+     "wer": 0.1568,
+     "cer": 0.0796
+    },
+    "L03": {
+     "wer": 0.2326,
+     "cer": 0.1338
+    },
+    "L04": {
+     "wer": 0.3295,
+     "cer": 0.2606
+    },
+    "L05": {
+     "wer": 0.1382,
+     "cer": 0.0711
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L3__small__cpu__int8__glosario__vad0.5",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L3",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.5,
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": null,
+   "vram_peak_mb": null,
+   "seconds_per_audio_minute": 20.02,
+   "load_seconds": 2.06,
+   "n_clips": 5,
+   "wer": 0.212,
+   "wer_ci": [
+    0.1576,
+    0.2715
+   ],
+   "cer": 0.1361,
+   "cer_ci": [
+    0.087,
+    0.1991
+   ],
+   "glossary_recall": 0.8947,
+   "clips": {
+    "L01": {
+     "wer": 0.1864,
+     "cer": 0.1238
+    },
+    "L02": {
+     "wer": 0.1568,
+     "cer": 0.0796
+    },
+    "L03": {
+     "wer": 0.2326,
+     "cer": 0.1338
+    },
+    "L04": {
+     "wer": 0.3295,
+     "cer": 0.2606
+    },
+    "L05": {
+     "wer": 0.1382,
+     "cer": 0.0711
+    }
+   }
+  }
+ ],
+ "text_changes": [
+  {
+   "cambia": "compute_type_requested",
+   "run_a": "tts-es-PE__entrevista__L0__small__cpu__float32__glosario",
+   "run_b": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario",
+   "clips": 5,
+   "clips_identicos": 3,
+   "diferencia_texto_wer": 0.0324,
+   "wer_a": 0.0363,
+   "wer_b": 0.0056
+  }
+ ],
+ "glossary_effect": [
+  {
+   "cambia": "glossary",
+   "de": false,
+   "a": true,
+   "tarea": "entrevista",
+   "nivel": "L0",
+   "modelo": "small",
+   "clips": 5,
+   "wer_antes": 0.0113,
+   "wer_despues": 0.0056,
+   "mejora_wer_media": 0.0061,
+   "mejora_wer_ci": [
+    0.0028,
+    0.009
+   ],
+   "recall_glosario_antes": 0.7083,
+   "recall_glosario_despues": 0.7917
+  },
+  {
+   "cambia": "glossary",
+   "de": false,
+   "a": true,
+   "tarea": "pedido",
+   "nivel": "L0",
+   "modelo": "small",
+   "clips": 5,
+   "wer_antes": 0.0181,
+   "wer_despues": 0.006,
+   "mejora_wer_media": 0.0113,
+   "mejora_wer_ci": [
+    0.0045,
+    0.0182
+   ],
+   "recall_glosario_antes": 0.7368,
+   "recall_glosario_despues": 1.0
+  }
+ ],
+ "vad_effect": [
+  {
+   "cambia": "vad_threshold",
+   "de": 0.5,
+   "a": 0.25,
+   "tarea": "entrevista",
+   "nivel": "L0",
+   "modelo": "small",
+   "clips": 5,
+   "wer_antes": 0.0056,
+   "wer_despues": 0.0056,
+   "mejora_wer_media": 0.0,
+   "mejora_wer_ci": [
+    0.0,
+    0.0
+   ],
+   "recall_glosario_antes": 0.7917,
+   "recall_glosario_despues": 0.7917
+  },
+  {
+   "cambia": "vad_threshold",
+   "de": 0.5,
+   "a": 0.25,
+   "tarea": "pedido",
+   "nivel": "L0",
+   "modelo": "small",
+   "clips": 5,
+   "wer_antes": 0.006,
+   "wer_despues": 0.006,
+   "mejora_wer_media": 0.0,
+   "mejora_wer_ci": [
+    0.0,
+    0.0
+   ],
+   "recall_glosario_antes": 1.0,
+   "recall_glosario_despues": 1.0
+  },
+  {
+   "cambia": "vad_threshold",
+   "de": 0.5,
+   "a": 0.25,
+   "tarea": "pedido",
+   "nivel": "L1",
+   "modelo": "small",
+   "clips": 5,
+   "wer_antes": 0.0096,
+   "wer_despues": 0.0096,
+   "mejora_wer_media": 0.0,
+   "mejora_wer_ci": [
+    0.0,
+    0.0
+   ],
+   "recall_glosario_antes": 1.0,
+   "recall_glosario_despues": 1.0
+  },
+  {
+   "cambia": "vad_threshold",
+   "de": 0.5,
+   "a": 0.25,
+   "tarea": "pedido",
+   "nivel": "L2",
+   "modelo": "small",
+   "clips": 5,
+   "wer_antes": 0.6145,
+   "wer_despues": 0.0133,
+   "mejora_wer_media": 0.6059,
+   "mejora_wer_ci": [
+    0.5633,
+    0.6519
+   ],
+   "recall_glosario_antes": 0.6842,
+   "recall_glosario_despues": 1.0
+  },
+  {
+   "cambia": "vad_threshold",
+   "de": 0.5,
+   "a": 0.25,
+   "tarea": "pedido",
+   "nivel": "L3",
+   "modelo": "small",
+   "clips": 5,
+   "wer_antes": 0.212,
+   "wer_despues": 0.212,
+   "mejora_wer_media": 0.0,
+   "mejora_wer_ci": [
+    0.0,
+    0.0
+   ],
+   "recall_glosario_antes": 0.8947,
+   "recall_glosario_despues": 0.8947
+  }
+ ],
+ "records": [
+  {
+   "run": "tts-es-AR__entrevista__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-AR",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.8,
+   "accuracy_ci": [
+    0.6667,
+    0.9333
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 29,
+   "verificados_correctos": 24,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0232,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "ultimo_puesto",
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0072,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0127,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0146,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.0091,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    }
+   }
+  },
+  {
+   "run": "tts-es-AR__pedido__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-AR",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.92,
+   "accuracy_ci": [
+    0.8,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.75
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 22,
+   "verificados_correctos": 21,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.0108,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0405,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-CO__entrevista__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-CO",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.7667,
+   "accuracy_ci": [
+    0.6,
+    0.9
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 30,
+   "verificados_correctos": 23,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0464,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.1986,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0169,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E04": {
+     "wer": 0.0194,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.0411,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "tts-es-CO__pedido__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-CO",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.88,
+   "accuracy_ci": [
+    0.76,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ],
+     "macro_f1": 0.4167
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 20,
+   "verificados_correctos": 20,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0395,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "metodo_pago"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.0324,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0698,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0462,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0488,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-ES__entrevista__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-ES",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.8333,
+   "accuracy_ci": [
+    0.7,
+    0.9667
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 30,
+   "verificados_correctos": 25,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.1408,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0097,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.0183,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    }
+   }
+  },
+  {
+   "run": "tts-es-ES__pedido__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-ES",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.92,
+   "accuracy_ci": [
+    0.8,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.75
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 22,
+   "verificados_correctos": 21,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0056,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.0216,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0231,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-MX__entrevista__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-MX",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.8333,
+   "accuracy_ci": [
+    0.7,
+    0.9667
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 30,
+   "verificados_correctos": 25,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0066,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0108,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0097,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    }
+   }
+  },
+  {
+   "run": "tts-es-MX__pedido__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-MX",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.96,
+   "accuracy_ci": [
+    0.88,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 23,
+   "verificados_correctos": 22,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0169,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.0108,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__base__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "base",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.7,
+   "accuracy_ci": [
+    0.5333,
+    0.8667
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.2,
+     "ci": [
+      0.0,
+      0.6
+     ],
+     "mae": 1.33
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.2,
+     "ci": [
+      0.0,
+      0.6
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.75
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 26,
+   "verificados_correctos": 21,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0232,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0361,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.2288,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "disponibilidad"
+     ]
+    },
+    "E04": {
+     "wer": 0.0631,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.2329,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__float32__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "float32",
+   "vad_threshold": 0.25,
+   "accuracy": 0.8,
+   "accuracy_ci": [
+    0.6667,
+    0.9333
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.2,
+     "ci": [
+      0.0,
+      0.6
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 30,
+   "verificados_correctos": 24,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0108,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0097,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.1781,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario",
+   "extractor": "llm",
+   "llm": "qwen2.5:3b",
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.7667,
+   "accuracy_ci": [
+    0.6325,
+    0.9
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "mae": 0.2
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.8222
+    }
+   },
+   "verificados": 27,
+   "verificados_correctos": 22,
+   "sin_verificar": 3,
+   "sin_verificar_correctos": 1,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0072,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E04": {
+     "wer": 0.0097,
+     "error": null,
+     "correctos": 3,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias",
+      "nivel_ingles"
+     ]
+    },
+    "E05": {
+     "wer": 0.0091,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.8,
+   "accuracy_ci": [
+    0.6667,
+    0.9333
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.2,
+     "ci": [
+      0.0,
+      0.6
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 30,
+   "verificados_correctos": 24,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0072,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0097,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.0091,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario__vad0.5",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.5,
+   "accuracy": 0.8,
+   "accuracy_ci": [
+    0.6667,
+    0.9333
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.2,
+     "ci": [
+      0.0,
+      0.6
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 30,
+   "verificados_correctos": 24,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0072,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0097,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.0091,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__plano",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": false,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.7667,
+   "accuracy_ci": [
+    0.6,
+    0.9
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ],
+     "mae": 0.8
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 30,
+   "verificados_correctos": 23,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0033,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0144,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0042,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E04": {
+     "wer": 0.0194,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E05": {
+     "wer": 0.0183,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L0__small__cpu__int8__glosario",
+   "extractor": "llm",
+   "llm": "qwen2.5:3b",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.88,
+   "accuracy_ci": [
+    0.759,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 21,
+   "verificados_correctos": 20,
+   "sin_verificar": 2,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.0108,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_asr",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 0,
+    "diagnosis_total": 0,
+    "recall": 1.0,
+    "diagnosis_accuracy": null
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L0__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.96,
+   "accuracy_ci": [
+    0.88,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 23,
+   "verificados_correctos": 22,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.0108,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L0__small__cpu__int8__glosario__vad0.5",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.5,
+   "accuracy": 0.96,
+   "accuracy_ci": [
+    0.88,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 23,
+   "verificados_correctos": 22,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.0108,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L0__small__cpu__int8__plano",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": false,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.84,
+   "accuracy_ci": [
+    0.68,
+    0.96
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.7
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.75
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 21,
+   "verificados_correctos": 19,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0282,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_asr",
+     "roto": true
+    },
+    "L02": {
+     "wer": 0.0216,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "promocion"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0116,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0231,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 1,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L1__small__cpu__int8__glosario",
+   "extractor": "llm",
+   "llm": "qwen2.5:3b",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L1",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.88,
+   "accuracy_ci": [
+    0.759,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 23,
+   "verificados_correctos": 20,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 0,
+    "diagnosis_total": 0,
+    "recall": 1.0,
+    "diagnosis_accuracy": null
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L1__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L1",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 1.0,
+   "accuracy_ci": [
+    1.0,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 23,
+   "verificados_correctos": 23,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L1__small__cpu__int8__glosario__vad0.5",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L1",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.5,
+   "accuracy": 1.0,
+   "accuracy_ci": [
+    1.0,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 23,
+   "verificados_correctos": 23,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0058,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L2__small__cpu__int8__glosario",
+   "extractor": "llm",
+   "llm": "qwen2.5:3b",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L2",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.88,
+   "accuracy_ci": [
+    0.76,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 21,
+   "verificados_correctos": 20,
+   "sin_verificar": 2,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "items"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0116,
+     "error": null,
+     "correctos": 3,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_asr",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0116,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 1,
+    "diagnosis_total": 1,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L2__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L2",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.92,
+   "accuracy_ci": [
+    0.8,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 23,
+   "verificados_correctos": 21,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.0113,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.0116,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0116,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.0,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L2__small__cpu__int8__glosario__vad0.5",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L2",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.5,
+   "accuracy": 0.16,
+   "accuracy_ci": [
+    0.04,
+    0.32
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ],
+     "macro_f1": 0.1429
+    },
+    "direccion_entrega": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ],
+     "macro_f1": 0.4167
+    },
+    "total_dicho": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "mae": null
+    }
+   },
+   "verificados": 2,
+   "verificados_correctos": 2,
+   "sin_verificar": 5,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.6045,
+     "error": null,
+     "correctos": 1,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "metodo_pago",
+      "total_dicho"
+     ],
+     "estado": "incompleto",
+     "causa": null,
+     "roto": true
+    },
+    "L02": {
+     "wer": 0.6649,
+     "error": null,
+     "correctos": 0,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "promocion",
+      "direccion_entrega",
+      "metodo_pago",
+      "total_dicho"
+     ],
+     "estado": "incompleto",
+     "causa": null,
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.5814,
+     "error": null,
+     "correctos": 1,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "promocion",
+      "direccion_entrega",
+      "total_dicho"
+     ],
+     "estado": "incompleto",
+     "causa": null,
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.5491,
+     "error": null,
+     "correctos": 0,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "promocion",
+      "direccion_entrega",
+      "metodo_pago",
+      "total_dicho"
+     ],
+     "estado": "incompleto",
+     "causa": null,
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.6911,
+     "error": null,
+     "correctos": 2,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "total_dicho"
+     ],
+     "estado": "incompleto",
+     "causa": null,
+     "roto": true
+    }
+   },
+   "validator": {
+    "caught": 5,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 0,
+    "diagnosis_right": 0,
+    "diagnosis_total": 0,
+    "recall": 1.0,
+    "diagnosis_accuracy": null
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L3__small__cpu__int8__glosario",
+   "extractor": "llm",
+   "llm": "qwen2.5:3b",
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L3",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.76,
+   "accuracy_ci": [
+    0.6,
+    0.92
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.6,
+     "ci": [
+      0.2,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.6
+    },
+    "direccion_entrega": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "macro_f1": 0.75
+    },
+    "total_dicho": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "mae": 14.6
+    }
+   },
+   "verificados": 20,
+   "verificados_correctos": 17,
+   "sin_verificar": 2,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.1864,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.1568,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.2326,
+     "error": null,
+     "correctos": 2,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "total_dicho"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_asr",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.3295,
+     "error": null,
+     "correctos": 2,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "promocion",
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_asr",
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.1382,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 1,
+    "diagnosis_total": 1,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L3__small__cpu__int8__glosario",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L3",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "accuracy": 0.52,
+   "accuracy_ci": [
+    0.32,
+    0.72
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ],
+     "macro_f1": 0.4167
+    },
+    "total_dicho": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 16,
+   "verificados_correctos": 11,
+   "sin_verificar": 2,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.1864,
+     "error": null,
+     "correctos": 3,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.1568,
+     "error": null,
+     "correctos": 2,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.2326,
+     "error": null,
+     "correctos": 3,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.3295,
+     "error": null,
+     "correctos": 1,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "metodo_pago",
+      "total_dicho"
+     ],
+     "estado": "incompleto",
+     "causa": null,
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.1382,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 0,
+    "diagnosis_total": 0,
+    "recall": 1.0,
+    "diagnosis_accuracy": null
+   }
+  },
+  {
+   "run": "tts-es-PE__pedido__L3__small__cpu__int8__glosario__vad0.5",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "tts-es-PE",
+   "task": "pedido",
+   "level": "L3",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.5,
+   "accuracy": 0.52,
+   "accuracy_ci": [
+    0.32,
+    0.72
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.4,
+     "ci": [
+      0.0,
+      0.8
+     ],
+     "macro_f1": 0.4167
+    },
+    "total_dicho": {
+     "accuracy": 0.8,
+     "ci": [
+      0.4,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 16,
+   "verificados_correctos": 11,
+   "sin_verificar": 2,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.1864,
+     "error": null,
+     "correctos": 3,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.1568,
+     "error": null,
+     "correctos": 2,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.2326,
+     "error": null,
+     "correctos": 3,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.3295,
+     "error": null,
+     "correctos": 1,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "metodo_pago",
+      "total_dicho"
+     ],
+     "estado": "incompleto",
+     "causa": null,
+     "roto": true
+    },
+    "L05": {
+     "wer": 0.1382,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 2,
+    "diagnosis_right": 0,
+    "diagnosis_total": 0,
+    "recall": 1.0,
+    "diagnosis_accuracy": null
+   }
+  }
+ ],
+ "wer_vs_record": {
+  "wer_alto_registro_perfecto": {
+   "run": "tts-es-PE__pedido__L3__small__cpu__int8__glosario",
+   "extractor": "llm",
+   "clip": "L01",
+   "wer": 0.1864,
+   "incorrectos": []
+  },
+  "wer_bajo_registro_roto": {
+   "run": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario",
+   "extractor": "llm",
+   "clip": "E03",
+   "wer": 0.0,
+   "incorrectos": [
+    "tecnologias"
+   ]
+  }
+ },
+ "gate": {
+  "corpus": "tts-es-PE",
+  "checks": [
+   {
+    "check": "WER entrevista <= 0.2",
+    "value": 0.0056,
+    "ok": true
+   },
+   {
+    "check": "exactitud reglas entrevista >= 0.6",
+    "value": 0.8,
+    "ok": true
+   },
+   {
+    "check": "WER pedido <= 0.2",
+    "value": 0.006,
+    "ok": true
+   },
+   {
+    "check": "exactitud reglas pedido >= 0.5",
+    "value": 0.96,
+    "ok": true
+   },
+   {
+    "check": "recall del validador >= 0.66",
+    "value": 1.0,
+    "ok": true
+   }
+  ],
+  "passed": true
+ }
+}

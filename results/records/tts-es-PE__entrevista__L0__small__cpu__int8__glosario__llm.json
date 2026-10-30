@@ -1,0 +1,171 @@
+{
+ "meta": {
+  "corpus": "tts-es-PE",
+  "task": "entrevista",
+  "level": "L0",
+  "model": "small",
+  "glossary": true,
+  "vad_threshold": 0.25,
+  "device_requested": "cpu",
+  "compute_type_requested": "int8",
+  "device_runtime": "cpu",
+  "compute_type_runtime": "int8_float32",
+  "gpu": null,
+  "vram_peak_mb": null,
+  "load_seconds": 3.16,
+  "audio_seconds": 599.0,
+  "asr_seconds": 258.9,
+  "seconds_per_audio_minute": 25.94,
+  "faster_whisper": "1.2.1",
+  "ctranslate2": "4.8.4",
+  "created": "2026-10-30T14:58:34+00:00",
+  "run": "tts-es-PE__entrevista__L0__small__cpu__int8__glosario",
+  "extractor": "llm",
+  "llm": "qwen2.5:3b"
+ },
+ "clips": {
+  "E01": {
+   "fields": {
+    "anios_experiencia": 4,
+    "ultimo_puesto": "analista de datos",
+    "tecnologias": [
+     "paisan",
+     "SQL",
+     "Power BI"
+    ],
+    "pretension_salarial": {
+     "monto": 6500,
+     "moneda": "PEN"
+    },
+    "disponibilidad": "2_semanas",
+    "nivel_ingles": "intermedio"
+   },
+   "verified": {
+    "anios_experiencia": "verificado",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "verificado"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 30.32
+  },
+  "E02": {
+   "fields": {
+    "anios_experiencia": 5.5,
+    "ultimo_puesto": "desarrollador backend",
+    "tecnologias": [
+     "Java",
+     "Spring Boot",
+     "PostgreSQL",
+     "daq",
+     "Kubernetes"
+    ],
+    "pretension_salarial": {
+     "monto": 3000,
+     "moneda": "USD"
+    },
+    "disponibilidad": "1_mes",
+    "nivel_ingles": "avanzado"
+   },
+   "verified": {
+    "anios_experiencia": "sin_verificar",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "verificado"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 16.32
+  },
+  "E03": {
+   "fields": {
+    "anios_experiencia": 8,
+    "ultimo_puesto": "jefe de proyectos",
+    "tecnologias": [
+     "Jira",
+     "Excel"
+    ],
+    "pretension_salarial": {
+     "monto": 9000,
+     "moneda": "PEN"
+    },
+    "disponibilidad": "inmediata",
+    "nivel_ingles": "basico"
+   },
+   "verified": {
+    "anios_experiencia": "verificado",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "verificado"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 14.65
+  },
+  "E04": {
+   "fields": {
+    "anios_experiencia": 3,
+    "ultimo_puesto": "ingeniera de datos junior",
+    "tecnologias": [
+     "paisan",
+     "Airflow",
+     "Spark",
+     "AWS",
+     "Snowflake"
+    ],
+    "pretension_salarial": {
+     "monto": 4200,
+     "moneda": "PEN"
+    },
+    "disponibilidad": "2_meses",
+    "nivel_ingles": "intermedio"
+   },
+   "verified": {
+    "anios_experiencia": "sin_verificar",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "sin_verificar"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 15.23
+  },
+  "E05": {
+   "fields": {
+    "anios_experiencia": 3,
+    "ultimo_puesto": "desarrollador frontend",
+    "tecnologias": [
+     "vyack",
+     "TypeScript",
+     "norda.js"
+    ],
+    "pretension_salarial": {
+     "monto": 7250,
+     "moneda": "PEN"
+    },
+    "disponibilidad": "1_mes",
+    "nivel_ingles": "intermedio"
+   },
+   "verified": {
+    "anios_experiencia": "verificado",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "verificado"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 14.43
+  }
+ }
+}

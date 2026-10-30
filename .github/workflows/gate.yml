@@ -1,0 +1,24 @@
+# Gate de regresión: recalcula métricas desde las transcripciones CACHEADAS y falla si la
+# calidad baja del umbral de config.yaml. Los runners no tienen GPU: aquí nunca se transcribe.
+name: gate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: El motor no importa ninguna librería de interfaz
+        run: python -c "import engine, sys; assert 'streamlit' not in sys.modules, 'engine importa streamlit'"
+      - name: Re-extraer con reglas (rápido, sin GPU ni LLM)
+        run: python pipeline.py extract --extractor rules --force
+      - name: Métricas y gate
+        run: python pipeline.py evaluate --gate
