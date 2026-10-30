@@ -337,7 +337,8 @@ def _canonical(value, classes):
     for name, aliases in classes.items():
         if norm == normalize(str(name)) or any(norm == normalize(a) for a in aliases):
             return name
-    return str(value)
+    contained = {name for name, aliases in classes.items() if any(has_phrase(norm, a) for a in aliases)}
+    return contained.pop() if len(contained) == 1 else str(value)    # "intermedio alto" -> intermedio
 
 
 def _coerce(data, schema):

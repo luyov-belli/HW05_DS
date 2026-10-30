@@ -45,7 +45,7 @@ def load_model(name, device, compute_type):
     return WhisperModel(name, device=device, compute_type=compute_type)
 
 
-def transcribe(audio_path, task, model=None, device=None, compute_type=None, glossary=None):
+def transcribe(audio_path, task, model=None, device=None, compute_type=None, glossary=None, vad_threshold=None):
     """Transcribe un audio con faster-whisper y devuelve texto, segmentos y evidencia del dispositivo.
 
     `device` y `compute_type` del resultado se leen del modelo ya cargado (CTranslate2),
@@ -55,6 +55,7 @@ def transcribe(audio_path, task, model=None, device=None, compute_type=None, glo
     device = resolve_device(device or asr["device"])
     compute_type = resolve_compute_type(compute_type or asr["compute_type"], device)
     use_glossary = asr["use_glossary"] if glossary is None else glossary
+    vad_threshold = asr["vad_threshold"] if vad_threshold is None else vad_threshold
     name = model or asr["model"]
 
     t0 = time.perf_counter()
@@ -67,7 +68,8 @@ def transcribe(audio_path, task, model=None, device=None, compute_type=None, glo
         language=asr["language"],
         beam_size=asr["beam_size"],
         vad_filter=asr["vad_filter"],
-        word_timestamps=True,                    # da la probabilidad de cada palabra
+        vad_parameters={"threshold": vad_threshold},
+        word_timestamps=True,                   # da la probabilidad de cada palabra
         hotwords=load_config()["glossary"][task] if use_glossary else None,
     )
     segments = [{"start": round(s.start, 2), "end": round(s.end, 2), "text": s.text.strip(),
@@ -82,6 +84,7 @@ def transcribe(audio_path, task, model=None, device=None, compute_type=None, glo
         "device": whisper.model.device,          # leído de la librería en tiempo de ejecución
         "compute_type": whisper.model.compute_type,
         "glossary": use_glossary,
+        "vad_threshold": vad_threshold,
         "audio_seconds": round(info.duration, 2),
         "asr_seconds": round(asr_seconds, 2),
         "load_seconds": round(load_seconds, 2),

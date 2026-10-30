@@ -12,6 +12,7 @@ import streamlit as st
 import yaml
 
 import engine
+from pipeline import is_reference
 
 CFG = engine.load_config()
 ROOT = engine.ROOT
@@ -22,9 +23,13 @@ st.set_page_config(page_title="De la voz al registro", page_icon="🎙️", layo
 
 
 @st.cache_data
-def load_json(path):
-    path = ROOT / path
-    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
+def _read_json(path, modified):            # `modified` invalida la caché si el archivo cambia
+    return json.loads(Path(path).read_text(encoding="utf-8"))
+
+
+def load_json(relative):
+    path = ROOT / relative
+    return _read_json(str(path), path.stat().st_mtime) if path.exists() else None
 
 
 @st.cache_data
@@ -36,8 +41,7 @@ def ground_truth(task):
 def find_run(metrics, task, level="L0"):
     """Corrida de referencia: corpus principal, modelo y glosario por defecto de config.yaml."""
     rows = [r for r in metrics["asr"] if r["corpus"] == metrics["main_corpus"] and r["task"] == task
-            and r["level"] == level and r["model"] == CFG["asr"]["model"]
-            and r["glossary"] == CFG["asr"]["use_glossary"]]
+            and r["level"] == level and is_reference(r)]
     return rows[0]["run"] if rows else None
 
 
@@ -136,15 +140,16 @@ with tab_results:
     asr = pd.DataFrame(metrics["asr"])
     st.subheader("Capa 1 — Transcripción")
     st.dataframe(asr[["corpus", "task", "level", "model", "device_runtime", "compute_type_runtime", "glossary",
-                      "wer", "wer_ci", "cer", "seconds_per_audio_minute", "vram_peak_mb", "gpu"]],
+                      "vad_threshold", "wer", "wer_ci", "cer", "seconds_per_audio_minute", "vram_peak_mb", "gpu"]],
                  hide_index=True, use_container_width=True)
     st.subheader("Capa 2 — Registro")
-    rec = pd.DataFrame([{**{k: r[k] for k in ("corpus", "task", "level", "extractor", "model", "accuracy",
-                                                "accuracy_ci")},
+    rec = pd.DataFrame([{**{k: r[k] for k in ("corpus", "task", "level", "extractor", "model", "glossary",
+                                                "vad_threshold", "accuracy", "accuracy_ci")},
                          **{f: v["accuracy"] for f, v in r["fields"].items()}} for r in metrics["records"]])
     st.dataframe(rec, hide_index=True, use_container_width=True)
-    st.subheader("Glosario (hotwords) — mejora de WER con IC95")
-    st.dataframe(pd.DataFrame(metrics["glossary_effect"]), hide_index=True, use_container_width=True)
+    st.subheader("Glosario (hotwords) y umbral del VAD — mejora de WER con IC95")
+    st.dataframe(pd.DataFrame(metrics["glossary_effect"] + metrics["vad_effect"]), hide_index=True,
+                 use_container_width=True)
     st.subheader("¿Cambia el texto con el dispositivo o la precisión?")
     st.dataframe(pd.DataFrame(metrics["text_changes"]), hide_index=True, use_container_width=True)
     st.subheader("El WER no predice si el registro sirve")
@@ -152,7 +157,7 @@ with tab_results:
 
 with tab_orders:
     main = metrics["main_corpus"]
-    rows = [r for r in metrics["records"] if r["task"] == "pedido" and r["corpus"] == main]
+    rows = [r for r in metrics["records"] if r["task"] == "pedido" and r["corpus"] == main and is_reference(r)]
     wer_of = {a["run"]: a["wer"] for a in metrics["asr"]}
     ladder = pd.DataFrame([{"nivel": r["level"], "extractor": r["extractor"], "WER": wer_of.get(r["run"]),
                             "exactitud registro": r["accuracy"], **{k: r["validator"][k] for k in

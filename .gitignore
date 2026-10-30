@@ -9,6 +9,10 @@ data/audio/
 *.ogg
 *.opus
 
+# Notas locales
+PULL_REQUESTS.md
+.claude/
+
 # Python
 .venv/
 __pycache__/
