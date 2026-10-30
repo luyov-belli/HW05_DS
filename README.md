@@ -113,8 +113,10 @@ glosario, y `small` en CPU sobre los mismos clips. Descarga el zip, cópialo a `
 uv pip install --python .venv -r requirements-diarization.txt
 ```
 Crea un token de lectura en Hugging Face, acepta los términos de `pyannote/speaker-diarization-community-1`,
-pon `HF_TOKEN=...` en `.env` y `diarization.enabled: true` en `config.yaml`. Desde entonces cada pedido que
-pasa por `engine.process` trae `validation.correcciones` con el hablante y el rol (cliente o vendedor).
+y pon `HF_TOKEN=...` en `.env` (`diarization.enabled: true` ya está en `config.yaml`; sin token se omite, como
+en la app pública). Desde entonces cada pedido que pasa por `engine.process` trae `validation.correcciones`
+con el hablante y el rol (cliente o vendedor). Probado en L01: separó vendedor y cliente y atribuyó al cliente
+"cámbieme el medio pollo por un pollo entero" (≈3 min en CPU para 100 s de audio, incluida la descarga).
 
 ### Despliegue público (Streamlit Community Cloud)
 En share.streamlit.io: *Create app* → repositorio `luyov-belli/HW05_DS`, rama `main`, archivo `app.py`,
@@ -313,7 +315,7 @@ Describe cómo `small` trata esas **voces de Edge TTS**, no a hablantes reales d
 | **Gate de regresión en GitHub Actions** | `.github/workflows/gate.yml` | Re-extrae con reglas y recalcula métricas **desde transcripciones cacheadas** (los runners no tienen GPU; transcribir ahí sería 40× más lento o imposible). Falla si el WER o la exactitud bajan de los umbrales de `config.yaml`. |
 | **Servidor MCP propio** | `mcp_server.py`, `.mcp.json` | Herramientas `procesar_audio` y `extraer_de_texto`: un agente en Claude Code transcribe y extrae con **la misma función** del motor. |
 | **Eje de acentos** | `pipeline.py tts --locales ...` | El mismo guion con voces sintéticas de PE, MX, ES, AR y CO. **Son voces sintéticas, no hablantes humanos**: el resultado describe cómo el modelo trata esas voces, no acentos reales. |
-| **Separación de hablantes** | `engine.diarize`, `requirements-diarization.txt` | pyannote (`HF_TOKEN` + aceptar términos). Atribuye cada corrección del pedido a **cliente** o **vendedor**. Desactivada por defecto (`diarization.enabled`). |
+| **Separación de hablantes** | `engine.diarize`, `requirements-diarization.txt` | pyannote (`HF_TOKEN` + aceptar términos). Atribuye cada corrección del pedido a **cliente** o **vendedor**. Se activa sola cuando hay `HF_TOKEN`. |
 | **Despliegue público** | Streamlit Community Cloud | La app lee resultados cacheados, así que corre sin GPU ni Ollama (el probador usa el modelo `base` y la ruta de reglas). |
 
 ## Herramientas de IA declaradas

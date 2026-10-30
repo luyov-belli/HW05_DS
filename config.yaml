@@ -218,7 +218,7 @@ tts:
     es-CO: [es-CO-GonzaloNeural, es-CO-SalomeNeural]
 
 diarization:
-  enabled: false               # requiere HF_TOKEN en .env y aceptar los términos del modelo
+  enabled: true                # solo actúa si hay HF_TOKEN en .env (y términos del modelo aceptados)
   model: pyannote/speaker-diarization-community-1
   num_speakers: 2
   correction_cues: [mejor, cambieme, quiteme, perdon, me equivoque, en lugar de, que sean]

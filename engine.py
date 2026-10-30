@@ -151,12 +151,13 @@ def process(audio_path, task="entrevista", extractor="rules", model=None):
         if task not in load_config()["schemas"]:
             raise ValueError(f"tarea desconocida: {task}")
         asr = transcribe(audio_path, task, model=model)
-        if load_config()["diarization"]["enabled"]:
+        diarizing = load_config()["diarization"]["enabled"] and bool(os.getenv("HF_TOKEN"))  # sin token (app pública): se omite
+        if diarizing:
             asr["segments"] = diarize(audio_path, asr["segments"])
         result.update(transcript=asr["text"], segments=asr["segments"], model=asr["model"],
                       device=asr["device"], compute_type=asr["compute_type"])
         result.update(extract_record(asr["text"], task, extractor, asr["segments"]))
-        if task == "pedido" and load_config()["diarization"]["enabled"]:
+        if task == "pedido" and diarizing:
             result["validation"]["correcciones"] = attribute_corrections(asr["segments"])
     except Exception as exc:                     # el error viaja en el resultado, no rompe la app
         result["error"] = f"{type(exc).__name__}: {exc}"
