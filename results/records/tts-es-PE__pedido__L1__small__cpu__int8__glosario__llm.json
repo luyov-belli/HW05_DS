@@ -1,0 +1,269 @@
+{
+ "meta": {
+  "corpus": "tts-es-PE",
+  "task": "pedido",
+  "level": "L1",
+  "model": "small",
+  "glossary": true,
+  "vad_threshold": 0.25,
+  "device_requested": "cpu",
+  "compute_type_requested": "int8",
+  "device_runtime": "cpu",
+  "compute_type_runtime": "int8_float32",
+  "gpu": null,
+  "vram_peak_mb": null,
+  "load_seconds": 3.84,
+  "audio_seconds": 476.1,
+  "asr_seconds": 186.3,
+  "seconds_per_audio_minute": 23.48,
+  "faster_whisper": "1.2.1",
+  "ctranslate2": "4.8.4",
+  "created": "2026-10-30T15:05:11+00:00",
+  "run": "tts-es-PE__pedido__L1__small__cpu__int8__glosario",
+  "extractor": "llm",
+  "llm": "qwen2.5:3b"
+ },
+ "clips": {
+  "L01": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "entero",
+      "cantidad": 1,
+      "precio_unitario": 69
+     },
+     {
+      "producto": "papas fritas",
+      "tamano": "familiar",
+      "cantidad": 1,
+      "precio_unitario": 18
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "jarra",
+      "cantidad": 1,
+      "precio_unitario": 16
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": "avenida los proceres 845 surco",
+    "metodo_pago": "yape",
+    "total_dicho": 103
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "vacio",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "cuadra",
+    "subtotal": 103.0,
+    "descuento": 0.0,
+    "total_calculado": 103.0,
+    "total_dicho": 103,
+    "diferencia": 0.0,
+    "motivos": [],
+    "causa": null
+   },
+   "error": null,
+   "seconds": 18.18
+  },
+  "L02": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "cuarto",
+      "cantidad": 1,
+      "precio_unitario": 22
+     },
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "cuarto",
+      "cantidad": 1,
+      "precio_unitario": 22
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "vaso",
+      "cantidad": 1,
+      "precio_unitario": 6
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "vaso",
+      "cantidad": 1,
+      "precio_unitario": 6
+     },
+     {
+      "producto": "ensalada",
+      "tamano": null,
+      "cantidad": 1,
+      "precio_unitario": 9
+     }
+    ],
+    "promocion": "martes brasero",
+    "direccion_entrega": "jiron huascar 1450 departamento 302 en jesus maria",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 62.5
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "verificado",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "no_cuadra",
+    "subtotal": 65.0,
+    "descuento": 6.5,
+    "total_calculado": 58.5,
+    "total_dicho": 62.5,
+    "diferencia": 4.0,
+    "motivos": [],
+    "causa": "error_hablante"
+   },
+   "error": null,
+   "seconds": 27.48
+  },
+  "L03": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "entero",
+      "cantidad": 1,
+      "precio_unitario": 69
+     },
+     {
+      "producto": "anticuchos",
+      "tamano": null,
+      "cantidad": 1,
+      "precio_unitario": 24
+     },
+     {
+      "producto": "gaseosa",
+      "tamano": "grande",
+      "cantidad": 1,
+      "precio_unitario": 12
+     }
+    ],
+    "promocion": "combo familiar",
+    "direccion_entrega": "calle las begonias 2280 san isidro",
+    "metodo_pago": "efectivo",
+    "total_dicho": 127
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "verificado",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "no_cuadra",
+    "subtotal": 105.0,
+    "descuento": 12.0,
+    "total_calculado": 93.0,
+    "total_dicho": 127,
+    "diferencia": 34.0,
+    "motivos": [],
+    "causa": "error_hablante"
+   },
+   "error": null,
+   "seconds": 21.21
+  },
+  "L04": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "medio",
+      "cantidad": 2,
+      "precio_unitario": 38
+     },
+     {
+      "producto": "papas fritas",
+      "tamano": "personal",
+      "cantidad": 2,
+      "precio_unitario": 10
+     }
+    ],
+    "promocion": "cupon de bienvenida",
+    "direccion_entrega": "avenida brasil 3021 pueblo libre",
+    "metodo_pago": "plin",
+    "total_dicho": 91
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "verificado",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "no_cuadra",
+    "subtotal": 96.0,
+    "descuento": 15.0,
+    "total_calculado": 81.0,
+    "total_dicho": 91,
+    "diferencia": 10.0,
+    "motivos": [],
+    "causa": "error_hablante"
+   },
+   "error": null,
+   "seconds": 17.29
+  },
+  "L05": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "cuarto",
+      "cantidad": 1,
+      "precio_unitario": 22
+     },
+     {
+      "producto": "ensalada",
+      "tamano": null,
+      "cantidad": 1,
+      "precio_unitario": 9
+     },
+     {
+      "producto": "gaseosa",
+      "tamano": "personal",
+      "cantidad": 1,
+      "precio_unitario": 4
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": "calle tarata 160 miraflores",
+    "metodo_pago": "yape",
+    "total_dicho": 35
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "vacio",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "cuadra",
+    "subtotal": 35.0,
+    "descuento": 0.0,
+    "total_calculado": 35.0,
+    "total_dicho": 35,
+    "diferencia": 0.0,
+    "motivos": [],
+    "causa": null
+   },
+   "error": null,
+   "seconds": 18.0
+  }
+ }
+}
