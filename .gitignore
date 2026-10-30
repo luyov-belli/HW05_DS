@@ -1,0 +1,16 @@
+# Credenciales
+.env
+
+# Audio y pesos de modelos: no se suben (ver README para regenerarlos)
+data/audio/
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.opus
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
