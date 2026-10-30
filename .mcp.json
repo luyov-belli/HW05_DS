@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "voz-a-registro": {
+      "command": ".venv/Scripts/python",
+      "args": ["mcp_server.py"]
+    }
+  }
+}
