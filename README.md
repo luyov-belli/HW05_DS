@@ -234,8 +234,36 @@ que la sintética (0.6 % en ambas tareas): justo lo que el enunciado advertía d
 - **Glosario (`hotwords`)**, mejora pareada por clip: entrevistas −1,07 pp de WER, IC95 [0,1, 1,7]; llamadas
   −2,03 pp, IC95 [−0,3, 6,1] (**incluye el cero**: con 4 llamadas no se puede afirmar que mejore). El *recall*
   de términos del glosario sube de 95 % a 100 % en entrevistas y de 53 % a 88 % en llamadas.
-- **GPU:** pendiente de la corrida en Colab (`colab_gpu.ipynb`); se agrega con `device_runtime = cuda` y
-  `vram_peak_mb` medido. Las corridas de CPU ya muestran la evidencia negativa: `device_runtime = cpu`, sin VRAM.
+
+#### GPU (Colab, Tesla T4) — entrevistas reales
+
+Todas las filas corrieron en la **misma máquina** (`machine: colab`), así que la diferencia entre CPU y GPU es
+el dispositivo y no el procesador. `dispositivo` y `precisión` se leen de CTranslate2 en tiempo de ejecución;
+la VRAM es el pico medido con NVML sobre la línea base.
+
+| Modelo | Dispositivo (runtime) | Precisión (runtime) | WER | IC95 | s por min de audio | VRAM pico |
+|---|---|---|---:|---|---:|---:|
+| `small` | **cpu** | int8_float32 | 7.0 % | [4.0, 9.0] | 34.0 | **0 MB** |
+| `small` | **cuda** | int8_float16 | 7.1 % | [3.7, 10.0] | 2.0 | 522 MB |
+| `small` | **cuda** | float16 | 6.7 % | [3.7, 8.9] | 2.0 | 887 MB |
+| `large-v3` | **cuda** | int8_float16 | 5.2 % | [3.7, 6.1] | 7.0 | 3 370 MB |
+| `large-v3` | **cuda** | float16 | 5.4 % | [3.5, 7.0] | 6.2 | 4 106 MB |
+
+- **Prueba de que se usó la GPU:** en la misma sesión, la corrida en CPU reporta `cpu` y **0 MB** de VRAM, y
+  las de GPU reportan `cuda` con memoria medida. La GPU es **17 veces más rápida** con `small` (2,0 contra
+  34 s por minuto de audio).
+- **Cuantización:** `large-v3` baja de 4 106 MB a 3 370 MB con int8 (−18 %), y `small` de 887 MB a 522 MB.
+  El enunciado midió 4 525 MB contra 2 926 MB. Ojo: NVML mide toda la GPU, y la misma configuración `float16`
+  marcó entre 4 010 y 4 874 MB en distintas corridas por la memoria que CTranslate2 deja reservada. Las
+  diferencias de menos de ~1 GB no son concluyentes.
+- **El texto cambia, no solo la velocidad:** CPU contra GPU (`small` int8) no deja **ninguna** de las 4
+  transcripciones idéntica (2,6 % de palabras distintas), y float16 contra int8 deja idéntica solo 1 de 4. El WER
+  apenas se mueve: más rápido no salió peor, pero tampoco es "lo mismo".
+- **Modelo grande:** `large-v3` baja el WER de 6,9 % a 5,4 %. Con él, el glosario **ya no ayuda**
+  (−0,4 pp, IC95 [−2,2, 1,1]): el modelo grande ya reconoce esos términos y el glosario solo le sirve a `small`.
+- En la escalera de llamadas, `large-v3` en GPU mantiene el WER entre 7 y 8 % hasta L2 (contra 9–11 % con
+  `small`) y en L3 baja de 57 % a 50 %. El registro por reglas llega a 0.95 en L2 y a 0.60 en L3 (0.50 con
+  `small`), y el validador sigue atrapando las 3 trampas en todos los niveles.
 
 ### Capa 2 — Registro (L0)
 

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T01:04:58+00:00",
+ "generated": "2026-11-02T02:39:30+00:00",
  "main_corpus": "real",
  "asr": [
   {
@@ -10,6 +10,7 @@
    "model": "base",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -49,6 +50,147 @@
    }
   },
   {
+   "run": "real__entrevista__L0__large-v3__cuda__float16__glosario__colab",
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "large-v3",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "float16",
+   "compute_type_runtime": "float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 4106,
+   "seconds_per_audio_minute": 6.15,
+   "load_seconds": 49.64,
+   "n_clips": 4,
+   "wer": 0.0536,
+   "wer_ci": [
+    0.035,
+    0.0702
+   ],
+   "cer": 0.0351,
+   "cer_ci": [
+    0.018,
+    0.0502
+   ],
+   "glossary_recall": 0.9474,
+   "clips": {
+    "E01": {
+     "wer": 0.0695,
+     "cer": 0.0487
+    },
+    "E02": {
+     "wer": 0.0393,
+     "cer": 0.0195
+    },
+    "E03": {
+     "wer": 0.0711,
+     "cer": 0.0521
+    },
+    "E04": {
+     "wer": 0.0291,
+     "cer": 0.0159
+    }
+   }
+  },
+  {
+   "run": "real__entrevista__L0__large-v3__cuda__float16__plano__colab",
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "large-v3",
+   "glossary": false,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "float16",
+   "compute_type_runtime": "float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 4874,
+   "seconds_per_audio_minute": 6.66,
+   "load_seconds": 3.01,
+   "n_clips": 4,
+   "wer": 0.0506,
+   "wer_ci": [
+    0.036,
+    0.0638
+   ],
+   "cer": 0.0322,
+   "cer_ci": [
+    0.0215,
+    0.0419
+   ],
+   "glossary_recall": 0.9474,
+   "clips": {
+    "E01": {
+     "wer": 0.0695,
+     "cer": 0.0459
+    },
+    "E02": {
+     "wer": 0.0536,
+     "cer": 0.034
+    },
+    "E03": {
+     "wer": 0.0418,
+     "cer": 0.0268
+    },
+    "E04": {
+     "wer": 0.0291,
+     "cer": 0.0159
+    }
+   }
+  },
+  {
+   "run": "real__entrevista__L0__large-v3__cuda__int8__glosario__colab",
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "large-v3",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 3370,
+   "seconds_per_audio_minute": 7.0,
+   "load_seconds": 8.83,
+   "n_clips": 4,
+   "wer": 0.0516,
+   "wer_ci": [
+    0.0373,
+    0.061
+   ],
+   "cer": 0.0357,
+   "cer_ci": [
+    0.0238,
+    0.0432
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "E01": {
+     "wer": 0.0629,
+     "cer": 0.0425
+    },
+    "E02": {
+     "wer": 0.05,
+     "cer": 0.0358
+    },
+    "E03": {
+     "wer": 0.0586,
+     "cer": 0.0441
+    },
+    "E04": {
+     "wer": 0.0291,
+     "cer": 0.0159
+    }
+   }
+  },
+  {
    "run": "real__entrevista__L0__small__cpu__float32__glosario",
    "corpus": "real",
    "task": "entrevista",
@@ -56,6 +198,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "float32",
    "compute_type_runtime": "float32",
@@ -102,6 +245,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -141,6 +285,53 @@
    }
   },
   {
+   "run": "real__entrevista__L0__small__cpu__int8__glosario__colab",
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cpu",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float32",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 0,
+   "seconds_per_audio_minute": 33.99,
+   "load_seconds": 1.46,
+   "n_clips": 4,
+   "wer": 0.0701,
+   "wer_ci": [
+    0.0399,
+    0.09
+   ],
+   "cer": 0.0309,
+   "cer_ci": [
+    0.0194,
+    0.041
+   ],
+   "glossary_recall": 0.9474,
+   "clips": {
+    "E01": {
+     "wer": 0.0927,
+     "cer": 0.0419
+    },
+    "E02": {
+     "wer": 0.0286,
+     "cer": 0.0157
+    },
+    "E03": {
+     "wer": 0.0795,
+     "cer": 0.0398
+    },
+    "E04": {
+     "wer": 0.0825,
+     "cer": 0.0243
+    }
+   }
+  },
+  {
    "run": "real__entrevista__L0__small__cpu__int8__plano",
    "corpus": "real",
    "task": "entrevista",
@@ -148,6 +339,7 @@
    "model": "small",
    "glossary": false,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -187,6 +379,147 @@
    }
   },
   {
+   "run": "real__entrevista__L0__small__cuda__float16__glosario__colab",
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "float16",
+   "compute_type_runtime": "float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 887,
+   "seconds_per_audio_minute": 2.0,
+   "load_seconds": 7.64,
+   "n_clips": 4,
+   "wer": 0.0672,
+   "wer_ci": [
+    0.0373,
+    0.0886
+   ],
+   "cer": 0.0277,
+   "cer_ci": [
+    0.0148,
+    0.0387
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "E01": {
+     "wer": 0.0894,
+     "cer": 0.0413
+    },
+    "E02": {
+     "wer": 0.025,
+     "cer": 0.0101
+    },
+    "E03": {
+     "wer": 0.0711,
+     "cer": 0.0311
+    },
+    "E04": {
+     "wer": 0.0874,
+     "cer": 0.0268
+    }
+   }
+  },
+  {
+   "run": "real__entrevista__L0__small__cuda__int8__glosario__colab",
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "int8",
+   "compute_type_runtime": "int8_float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 522,
+   "seconds_per_audio_minute": 2.01,
+   "load_seconds": 1.25,
+   "n_clips": 4,
+   "wer": 0.0711,
+   "wer_ci": [
+    0.0373,
+    0.1004
+   ],
+   "cer": 0.0283,
+   "cer_ci": [
+    0.0127,
+    0.0436
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "E01": {
+     "wer": 0.1093,
+     "cer": 0.0476
+    },
+    "E02": {
+     "wer": 0.025,
+     "cer": 0.0082
+    },
+    "E03": {
+     "wer": 0.0628,
+     "cer": 0.0282
+    },
+    "E04": {
+     "wer": 0.0874,
+     "cer": 0.0268
+    }
+   }
+  },
+  {
+   "run": "real__pedido__L0__large-v3__cuda__float16__glosario__colab",
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L0",
+   "model": "large-v3",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "float16",
+   "compute_type_runtime": "float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 4151,
+   "seconds_per_audio_minute": 6.21,
+   "load_seconds": 3.83,
+   "n_clips": 4,
+   "wer": 0.0721,
+   "wer_ci": [
+    0.0279,
+    0.1175
+   ],
+   "cer": 0.044,
+   "cer_ci": [
+    0.0127,
+    0.0759
+   ],
+   "glossary_recall": 0.9412,
+   "clips": {
+    "L01": {
+     "wer": 0.1243,
+     "cer": 0.0583
+    },
+    "L02": {
+     "wer": 0.027,
+     "cer": 0.0131
+    },
+    "L03": {
+     "wer": 0.1105,
+     "cer": 0.0948
+    },
+    "L04": {
+     "wer": 0.0289,
+     "cer": 0.0122
+    }
+   }
+  },
+  {
    "run": "real__pedido__L0__small__cpu__int8__glosario",
    "corpus": "real",
    "task": "pedido",
@@ -194,6 +527,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -240,6 +574,7 @@
    "model": "small",
    "glossary": false,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -279,6 +614,53 @@
    }
   },
   {
+   "run": "real__pedido__L1__large-v3__cuda__float16__glosario__colab",
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L1",
+   "model": "large-v3",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "float16",
+   "compute_type_runtime": "float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 4042,
+   "seconds_per_audio_minute": 6.27,
+   "load_seconds": 3.0,
+   "n_clips": 4,
+   "wer": 0.0764,
+   "wer_ci": [
+    0.0307,
+    0.1232
+   ],
+   "cer": 0.0475,
+   "cer_ci": [
+    0.0138,
+    0.0818
+   ],
+   "glossary_recall": 0.9412,
+   "clips": {
+    "L01": {
+     "wer": 0.1412,
+     "cer": 0.0708
+    },
+    "L02": {
+     "wer": 0.027,
+     "cer": 0.0121
+    },
+    "L03": {
+     "wer": 0.1047,
+     "cer": 0.0936
+    },
+    "L04": {
+     "wer": 0.0347,
+     "cer": 0.0156
+    }
+   }
+  },
+  {
    "run": "real__pedido__L1__small__cpu__int8__glosario",
    "corpus": "real",
    "task": "pedido",
@@ -286,6 +668,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -325,6 +708,53 @@
    }
   },
   {
+   "run": "real__pedido__L2__large-v3__cuda__float16__glosario__colab",
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L2",
+   "model": "large-v3",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "float16",
+   "compute_type_runtime": "float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 4010,
+   "seconds_per_audio_minute": 6.19,
+   "load_seconds": 3.04,
+   "n_clips": 4,
+   "wer": 0.0792,
+   "wer_ci": [
+    0.0279,
+    0.1318
+   ],
+   "cer": 0.0515,
+   "cer_ci": [
+    0.0116,
+    0.092
+   ],
+   "glossary_recall": 1.0,
+   "clips": {
+    "L01": {
+     "wer": 0.1356,
+     "cer": 0.0812
+    },
+    "L02": {
+     "wer": 0.027,
+     "cer": 0.0111
+    },
+    "L03": {
+     "wer": 0.1279,
+     "cer": 0.1037
+    },
+    "L04": {
+     "wer": 0.0289,
+     "cer": 0.0122
+    }
+   }
+  },
+  {
    "run": "real__pedido__L2__small__cpu__int8__glosario",
    "corpus": "real",
    "task": "pedido",
@@ -332,6 +762,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -378,6 +809,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.5,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -417,6 +849,53 @@
    }
   },
   {
+   "run": "real__pedido__L3__large-v3__cuda__float16__glosario__colab",
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L3",
+   "model": "large-v3",
+   "glossary": true,
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "device_runtime": "cuda",
+   "compute_type_requested": "float16",
+   "compute_type_runtime": "float16",
+   "gpu": "Tesla T4",
+   "vram_peak_mb": 4874,
+   "seconds_per_audio_minute": 8.91,
+   "load_seconds": 3.03,
+   "n_clips": 4,
+   "wer": 0.495,
+   "wer_ci": [
+    0.2,
+    0.9218
+   ],
+   "cer": 0.3631,
+   "cer_ci": [
+    0.1437,
+    0.6632
+   ],
+   "glossary_recall": 0.8235,
+   "clips": {
+    "L01": {
+     "wer": 1.1525,
+     "cer": 0.8241
+    },
+    "L02": {
+     "wer": 0.4162,
+     "cer": 0.3135
+    },
+    "L03": {
+     "wer": 0.2093,
+     "cer": 0.146
+    },
+    "L04": {
+     "wer": 0.1908,
+     "cer": 0.1414
+    }
+   }
+  },
+  {
    "run": "real__pedido__L3__small__cpu__int8__glosario",
    "corpus": "real",
    "task": "pedido",
@@ -424,6 +903,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -470,6 +950,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -520,6 +1001,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -570,6 +1052,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -620,6 +1103,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -670,6 +1154,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -720,6 +1205,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -770,6 +1256,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -820,6 +1307,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -870,6 +1358,7 @@
    "model": "base",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -920,6 +1409,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "float32",
    "compute_type_runtime": "float32",
@@ -970,6 +1460,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1020,6 +1511,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.5,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1070,6 +1562,7 @@
    "model": "small",
    "glossary": false,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1120,6 +1613,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1170,6 +1664,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.5,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1220,6 +1715,7 @@
    "model": "small",
    "glossary": false,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1270,6 +1766,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1320,6 +1817,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.5,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1370,6 +1868,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1420,6 +1919,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.5,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1470,6 +1970,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.25,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1520,6 +2021,7 @@
    "model": "small",
    "glossary": true,
    "vad_threshold": 0.5,
+   "machine": "local",
    "device_runtime": "cpu",
    "compute_type_requested": "int8",
    "compute_type_runtime": "int8_float32",
@@ -1566,6 +2068,28 @@
  "text_changes": [
   {
    "corpus": "real",
+   "cambia": "device_runtime",
+   "run_a": "real__entrevista__L0__small__cpu__int8__glosario__colab",
+   "run_b": "real__entrevista__L0__small__cuda__int8__glosario__colab",
+   "clips": 4,
+   "clips_identicos": 0,
+   "diferencia_texto_wer": 0.0263,
+   "wer_a": 0.0701,
+   "wer_b": 0.0711
+  },
+  {
+   "corpus": "real",
+   "cambia": "compute_type_requested",
+   "run_a": "real__entrevista__L0__large-v3__cuda__float16__glosario__colab",
+   "run_b": "real__entrevista__L0__large-v3__cuda__int8__glosario__colab",
+   "clips": 4,
+   "clips_identicos": 1,
+   "diferencia_texto_wer": 0.0179,
+   "wer_a": 0.0536,
+   "wer_b": 0.0516
+  },
+  {
+   "corpus": "real",
    "cambia": "compute_type_requested",
    "run_a": "real__entrevista__L0__small__cpu__float32__glosario",
    "run_b": "real__entrevista__L0__small__cpu__int8__glosario",
@@ -1574,6 +2098,17 @@
    "diferencia_texto_wer": 0.0194,
    "wer_a": 0.0662,
    "wer_b": 0.0691
+  },
+  {
+   "corpus": "real",
+   "cambia": "compute_type_requested",
+   "run_a": "real__entrevista__L0__small__cuda__float16__glosario__colab",
+   "run_b": "real__entrevista__L0__small__cuda__int8__glosario__colab",
+   "clips": 4,
+   "clips_identicos": 1,
+   "diferencia_texto_wer": 0.0146,
+   "wer_a": 0.0672,
+   "wer_b": 0.0711
   },
   {
    "corpus": "tts-es-PE",
@@ -1588,6 +2123,25 @@
   }
  ],
  "glossary_effect": [
+  {
+   "corpus": "real",
+   "cambia": "glossary",
+   "de": false,
+   "a": true,
+   "tarea": "entrevista",
+   "nivel": "L0",
+   "modelo": "large-v3",
+   "clips": 4,
+   "wer_antes": 0.0506,
+   "wer_despues": 0.0536,
+   "mejora_wer_media": -0.0037,
+   "mejora_wer_ci": [
+    -0.022,
+    0.0107
+   ],
+   "recall_glosario_antes": 0.9474,
+   "recall_glosario_despues": 0.9474
+  },
   {
    "corpus": "real",
    "cambia": "glossary",
@@ -1794,6 +2348,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7083,
    "accuracy_ci": [
     0.5,
@@ -1893,6 +2448,335 @@
    }
   },
   {
+   "run": "real__entrevista__L0__large-v3__cuda__float16__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "large-v3",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "float16",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.7917,
+   "accuracy_ci": [
+    0.625,
+    0.9583
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ],
+     "mae": 1.0
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.25,
+     "ci": [
+      0.0,
+      0.75
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 24,
+   "verificados_correctos": 19,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0695,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0393,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0711,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0291,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "real__entrevista__L0__large-v3__cuda__float16__plano__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "large-v3",
+   "device_runtime": "cuda",
+   "glossary": false,
+   "compute_type_requested": "float16",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.75,
+   "accuracy_ci": [
+    0.5833,
+    0.9167
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ],
+     "mae": 1.0
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 24,
+   "verificados_correctos": 18,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0695,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0536,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0418,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E04": {
+     "wer": 0.0291,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "real__entrevista__L0__large-v3__cuda__int8__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "large-v3",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.7917,
+   "accuracy_ci": [
+    0.625,
+    0.9583
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ],
+     "mae": 1.0
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.25,
+     "ci": [
+      0.0,
+      0.75
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 24,
+   "verificados_correctos": 19,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0629,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.05,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0586,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0291,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
    "run": "real__entrevista__L0__small__cpu__float32__glosario",
    "extractor": "rules",
    "llm": null,
@@ -1904,6 +2788,7 @@
    "glossary": true,
    "compute_type_requested": "float32",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7917,
    "accuracy_ci": [
     0.625,
@@ -2001,6 +2886,117 @@
    }
   },
   {
+   "run": "real__entrevista__L0__small__cpu__int8__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cpu",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.75,
+   "accuracy_ci": [
+    0.5833,
+    0.9167
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ],
+     "mae": 1.0
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 24,
+   "verificados_correctos": 18,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0927,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.0286,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0795,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E04": {
+     "wer": 0.0825,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
    "run": "real__entrevista__L0__small__cpu__int8__glosario",
    "extractor": "llm",
    "llm": "qwen2.5:3b",
@@ -2012,6 +3008,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.875,
    "accuracy_ci": [
     0.75,
@@ -2116,6 +3113,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.75,
    "accuracy_ci": [
     0.5833,
@@ -2226,6 +3224,7 @@
    "glossary": false,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7083,
    "accuracy_ci": [
     0.5417,
@@ -2326,6 +3325,346 @@
    }
   },
   {
+   "run": "real__entrevista__L0__small__cuda__float16__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "float16",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.7917,
+   "accuracy_ci": [
+    0.625,
+    0.9583
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ],
+     "mae": 1.0
+    },
+    "ultimo_puesto": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.25,
+     "ci": [
+      0.0,
+      0.75
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 24,
+   "verificados_correctos": 19,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.0894,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.025,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0711,
+     "error": null,
+     "correctos": 6,
+     "campos": 6,
+     "incorrectos": []
+    },
+    "E04": {
+     "wer": 0.0874,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "real__entrevista__L0__small__cuda__int8__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "entrevista",
+   "level": "L0",
+   "model": "small",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "int8",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.75,
+   "accuracy_ci": [
+    0.5833,
+    0.9167
+   ],
+   "fields": {
+    "anios_experiencia": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ],
+     "mae": 1.0
+    },
+    "ultimo_puesto": {
+     "accuracy": 0.75,
+     "ci": [
+      0.25,
+      1.0
+     ]
+    },
+    "tecnologias": {
+     "accuracy": 0.25,
+     "ci": [
+      0.0,
+      0.75
+     ]
+    },
+    "pretension_salarial": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    },
+    "disponibilidad": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "nivel_ingles": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    }
+   },
+   "verificados": 24,
+   "verificados_correctos": 18,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "E01": {
+     "wer": 0.1093,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "tecnologias"
+     ]
+    },
+    "E02": {
+     "wer": 0.025,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    },
+    "E03": {
+     "wer": 0.0628,
+     "error": null,
+     "correctos": 5,
+     "campos": 6,
+     "incorrectos": [
+      "ultimo_puesto"
+     ]
+    },
+    "E04": {
+     "wer": 0.0874,
+     "error": null,
+     "correctos": 4,
+     "campos": 6,
+     "incorrectos": [
+      "anios_experiencia",
+      "tecnologias"
+     ]
+    }
+   }
+  },
+  {
+   "run": "real__pedido__L0__large-v3__cuda__float16__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L0",
+   "model": "large-v3",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "float16",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.85,
+   "accuracy_ci": [
+    0.7,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.75,
+     "ci": [
+      0.25,
+      1.0
+     ],
+     "macro_f1": 0.75
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 18,
+   "verificados_correctos": 16,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.1243,
+     "error": null,
+     "correctos": 3,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.1105,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0289,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 1,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
    "run": "real__pedido__L0__small__cpu__int8__glosario",
    "extractor": "llm",
    "llm": "qwen2.5:3b",
@@ -2337,6 +3676,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.8,
    "accuracy_ci": [
     0.6,
@@ -2458,6 +3798,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.9,
    "accuracy_ci": [
     0.75,
@@ -2576,6 +3917,7 @@
    "glossary": false,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.85,
    "accuracy_ci": [
     0.6988,
@@ -2684,6 +4026,126 @@
    }
   },
   {
+   "run": "real__pedido__L1__large-v3__cuda__float16__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L1",
+   "model": "large-v3",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "float16",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.85,
+   "accuracy_ci": [
+    0.7,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.75,
+     "ci": [
+      0.25,
+      1.0
+     ],
+     "macro_f1": 0.75
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 18,
+   "verificados_correctos": 16,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.1412,
+     "error": null,
+     "correctos": 3,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.1047,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0347,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 1,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
    "run": "real__pedido__L1__small__cpu__int8__glosario",
    "extractor": "llm",
    "llm": "qwen2.5:3b",
@@ -2695,6 +4157,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.8,
    "accuracy_ci": [
     0.6,
@@ -2815,6 +4278,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.85,
    "accuracy_ci": [
     0.7,
@@ -2923,6 +4387,123 @@
    }
   },
   {
+   "run": "real__pedido__L2__large-v3__cuda__float16__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L2",
+   "model": "large-v3",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "float16",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.95,
+   "accuracy_ci": [
+    0.85,
+    1.0
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "direccion_entrega": {
+     "accuracy": 0.75,
+     "ci": [
+      0.25,
+      1.0
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "macro_f1": 1.0
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 19,
+   "verificados_correctos": 18,
+   "sin_verificar": 0,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 0.1356,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "cuadra",
+     "causa": null,
+     "roto": false
+    },
+    "L02": {
+     "wer": 0.027,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.1279,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.0289,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    }
+   },
+   "validator": {
+    "caught": 3,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 1,
+    "diagnosis_right": 3,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 1.0
+   }
+  },
+  {
    "run": "real__pedido__L2__small__cpu__int8__glosario",
    "extractor": "llm",
    "llm": "qwen2.5:3b",
@@ -2934,6 +4515,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7,
    "accuracy_ci": [
     0.5,
@@ -3058,6 +4640,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.85,
    "accuracy_ci": [
     0.7,
@@ -3178,6 +4761,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.5,
+   "machine": "local",
    "accuracy": 0.85,
    "accuracy_ci": [
     0.7,
@@ -3286,6 +4870,132 @@
    }
   },
   {
+   "run": "real__pedido__L3__large-v3__cuda__float16__glosario__colab",
+   "extractor": "rules",
+   "llm": null,
+   "corpus": "real",
+   "task": "pedido",
+   "level": "L3",
+   "model": "large-v3",
+   "device_runtime": "cuda",
+   "glossary": true,
+   "compute_type_requested": "float16",
+   "vad_threshold": 0.25,
+   "machine": "colab",
+   "accuracy": 0.6,
+   "accuracy_ci": [
+    0.35,
+    0.8
+   ],
+   "fields": {
+    "items": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ]
+    },
+    "promocion": {
+     "accuracy": 0.75,
+     "ci": [
+      0.25,
+      1.0
+     ],
+     "macro_f1": 0.6667
+    },
+    "direccion_entrega": {
+     "accuracy": 0.25,
+     "ci": [
+      0.0,
+      0.75
+     ]
+    },
+    "metodo_pago": {
+     "accuracy": 0.5,
+     "ci": [
+      0.0,
+      1.0
+     ],
+     "macro_f1": 0.5
+    },
+    "total_dicho": {
+     "accuracy": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ],
+     "mae": 0.0
+    }
+   },
+   "verificados": 17,
+   "verificados_correctos": 12,
+   "sin_verificar": 1,
+   "sin_verificar_correctos": 0,
+   "clips": {
+    "L01": {
+     "wer": 1.1525,
+     "error": null,
+     "correctos": 1,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "promocion",
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L02": {
+     "wer": 0.4162,
+     "error": null,
+     "correctos": 2,
+     "campos": 5,
+     "incorrectos": [
+      "items",
+      "direccion_entrega",
+      "metodo_pago"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_asr",
+     "roto": true
+    },
+    "L03": {
+     "wer": 0.2093,
+     "error": null,
+     "correctos": 5,
+     "campos": 5,
+     "incorrectos": [],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    },
+    "L04": {
+     "wer": 0.1908,
+     "error": null,
+     "correctos": 4,
+     "campos": 5,
+     "incorrectos": [
+      "direccion_entrega"
+     ],
+     "estado": "no_cuadra",
+     "causa": "error_hablante",
+     "roto": true
+    }
+   },
+   "validator": {
+    "caught": 4,
+    "missed": 0,
+    "false_alarms": 0,
+    "correct_pass": 0,
+    "diagnosis_right": 2,
+    "diagnosis_total": 3,
+    "recall": 1.0,
+    "diagnosis_accuracy": 0.6667
+   }
+  },
+  {
    "run": "real__pedido__L3__small__cpu__int8__glosario",
    "extractor": "llm",
    "llm": "qwen2.5:3b",
@@ -3297,6 +5007,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.5,
    "accuracy_ci": [
     0.3,
@@ -3425,6 +5136,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.5,
    "accuracy_ci": [
     0.3,
@@ -3553,6 +5265,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.8,
    "accuracy_ci": [
     0.6667,
@@ -3669,6 +5382,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.92,
    "accuracy_ci": [
     0.8,
@@ -3797,6 +5511,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7667,
    "accuracy_ci": [
     0.6,
@@ -3916,6 +5631,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.88,
    "accuracy_ci": [
     0.76,
@@ -4046,6 +5762,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.8333,
    "accuracy_ci": [
     0.7,
@@ -4161,6 +5878,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.92,
    "accuracy_ci": [
     0.8,
@@ -4289,6 +6007,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.8333,
    "accuracy_ci": [
     0.7,
@@ -4404,6 +6123,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.96,
    "accuracy_ci": [
     0.88,
@@ -4530,6 +6250,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7,
    "accuracy_ci": [
     0.5333,
@@ -4651,6 +6372,7 @@
    "glossary": true,
    "compute_type_requested": "float32",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.8,
    "accuracy_ci": [
     0.6667,
@@ -4768,6 +6490,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7667,
    "accuracy_ci": [
     0.6325,
@@ -4887,6 +6610,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.8,
    "accuracy_ci": [
     0.6667,
@@ -5004,6 +6728,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.5,
+   "machine": "local",
    "accuracy": 0.8,
    "accuracy_ci": [
     0.6667,
@@ -5121,6 +6846,7 @@
    "glossary": false,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.7667,
    "accuracy_ci": [
     0.6,
@@ -5240,6 +6966,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.88,
    "accuracy_ci": [
     0.759,
@@ -5370,6 +7097,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.96,
    "accuracy_ci": [
     0.88,
@@ -5496,6 +7224,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.5,
+   "machine": "local",
    "accuracy": 0.96,
    "accuracy_ci": [
     0.88,
@@ -5622,6 +7351,7 @@
    "glossary": false,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.84,
    "accuracy_ci": [
     0.68,
@@ -5754,6 +7484,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.88,
    "accuracy_ci": [
     0.759,
@@ -5884,6 +7615,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 1.0,
    "accuracy_ci": [
     1.0,
@@ -6008,6 +7740,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.5,
+   "machine": "local",
    "accuracy": 1.0,
    "accuracy_ci": [
     1.0,
@@ -6132,6 +7865,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.88,
    "accuracy_ci": [
     0.76,
@@ -6261,6 +7995,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.96,
    "accuracy_ci": [
     0.88,
@@ -6387,6 +8122,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.5,
+   "machine": "local",
    "accuracy": 0.16,
    "accuracy_ci": [
     0.04,
@@ -6537,6 +8273,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.76,
    "accuracy_ci": [
     0.6,
@@ -6669,6 +8406,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.25,
+   "machine": "local",
    "accuracy": 0.56,
    "accuracy_ci": [
     0.36,
@@ -6809,6 +8547,7 @@
    "glossary": true,
    "compute_type_requested": "int8",
    "vad_threshold": 0.5,
+   "machine": "local",
    "accuracy": 0.56,
    "accuracy_ci": [
     0.36,

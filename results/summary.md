@@ -1,6 +1,6 @@
 # Resultados (corpus principal: `real`)
 
-Generado: 2026-11-02T01:04:58+00:00. Regenerar con `python pipeline.py evaluate`.
+Generado: 2026-11-02T02:39:30+00:00. Regenerar con `python pipeline.py evaluate`.
 
 ## Verdad de campo: distribución de cada campo
 
@@ -23,14 +23,21 @@ Generado: 2026-11-02T01:04:58+00:00. Regenerar con `python pipeline.py evaluate`
 
 ## Capa 1 — Transcripción (L0)
 
-| corpus   | tarea      | modelo   | dispositivo (runtime)   | precisión (runtime)   | glosario   |   VAD |    WER | IC95 WER       |    CER |   s/min audio | VRAM pico MB   | GPU   |
-|:---------|:-----------|:---------|:------------------------|:----------------------|:-----------|------:|-------:|:---------------|-------:|--------------:|:---------------|:------|
-| real     | entrevista | base     | cpu                     | int8_float32          | True       |  0.25 | 0.15   | [0.112, 0.193] | 0.0671 |          6.78 |                |       |
-| real     | entrevista | small    | cpu                     | float32               | True       |  0.25 | 0.0662 | [0.037, 0.089] | 0.0271 |         28.89 |                |       |
-| real     | entrevista | small    | cpu                     | int8_float32          | True       |  0.25 | 0.0691 | [0.040, 0.089] | 0.0305 |         59.27 |                |       |
-| real     | entrevista | small    | cpu                     | int8_float32          | False      |  0.25 | 0.0808 | [0.054, 0.102] | 0.0346 |         14.92 |                |       |
-| real     | pedido     | small    | cpu                     | int8_float32          | True       |  0.25 | 0.0905 | [0.056, 0.126] | 0.0408 |         27.35 |                |       |
-| real     | pedido     | small    | cpu                     | int8_float32          | False      |  0.25 | 0.1117 | [0.085, 0.135] | 0.0467 |         15.19 |                |       |
+| corpus   | tarea      | máquina   | modelo   | dispositivo (runtime)   | precisión (runtime)   | glosario   |   VAD |    WER | IC95 WER       |    CER |   s/min audio |   VRAM pico MB | GPU      |
+|:---------|:-----------|:----------|:---------|:------------------------|:----------------------|:-----------|------:|-------:|:---------------|-------:|--------------:|---------------:|:---------|
+| real     | entrevista | local     | base     | cpu                     | int8_float32          | True       |  0.25 | 0.15   | [0.112, 0.193] | 0.0671 |          6.78 |            nan | nan      |
+| real     | entrevista | colab     | large-v3 | cuda                    | float16               | True       |  0.25 | 0.0536 | [0.035, 0.070] | 0.0351 |          6.15 |           4106 | Tesla T4 |
+| real     | entrevista | colab     | large-v3 | cuda                    | float16               | False      |  0.25 | 0.0506 | [0.036, 0.064] | 0.0322 |          6.66 |           4874 | Tesla T4 |
+| real     | entrevista | colab     | large-v3 | cuda                    | int8_float16          | True       |  0.25 | 0.0516 | [0.037, 0.061] | 0.0357 |          7    |           3370 | Tesla T4 |
+| real     | entrevista | local     | small    | cpu                     | float32               | True       |  0.25 | 0.0662 | [0.037, 0.089] | 0.0271 |         28.89 |            nan | nan      |
+| real     | entrevista | local     | small    | cpu                     | int8_float32          | True       |  0.25 | 0.0691 | [0.040, 0.089] | 0.0305 |         59.27 |            nan | nan      |
+| real     | entrevista | colab     | small    | cpu                     | int8_float32          | True       |  0.25 | 0.0701 | [0.040, 0.090] | 0.0309 |         33.99 |              0 | Tesla T4 |
+| real     | entrevista | local     | small    | cpu                     | int8_float32          | False      |  0.25 | 0.0808 | [0.054, 0.102] | 0.0346 |         14.92 |            nan | nan      |
+| real     | entrevista | colab     | small    | cuda                    | float16               | True       |  0.25 | 0.0672 | [0.037, 0.089] | 0.0277 |          2    |            887 | Tesla T4 |
+| real     | entrevista | colab     | small    | cuda                    | int8_float16          | True       |  0.25 | 0.0711 | [0.037, 0.100] | 0.0283 |          2.01 |            522 | Tesla T4 |
+| real     | pedido     | colab     | large-v3 | cuda                    | float16               | True       |  0.25 | 0.0721 | [0.028, 0.117] | 0.044  |          6.21 |           4151 | Tesla T4 |
+| real     | pedido     | local     | small    | cpu                     | int8_float32          | True       |  0.25 | 0.0905 | [0.056, 0.126] | 0.0408 |         27.35 |            nan | nan      |
+| real     | pedido     | local     | small    | cpu                     | int8_float32          | False      |  0.25 | 0.1117 | [0.085, 0.135] | 0.0467 |         15.19 |            nan | nan      |
 
 ## Capa 2 — Registro (exactitud por campo, L0)
 
@@ -54,6 +61,7 @@ Generado: 2026-11-02T01:04:58+00:00. Regenerar con `python pipeline.py evaluate`
 
 | corpus    | cambia   | de    | a    | tarea      | nivel   | modelo   |   clips |   wer_antes |   wer_despues |   mejora_wer_media | mejora_wer_ci   |   recall_glosario_antes |   recall_glosario_despues |
 |:----------|:---------|:------|:-----|:-----------|:--------|:---------|--------:|------------:|--------------:|-------------------:|:----------------|------------------------:|--------------------------:|
+| real      | glossary | False | True | entrevista | L0      | large-v3 |       4 |      0.0506 |        0.0536 |            -0.0037 | [-0.022, 0.011] |                  0.9474 |                    0.9474 |
 | real      | glossary | False | True | entrevista | L0      | small    |       4 |      0.0808 |        0.0691 |             0.0107 | [0.001, 0.017]  |                  0.9474 |                    1      |
 | real      | glossary | False | True | pedido     | L0      | small    |       4 |      0.1117 |        0.0905 |             0.0203 | [-0.003, 0.061] |                  0.5294 |                    0.8824 |
 | tts-es-PE | glossary | False | True | entrevista | L0      | small    |       5 |      0.0113 |        0.0056 |             0.0061 | [0.003, 0.009]  |                  0.7083 |                    0.7917 |
@@ -72,23 +80,30 @@ Generado: 2026-11-02T01:04:58+00:00. Regenerar con `python pipeline.py evaluate`
 
 ## ¿Cambia el texto con el dispositivo o la precisión?
 
-| corpus    | cambia                 |   clips |   clips_identicos |   diferencia_texto_wer |   wer_a |   wer_b | a                                                        | b                                                     |
-|:----------|:-----------------------|--------:|------------------:|-----------------------:|--------:|--------:|:---------------------------------------------------------|:------------------------------------------------------|
-| real      | compute_type_requested |       4 |                 0 |                 0.0194 |  0.0662 |  0.0691 | real__entrevista__L0__small__cpu__float32__glosario      | real__entrevista__L0__small__cpu__int8__glosario      |
-| tts-es-PE | compute_type_requested |       5 |                 3 |                 0.0324 |  0.0363 |  0.0056 | tts-es-PE__entrevista__L0__small__cpu__float32__glosario | tts-es-PE__entrevista__L0__small__cpu__int8__glosario |
+| corpus    | cambia                 |   clips |   clips_identicos |   diferencia_texto_wer |   wer_a |   wer_b | a                                                              | b                                                           |
+|:----------|:-----------------------|--------:|------------------:|-----------------------:|--------:|--------:|:---------------------------------------------------------------|:------------------------------------------------------------|
+| real      | device_runtime         |       4 |                 0 |                 0.0263 |  0.0701 |  0.0711 | real__entrevista__L0__small__cpu__int8__glosario__colab        | real__entrevista__L0__small__cuda__int8__glosario__colab    |
+| real      | compute_type_requested |       4 |                 1 |                 0.0179 |  0.0536 |  0.0516 | real__entrevista__L0__large-v3__cuda__float16__glosario__colab | real__entrevista__L0__large-v3__cuda__int8__glosario__colab |
+| real      | compute_type_requested |       4 |                 0 |                 0.0194 |  0.0662 |  0.0691 | real__entrevista__L0__small__cpu__float32__glosario            | real__entrevista__L0__small__cpu__int8__glosario            |
+| real      | compute_type_requested |       4 |                 1 |                 0.0146 |  0.0672 |  0.0711 | real__entrevista__L0__small__cuda__float16__glosario__colab    | real__entrevista__L0__small__cuda__int8__glosario__colab    |
+| tts-es-PE | compute_type_requested |       5 |                 3 |                 0.0324 |  0.0363 |  0.0056 | tts-es-PE__entrevista__L0__small__cpu__float32__glosario       | tts-es-PE__entrevista__L0__small__cpu__int8__glosario       |
 
 ## Escalera de degradación y validador aritmético (pedidos)
 
-| nivel   | extractor   |    WER |   exactitud registro |   items |   total_dicho |   atrapados |   escapados |   falsas alarmas | diagnóstico ok   |
-|:--------|:------------|-------:|---------------------:|--------:|--------------:|------------:|------------:|-----------------:|:-----------------|
-| L0      | llm         | 0.0905 |                 0.8  |    0.5  |          1    |           3 |           0 |                0 | 1/1              |
-| L0      | rules       | 0.0905 |                 0.9  |    1    |          1    |           3 |           0 |                0 | 3/3              |
-| L1      | llm         | 0.1146 |                 0.8  |    0.75 |          1    |           3 |           0 |                0 | 2/2              |
-| L1      | rules       | 0.1146 |                 0.85 |    1    |          1    |           3 |           0 |                0 | 3/3              |
-| L2      | llm         | 0.1132 |                 0.7  |    0.25 |          1    |           3 |           0 |                0 | 0/0              |
-| L2      | rules       | 0.1132 |                 0.85 |    1    |          1    |           3 |           0 |                0 | 3/3              |
-| L3      | llm         | 0.5686 |                 0.5  |    0.25 |          0.75 |           3 |           0 |                0 | 0/0              |
-| L3      | rules       | 0.5686 |                 0.5  |    0.25 |          0.75 |           4 |           0 |                0 | 0/0              |
+| modelo          | nivel   | extractor   |    WER |   exactitud registro |   items |   total_dicho |   atrapados |   escapados |   falsas alarmas | diagnóstico ok   |
+|:----------------|:--------|:------------|-------:|---------------------:|--------:|--------------:|------------:|------------:|-----------------:|:-----------------|
+| large-v3 (cuda) | L0      | rules       | 0.0721 |                 0.85 |    1    |          1    |           3 |           0 |                0 | 3/3              |
+| large-v3 (cuda) | L1      | rules       | 0.0764 |                 0.85 |    1    |          1    |           3 |           0 |                0 | 3/3              |
+| large-v3 (cuda) | L2      | rules       | 0.0792 |                 0.95 |    1    |          1    |           3 |           0 |                0 | 3/3              |
+| large-v3 (cuda) | L3      | rules       | 0.495  |                 0.6  |    0.5  |          1    |           4 |           0 |                0 | 2/3              |
+| small (cpu)     | L0      | llm         | 0.0905 |                 0.8  |    0.5  |          1    |           3 |           0 |                0 | 1/1              |
+| small (cpu)     | L0      | rules       | 0.0905 |                 0.9  |    1    |          1    |           3 |           0 |                0 | 3/3              |
+| small (cpu)     | L1      | llm         | 0.1146 |                 0.8  |    0.75 |          1    |           3 |           0 |                0 | 2/2              |
+| small (cpu)     | L1      | rules       | 0.1146 |                 0.85 |    1    |          1    |           3 |           0 |                0 | 3/3              |
+| small (cpu)     | L2      | llm         | 0.1132 |                 0.7  |    0.25 |          1    |           3 |           0 |                0 | 0/0              |
+| small (cpu)     | L2      | rules       | 0.1132 |                 0.85 |    1    |          1    |           3 |           0 |                0 | 3/3              |
+| small (cpu)     | L3      | llm         | 0.5686 |                 0.5  |    0.25 |          0.75 |           3 |           0 |                0 | 0/0              |
+| small (cpu)     | L3      | rules       | 0.5686 |                 0.5  |    0.25 |          0.75 |           4 |           0 |                0 | 0/0              |
 
 ## WER no predice si el registro sirve
 
