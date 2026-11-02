@@ -9,9 +9,9 @@ from pathlib import Path
 
 import pandas as pd
 import streamlit as st
-import yaml
 
 import engine
+import pipeline
 from pipeline import is_reference
 
 CFG = engine.load_config()
@@ -33,9 +33,8 @@ def load_json(relative):
 
 
 @st.cache_data
-def ground_truth(task):
-    with open(ROOT / CFG["paths"]["ground_truth"][task], encoding="utf-8") as f:
-        return yaml.safe_load(f)
+def ground_truth(task, corpus):
+    return pipeline.ground_truth(task, corpus)
 
 
 def find_run(metrics, task, level="L0"):
@@ -112,7 +111,7 @@ El mismo `engine.process(audio, tarea)` sirve a las dos tareas: lo único que ca
 
 with tab_corpus:
     task = st.radio("Tarea", list(TASKS), format_func=TASKS.get, horizontal=True, key="corpus_task")
-    clips = ground_truth(task)
+    clips = ground_truth(task, metrics["main_corpus"])
     run_id = find_run(metrics, task)
     run = load_json(f"{CFG['paths']['transcripts']}/{run_id}.json") if run_id else None
     clip = st.selectbox("Clip", clips, format_func=lambda c: f"{c['id']} — {c.get('variacion') or c.get('nota')}")
@@ -174,7 +173,7 @@ with tab_orders:
         st.dataframe(ladder, hide_index=True, use_container_width=True)
         pick = st.selectbox("Ver detalle", rows, format_func=lambda r: f"{r['level']} · {r['extractor']}")
         records = load_json(f"{CFG['paths']['records']}/{pick['run']}__{pick['extractor']}.json")
-        gold = {c["id"]: c for c in ground_truth("pedido")}
+        gold = {c["id"]: c for c in ground_truth("pedido", main)}
         for cid, rec in records["clips"].items():
             with st.expander(f"{cid} — trampas: {', '.join(gold[cid].get('trampas', [])) or 'ninguna'} — "
                              f"{(rec['validation'] or {}).get('estado')}"):

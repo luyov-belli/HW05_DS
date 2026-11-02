@@ -115,9 +115,9 @@ schemas:
         describe: "una de: basico, intermedio, avanzado"
         cues: [ingles]
         classes:
-          basico: [basico, a1, a2]
-          intermedio: [intermedio, b1, b2]
-          avanzado: [avanzado, c1, c2, fluido, nativo]
+          basico: [basico, basica, a1, a2]
+          intermedio: [intermedio, intermedia, b1, b2]
+          avanzado: [avanzado, avanzada, c1, c2, fluido, nativo]
 
   pedido:
     catalog:                     # carta de referencia (precios en soles)
@@ -201,7 +201,7 @@ ladder:
 
 # Corpus que alimenta las tablas principales. Cambia a "real" cuando tengas tus grabaciones.
 evaluation:
-  main_corpus: tts-es-PE
+  main_corpus: real
   bootstrap_samples: 2000
   confidence: 0.95
   seed: 7

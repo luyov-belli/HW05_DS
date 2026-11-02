@@ -3,9 +3,16 @@
 # El "guion" es también la transcripción de referencia: si al grabar alguien se desvía,
 # corrige aquí el texto para que diga exactamente lo que se escucha en el audio.
 # A = entrevistador(a), B = candidato(a).
+# El bloque `grabacion` existe solo en los clips grabados de verdad (E05 no se grabó: queda solo sintético).
 
 - id: E01
   variacion: "Pretensión salarial al inicio, con un número distractor (sueldo anterior). Inglés al final."
+  grabacion:          # solo corpus real: quién grabó y qué se dijo distinto al guion (verificado escuchando)
+    participante: P1
+    archivo_original: Entrevista 1.m4a
+    duracion_s: 137.8
+    reemplazos:
+      - ["B: Diría que intermedio.", "B: Diría que intermedia."]
   campos:
     anios_experiencia: 4
     ultimo_puesto: analista de datos
@@ -35,6 +42,14 @@
 
 - id: E02
   variacion: "Los años nunca se dicen como total (3 + 2,5). Tecnologías al final, con una negada (AWS). Salario en dólares."
+  grabacion:
+    participante: P3
+    archivo_original: Entrevista 03.m4a
+    duracion_s: 141.3
+    reemplazos:
+      - ["B: Soy desarrollador backend.", "B: Soy desarrolladora backend."]
+      - ["cuarenta mil paquetes al día.", "cuarenta mil paquetes al día, más o menos."]
+    campos: {ultimo_puesto: desarrolladora backend}
   campos:
     anios_experiencia: 5.5
     ultimo_puesto: desarrollador backend
@@ -64,6 +79,14 @@
 
 - id: E03
   variacion: "Disponibilidad primero. Salario dicho como rango antes de fijarlo. Inglés en medio."
+  grabacion:
+    participante: P2
+    archivo_original: Entrevista 02.m4a
+    duracion_s: 102.4
+    reemplazos:
+      - ["A: Buenas tardes, bienvenida.", "A: Buenas tardes, bienvenido."]
+      - ["B: Llevo ocho años", "B: Bueno, llevo ocho años"]
+      - ["Siendo concreta, mi pretensión", "Siendo concreto, en realidad mi pretensión"]
   campos:
     anios_experiencia: 8
     ultimo_puesto: jefe de proyectos
@@ -91,6 +114,13 @@
 
 - id: E04
   variacion: "Inglés dicho como certificación (C1). Disponibilidad relativa a un evento (dos meses). Experiencia incluye prácticas."
+  grabacion:
+    participante: P4
+    archivo_original: Entrevista 04.m4a
+    duracion_s: 104.2
+    reemplazos:
+      - ["Actualmente soy ingeniera de datos junior", "Actualmente soy ingeniero de datos junior"]
+    campos: {ultimo_puesto: ingeniero de datos junior}
   campos:
     anios_experiencia: 2
     ultimo_puesto: ingeniera de datos junior

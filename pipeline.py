@@ -9,6 +9,7 @@
 """
 import argparse
 import asyncio
+import functools
 import gc
 import io
 import json
@@ -38,9 +39,29 @@ def path(key):
     return engine.ROOT / CFG["paths"][key]
 
 
-def ground_truth(task):
+def ground_truth(task, corpus=None):
+    """Guiones y valores correctos de una tarea.
+
+    Para el corpus real devuelve solo los clips grabados y les aplica el bloque `grabacion`:
+    lo que se dijo distinto al guion (reemplazos de texto y campos). Los clips sintéticos
+    usan el guion original, porque eso es lo que la voz TTS dijo.
+    """
     with open(engine.ROOT / CFG["paths"]["ground_truth"][task], encoding="utf-8") as f:
-        return yaml.safe_load(f)
+        clips = yaml.safe_load(f)
+    if corpus != "real":
+        return clips
+    adjusted = []
+    for clip in clips:
+        recording = clip.get("grabacion")
+        if not recording:
+            continue
+        clip = {**clip, "campos": {**clip["campos"], **recording.get("campos", {})}}
+        for old, new in recording.get("reemplazos", []):
+            if old not in clip["guion"]:
+                raise ValueError(f"{clip['id']}: el texto '{old}' no está en el guion")
+            clip["guion"] = clip["guion"].replace(old, new)
+        adjusted.append(clip)
+    return adjusted
 
 
 def audio_file(corpus, level, clip_id):
@@ -347,15 +368,17 @@ def cmd_extract(args):
 # --------------------------------------------------------------------------------------
 # evaluate: las dos capas de métricas, la escalera, el validador y el gate
 # --------------------------------------------------------------------------------------
-def _gold():
-    return {c["id"]: c for t in TASKS for c in ground_truth(t)}
+@functools.cache
+def _gold(corpus):
+    return {c["id"]: c for t in TASKS for c in ground_truth(t, corpus)}
 
 
-def evaluate_asr(runs, gold):
+def evaluate_asr(runs):
     rows = []
     for rid, data in runs.items():
         meta, per_clip = data["meta"], {}
         meta.setdefault("vad_threshold", 0.5)            # corridas previas al ajuste usaban el 0.5 de Silero
+        gold = _gold(meta["corpus"])
         for cid, clip in data["clips"].items():
             per_clip[cid] = metrics.wer_cer(gold[cid]["guion"], clip["text"])
         clips = list(per_clip.values())
@@ -398,7 +421,8 @@ def evaluate_text_changes(asr_rows, runs):
             ca, cb = runs[a["run"]]["clips"], runs[b["run"]]["clips"]
             common = sorted(set(ca) & set(cb))
             diffs = [metrics.wer_cer(ca[c]["text"], cb[c]["text"]) for c in common]
-            out.append({"cambia": key, "run_a": a["run"], "run_b": b["run"], "clips": len(common),
+            out.append({"corpus": a["corpus"], "cambia": key, "run_a": a["run"], "run_b": b["run"],
+                        "clips": len(common),
                         "clips_identicos": sum(d["word_errors"] == 0 for d in diffs),
                         "diferencia_texto_wer": round(metrics.pooled_rate(diffs), 4),
                         "wer_a": a["wer"], "wer_b": b["wer"]})
@@ -418,7 +442,8 @@ def evaluate_effect(asr_rows, key):
         base, new = (a, b) if b[key] == reference else (b, a)
         common = sorted(set(base["clips"]) & set(new["clips"]))
         deltas = [base["clips"][c]["wer"] - new["clips"][c]["wer"] for c in common]
-        out.append({"cambia": key, "de": base[key], "a": new[key], "tarea": new["task"], "nivel": new["level"],
+        out.append({"corpus": new["corpus"], "cambia": key, "de": base[key], "a": new[key], "tarea": new["task"],
+                    "nivel": new["level"],
                     "modelo": new["model"], "clips": len(common), "wer_antes": base["wer"], "wer_despues": new["wer"],
                     "mejora_wer_media": round(metrics.mean(deltas), 4),
                     "mejora_wer_ci": metrics.bootstrap_ci(deltas, metrics.mean, CFG),
@@ -436,11 +461,12 @@ def _truth_cause(gold_clip, record_ok):
     return None
 
 
-def evaluate_records(record_files, asr_by_run, gold):
+def evaluate_records(record_files, asr_by_run):
     rows = []
     for file in record_files:
         data = load_json(file)
         meta = data["meta"]
+        gold = _gold(meta["corpus"])
         schema = CFG["schemas"][meta["task"]]
         asr_clips = asr_by_run.get(meta["run"], {}).get("clips", {})
         clips, scored, validator = {}, [], {"caught": 0, "missed": 0, "false_alarms": 0, "correct_pass": 0,
@@ -543,11 +569,10 @@ def evaluate_gate(asr_rows, record_rows):
 
 
 def cmd_evaluate(args):
-    gold = _gold()
     runs = {f.stem: load_json(f) for f in sorted(path("transcripts").glob("*.json"))}
-    asr_rows = evaluate_asr(runs, gold)
+    asr_rows = evaluate_asr(runs)
     asr_by_run = {r["run"]: r for r in asr_rows}
-    record_rows = evaluate_records(sorted(path("records").glob("*.json")), asr_by_run, gold)
+    record_rows = evaluate_records(sorted(path("records").glob("*.json")), asr_by_run)
     main = CFG["evaluation"]["main_corpus"]
     result = {
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -557,7 +582,7 @@ def cmd_evaluate(args):
         "glossary_effect": evaluate_effect(asr_rows, "glossary"),
         "vad_effect": evaluate_effect(asr_rows, "vad_threshold"),
         "records": record_rows,
-        "wer_vs_record": evaluate_wer_vs_record([r for r in record_rows if r["corpus"] == main]),
+        "wer_vs_record": evaluate_wer_vs_record([r for r in record_rows if r["corpus"] == main and is_reference(r)]),
         "gate": evaluate_gate(asr_rows, record_rows),
     }
     save_json(path("metrics"), result)
@@ -582,11 +607,17 @@ def _ci(ci):
 
 
 def gt_distribution():
-    """Distribución de cada campo de la verdad de campo (Fase 1)."""
+    """Distribución de cada campo de la verdad de campo del corpus principal (Fase 1)."""
     from collections import Counter
     rows = []
     for task in TASKS:
-        clips = ground_truth(task)
+        clips = ground_truth(task, CFG["evaluation"]["main_corpus"])
+        if not clips:
+            continue
+        if all("grabacion" in c for c in clips):
+            rows.append({"tarea": task, "campo": "grabaciones",
+                         "distribución": ", ".join(f"{c['id']} {c['grabacion']['participante']} "
+                                                   f"{c['grabacion']['duracion_s']:.0f} s" for c in clips)})
         for field in clips[0]["campos"]:
             values = []
             for clip in clips:
