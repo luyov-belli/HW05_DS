@@ -8,10 +8,12 @@
 #   correccion     -> el cliente cambia el pedido a mitad de la llamada (el registro debe tener el final)
 #   total_erroneo  -> el total dicho en voz alta NO cuadra a propósito (el validador debe atraparlo)
 # La carta y las promociones (precios de referencia) están en config.yaml -> schemas.pedido.
+# El bloque `grabacion` existe solo en los clips grabados de verdad (L05 no se grabó: queda solo sintético).
 
 - id: L01
   trampas: [correccion]
   nota: "Medio pollo -> pollo entero. Total correcto: 69 + 18 + 16 = 103."
+  grabacion: {participante: P1, archivo_original: Pedido 1.m4a, duracion_s: 96.8}
   campos:
     items:
       - {producto: pollo a la brasa, tamano: entero, cantidad: 1, precio_unitario: 69}
@@ -43,6 +45,7 @@
 - id: L02
   trampas: [correccion, total_erroneo]
   nota: "Quita las gaseosas, pone dos vasos de chicha. 44 + 12 + 9 = 65, menos 10 % = 58,50. Se dice 62,50."
+  grabacion: {participante: P3, archivo_original: Pedido 03.m4a, duracion_s: 82.1}
   campos:
     items:
       - {producto: pollo a la brasa, tamano: cuarto, cantidad: 2, precio_unitario: 22}
@@ -72,6 +75,7 @@
 - id: L03
   trampas: [total_erroneo]
   nota: "69 + 2x24 + 12 = 129, menos 12 del combo = 117. Se dice 127. Distractores: billete de 200, papas ofrecidas y rechazadas."
+  grabacion: {participante: P2, archivo_original: Pedido 02.m4a, duracion_s: 79.4}
   campos:
     items:
       - {producto: pollo a la brasa, tamano: entero, cantidad: 1, precio_unitario: 69}
@@ -101,6 +105,7 @@
 - id: L04
   trampas: [correccion, total_erroneo]
   nota: "Tres medios pollos -> dos. 2x38 + 2x10 + 16 = 112, menos 15 del cupón = 97. Se dice 91."
+  grabacion: {participante: P4, archivo_original: Pedido 04.m4a, duracion_s: 80.1}
   campos:
     items:
       - {producto: pollo a la brasa, tamano: medio, cantidad: 2, precio_unitario: 38}

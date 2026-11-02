@@ -4,11 +4,10 @@ Convierte una **entrevista de trabajo** (Tarea 1) y una **llamada de pedido a un
 **registro estructurado** que dice qué campos se **verificaron literalmente** en el audio y, en los pedidos,
 si **la aritmética cuadra** (y, si no cuadra, si el error fue del ASR o de quien habló).
 
-> **Estado del corpus.** Las tablas de este README salen hoy del corpus **sintético** `tts-es-PE`
-> (Edge TTS, voces peruanas), que sirvió para construir y probar el pipeline de punta a punta. Las
-> grabaciones reales se agregan en `data/audio/real/` y basta cambiar `evaluation.main_corpus: real`
-> en `config.yaml` y volver a correr el pipeline (sección [Reproducir](#reproducir)). El grupo sintético
-> se reporta siempre **separado** y nunca se mezcla con el real.
+> **Corpus.** Las tablas principales salen de **8 grabaciones reales** con celular (4 entrevistas y 4 llamadas,
+> 4 participantes distintos más el autor, que está en todos los clips). Aparte, como grupo **sintético
+> separado** y nunca mezclado, están los 10 guiones leídos por voces Edge TTS (`tts-es-PE` y 4 acentos más),
+> que sirvieron para construir el pipeline y para el eje de acentos.
 
 - **Video:** _pendiente (enlace)_
 - **Documento del pipeline (visual):** https://claude.ai/artifact/AwFa6AqcAgnbTutXqthZJ8 — qué corre una vez,
@@ -20,8 +19,8 @@ si **la aritmética cuadra** (y, si no cuadra, si el error fue del ASR o de quie
 
 - **Todo lo dicho en los audios es inventado.** Nombres de empresas, salarios, direcciones, montos y
   personas no corresponden a nadie real. Ningún dato personal real aparece en el corpus.
-- **Consentimiento:** todas las personas que aparecen en las grabaciones aceptaron participar y que su voz
-  se use en este trabajo. No se nombra a nadie que no haya aceptado ser nombrado.
+- **Consentimiento:** las 4 personas que grabaron con el autor (P1–P4) aceptaron participar y que su voz se
+  use en este trabajo. No se nombra a ninguna.
 - Dominio elegido para la Tarea 2: **restaurante** (pollería inventada "La Brasa Real").
 
 ## Estructura (pocos archivos, una responsabilidad cada uno)
@@ -95,12 +94,14 @@ el zip que descarga se copia a `results/transcripts/` y se vuelve a correr `eval
 python -c "import engine, sys; assert 'streamlit' not in sys.modules"
 ```
 
-### Grabar el corpus real
-1. Lee el guion de cada clip con tu compañero/a (tú siempre eres una de las dos voces), con el celular.
-2. Guarda cada audio como `data/audio/real/<id>.<ext>` (`E01.m4a` … `L05.m4a`; cualquier formato que lea ffmpeg).
-3. Si alguien se desvió del guion, corrige el texto en el YAML para que sea exactamente lo que se oye.
-4. En `config.yaml` pon `evaluation.main_corpus: real` y corre `ladder`, `transcribe`, `extract` y `evaluate`
-   con `--corpus real`.
+### Corpus real
+- Cada participante (P1–P4) grabó con el autor una entrevista y una llamada leyendo el guion, con celular.
+  Los audios van en `data/audio/real/<id>.m4a`; E05 y L05 no se grabaron y existen solo como sintéticos.
+- Lo que se dijo distinto al guion está en el bloque `grabacion` de cada clip (`reemplazos` de texto y
+  `campos`), **verificado escuchando el audio**, no copiado del ASR: usar la salida de Whisper como referencia
+  mediría a Whisper contra sí mismo. `pipeline.ground_truth(tarea, "real")` aplica esos cambios solo al
+  corpus real, porque las voces sintéticas sí leyeron el guion original.
+- Comandos: los de arriba con `--corpus real` (es el `main_corpus` de `config.yaml`).
 
 ### GPU en Colab
 Abre [`colab_gpu.ipynb`](colab_gpu.ipynb) en Colab con una T4, sube los audios a `MyDrive/HW05_audio/` y corre
@@ -138,8 +139,9 @@ Las **transcripciones cacheadas** sí están en `results/transcripts/`.
   medio o al final; los años se dicen como total, como suma (3 + 2,5) o contando prácticas; el inglés como
   nivel, como certificación (C1, B2) o con matices ("intermedio alto"); hay tecnologías negadas (AWS, Azure,
   Snowflake) y números distractores (sueldo anterior, billete de 200, "unos cuarenta minutos").
-- **Trampas de las llamadas:** 4 correcciones del cliente (L01, L02, L04, L05) y 3 totales mal dichos a
+- **Trampas de las llamadas grabadas:** 3 correcciones del cliente (L01, L02, L04) y 3 totales mal dichos a
   propósito (L02, L03, L04); todas las direcciones llevan dígitos. Detalle en el campo `nota` de cada llamada.
+  L01 es además el control: su total sí cuadra.
 
 ### Normalización (una sola regla para todo)
 `extraction.normalize`: minúsculas; sin tildes; sin etiquetas `A:`/`B:`; `S/`→soles, `$`→dolares,
@@ -205,73 +207,82 @@ código. Lo que cambia es `config.yaml → schemas`: cada campo declara su **tip
 tercer registro (p. ej. una llamada de telefonía) es escribir un esquema, no copiar el motor. Si se cambia
 de modelo Whisper o de LLM, se cambia una línea del config y lo heredan la app, el pipeline y el MCP.
 
-## Resultados (corpus sintético `tts-es-PE`, 5 + 5 clips)
+## Resultados — corpus real (4 entrevistas + 4 llamadas)
 
-Tablas completas, con IC95 bootstrap y todas las corridas, en [`results/summary.md`](results/summary.md).
-Configuración de referencia: `small`, CPU `int8`, glosario como `hotwords`, VAD 0.25.
+Tablas completas, con IC95 bootstrap y todas las corridas (también las sintéticas), en
+[`results/summary.md`](results/summary.md). Configuración de referencia: `small`, CPU `int8`, glosario como
+`hotwords`, VAD 0.25. Con 4 clips por tarea, los IC son anchos: leer las diferencias como tendencias.
 
 ### Capa 1 — Transcripción
 
-| Corrida (entrevistas) | WER | IC95 | CER | s por min de audio |
-|---|---:|---|---:|---:|
-| `base` int8 | 10.9 % | [3.5, 20.0] | 8.4 % | 9.9 |
-| `small` int8 (referencia) | **0.56 %** | [0.3, 0.9] | 0.29 % | 25.9 |
-| `small` float32 | 3.6 % | [0.3, 10.4] | 3.1 % | 37.5 |
-| `small` int8 sin glosario | 1.1 % | [0.6, 1.8] | 0.49 % | 23.5 |
+| Corrida (entrevistas) | WER | IC95 | CER |
+|---|---:|---|---:|
+| `base` int8 | 15.0 % | [11.2, 19.3] | 6.7 % |
+| `small` int8 (referencia) | **6.9 %** | [4.0, 8.9] | 3.1 % |
+| `small` float32 | 6.6 % | [3.7, 8.9] | 2.7 % |
+| `small` int8 sin glosario | 8.1 % | [5.4, 10.2] | 3.5 % |
 
-- **Dos tamaños:** `base` comete ~20 veces más errores que `small` y es ~2,6 veces más rápido. Los segundos por
-  minuto de esta tabla se midieron en una laptop con otras tareas corriendo en paralelo (TTS, LLM): sirven para
-  comparar órdenes de magnitud, no como benchmark fino.
-- **Dos precisiones (CPU):** cambian el **texto**, no solo la velocidad: 3 de 5 transcripciones salen idénticas,
-  pero en E05 la corrida `float32` se saltó un tramo (35 palabras menos). Con 5 clips no se puede concluir que
-  int8 sea mejor; sí que no es "la misma transcripción más rápida".
-- **Glosario (`hotwords`)**, mejora pareada por clip: entrevistas −0,61 pp de WER, IC95 [0,3, 0,9]; pedidos
-  −1,13 pp, IC95 [0,4, 1,8]. El *recall* de términos del glosario sube de 71 % a 79 % (entrevistas) y de 74 % a
-  100 % (pedidos). Aun así "Python" sigue saliendo "paisan": el glosario no arregla una pronunciación que el
-  modelo no reconoce.
-- **GPU:** pendiente de la corrida en Colab (`colab_gpu.ipynb`); se agrega aquí con `device_runtime = cuda` y
-  `vram_peak_mb` medido. La tabla de CPU ya muestra la evidencia negativa: `device_runtime = cpu`, sin VRAM.
+Llamadas (referencia): WER **9.1 %** [5.6, 12.6], CER 4.1 %. La voz real tiene **10 a 15 veces más errores**
+que la sintética (0.6 % en ambas tareas): justo lo que el enunciado advertía del audio sintético.
+
+- **Dos tamaños:** `base` duplica el WER de `small` (15.0 % vs 6.9 %). La velocidad se midió en una laptop
+  con otras tareas en paralelo, así que solo vale como orden de magnitud: `base` ≈ 7 s por minuto de audio,
+  `small` ≈ 15 s en la corrida más limpia.
+- **Dos precisiones (CPU):** `float32` e `int8` dan WER casi igual, pero **ninguna de las 4 transcripciones
+  sale idéntica** (1,9 % de palabras distintas entre ambas). Cambiar la precisión cambia el texto, no solo la
+  velocidad.
+- **Glosario (`hotwords`)**, mejora pareada por clip: entrevistas −1,07 pp de WER, IC95 [0,1, 1,7]; llamadas
+  −2,03 pp, IC95 [−0,3, 6,1] (**incluye el cero**: con 4 llamadas no se puede afirmar que mejore). El *recall*
+  de términos del glosario sube de 95 % a 100 % en entrevistas y de 53 % a 88 % en llamadas.
+- **GPU:** pendiente de la corrida en Colab (`colab_gpu.ipynb`); se agrega con `device_runtime = cuda` y
+  `vram_peak_mb` medido. Las corridas de CPU ya muestran la evidencia negativa: `device_runtime = cpu`, sin VRAM.
 
 ### Capa 2 — Registro (L0)
 
 | Tarea | Extractor | Exactitud | IC95 | Lo que más falla |
 |---|---|---:|---|---|
-| Entrevista | reglas | 0.80 | [0.67, 0.93] | `tecnologias` 0.2 (ASR: "paisan", "daq"; menciones en preguntas), `anios_experiencia` 0.6 |
-| Entrevista | LLM | 0.77 | [0.63, 0.90] | `tecnologias` 0.0, `nivel_ingles` 0.8 |
-| Pedido | reglas | 0.96 | [0.88, 1.00] | `direccion_entrega` 0.8 |
-| Pedido | LLM | 0.88 | [0.76, 1.00] | `items` 0.4 (precios faltantes, líneas duplicadas, 2 medios pollos a 19) |
+| Entrevista | reglas | 0.75 | [0.58, 0.92] | `tecnologias` 0.25, `anios_experiencia` 0.50 |
+| Entrevista | LLM | **0.88** | [0.75, 1.00] | E04: años, tecnologías e inglés |
+| Pedido | reglas | **0.90** | [0.75, 1.00] | `direccion_entrega` 0.50 ("Surco" → "surgo") |
+| Pedido | LLM | 0.80 | [0.60, 0.95] | `items` 0.50, `direccion_entrega` 0.50 |
 
-F1 macro: `disponibilidad` 1.0 en ambos; `nivel_ingles` 1.0 reglas y 0.82 LLM; `metodo_pago` y `promocion` 1.0.
-Error absoluto medio: `anios_experiencia` 0.8 años con reglas y 0.2 con LLM; salario y total, 0.
+F1 macro: `disponibilidad` 1.0 en ambos; `nivel_ingles` 1.0 reglas y 0.78 LLM; `metodo_pago` y `promocion` 1.0.
+Error absoluto medio: `anios_experiencia` 1.0 años con reglas y 0.12 con LLM; salario y total, 0.
 
-**La verificación literal funciona como alarma:** con LLM, de los campos marcados `verificado` 22 de 27 son
-correctos; de los `sin_verificar`, solo 1 de 3. El caso de E02 (5,5 años obtenidos sumando) es el que queda
-`sin_verificar` aunque el número sea correcto.
+Con voz real el LLM supera a las reglas en entrevistas (donde la respuesta se dice de formas variadas) y
+las reglas siguen ganando en pedidos (vocabulario cerrado y una carta conocida).
 
-**¿El WER predice si el registro sirve? No.** En L3, la llamada L01 tiene **WER 18,6 %** y su registro LLM es
-**perfecto** (todos los campos correctos); la entrevista E03 tiene **WER 0 %** y su registro LLM está **roto**
-(omite SAP). Quien reporta solo WER no sabe si el dato sirve: el error que importa es el que cae en un campo,
-y un campo categórico tolera mucho ruido mientras que un monto no tolera un dígito.
+**La verificación literal funciona como alarma:** con LLM, de los campos marcados `verificado` 20 de 21 son
+correctos; de los `sin_verificar`, solo 1 de 3. El correcto es E02: 5,5 años obtenidos **sumando** "tres años"
+y "dos años y medio"; acierta, pero nadie lo dijo, así que queda `sin_verificar`. Los otros dos (E04: 2,5 años
+e inglés "intermedio") son errores reales del LLM, y la verificación los marcó.
 
-### Escalera de degradación y validador aritmético (pedidos, reglas / LLM)
+**¿El WER predice si el registro sirve? No.** La llamada L01 en L2 (teléfono) tiene **WER 16,4 %** y su
+registro es **perfecto**; la entrevista E02 tiene **WER 2,9 %** y su registro está **roto** (años y
+tecnologías mal). El error que importa es el que cae en un campo: un campo categórico tolera mucho ruido y un
+monto no tolera un dígito. Quien reporta solo WER no sabe si el dato sirve.
+
+### Escalera de degradación y validador aritmético (llamadas reales)
 
 | Nivel | WER | Exactitud registro (reglas / LLM) | Atrapados | Escapados | Falsas alarmas | Diagnóstico correcto (reglas) |
 |---|---:|---|---:|---:|---:|---|
-| L0 tal cual | 0.6 % | 0.96 / 0.88 | 3 | 0 | 0 | 3/3 |
-| L1 WhatsApp | 1.0 % | 1.00 / 0.88 | 3 | 0 | 0 | 3/3 |
-| L2 teléfono | 1.3 % | 0.92 / 0.88 | 3 | 0 | 0 | 3/3 |
-| L3 ruido 5 dB | **21.2 %** | **0.52** / 0.76 | 3 | 0 | 0 | 0/0 (casos ambiguos) |
+| L0 tal cual | 9.1 % | 0.90 / 0.80 | 3 | 0 | 0 | 3/3 |
+| L1 WhatsApp | 11.5 % | 0.85 / 0.80 | 3 | 0 | 0 | 3/3 |
+| L2 teléfono | 11.3 % | 0.85 / 0.70 | 3 | 0 | 0 | 3/3 |
+| L3 ruido 5 dB | **56.9 %** | **0.50** / 0.50 | 4 | 0 | 0 | 0/0 (casos ambiguos) |
 
-- El validador atrapa las 3 trampas sembradas en todos los niveles, sin falsas alarmas en las 2 llamadas que
-  cuadran. Con 3 trampas por nivel esto **no** es una tasa de detección, es un conteo.
-- **Hallazgo del VAD:** con el umbral por defecto de Silero (0.5), L2 tenía **WER 61 %**: el VAD borraba tramos
-  de voz de banda telefónica y Whisper nunca los oía. Con 0.25, WER 1,3 % (mejora pareada 60,6 pp, IC95
-  [56,3, 65,2]) sin cambiar ningún otro nivel. Las corridas con 0.5 quedan en `results/` como evidencia.
-- **L3 sí degrada** (el registro por reglas cae a 0.52), así que la escalera no necesitó endurecerse. En L3
-  ningún pedido sembrado quedó con el resto del registro intacto, por eso el diagnóstico no tiene casos
-  evaluables ahí.
+- El validador atrapa los 3 totales mal dichos en todos los niveles, sin falsas alarmas en L01, que cuadra.
+  En L3 atrapa además L01, cuyo registro rompió el ruido. Con 3–4 casos por nivel esto es un **conteo**, no
+  una tasa de detección.
+- El diagnóstico atribuye bien al hablante los 3 errores sembrados en L0–L2. En L3 ningún pedido sembrado
+  quedó con el resto del registro intacto, así que no hay casos evaluables.
+- **L3 sí degrada** (el registro cae a 0.50 y el WER a 57 %), así que la escalera no necesitó endurecerse.
+- **Hallazgo del VAD:** con el umbral por defecto de Silero (0.5), el VAD borra tramos de voz de banda
+  telefónica antes de que lleguen a Whisper. En las llamadas reales en L2, bajar el umbral a 0.25 baja el WER
+  de 13,9 % a 11,3 % (mejora pareada 2,5 pp, IC95 [1,1, 4,1]); con voz sintética el efecto fue enorme
+  (61 % → 1,3 %), porque la voz TTS es más uniforme y el VAD la descartaba entera.
 
-### Eje de acentos (voces sintéticas, **no** hablantes humanos)
+### Grupo sintético (separado): voces Edge TTS, 5 + 5 clips
 
 | Voz | WER entrevistas | WER pedidos |
 |---|---:|---:|
@@ -281,26 +292,29 @@ y un campo categórico tolera mucho ruido mientras que un monto no tolera un dí
 | es-ES | 3.71 % | 1.20 % |
 | es-CO | 6.94 % | 4.70 % |
 
-Describe cómo `small` trata esas **voces de Edge TTS**, no a hablantes reales de esos países.
+**Eje de acentos:** describe cómo `small` trata esas **voces sintéticas**, no a hablantes reales de esos
+países. Con `tts-es-PE` el registro llega a 0.80 (entrevistas) y 0.96 (pedidos) con reglas; la escalera
+sintética, el efecto del glosario y del VAD están en `results/summary.md`.
 
 ## Limitaciones y lo que la muestra no soporta
 
-- **Cinco clips por tarea.** Con 5 entrevistas × 6 campos = 30 observaciones, un campo que pasa de 3/5 a 4/5
-  cambia su exactitud en 20 puntos. Los IC bootstrap son anchos y se reportan siempre; ninguna diferencia
-  entre extractores o configuraciones con IC solapados debe leerse como un resultado firme.
-- **El corpus sintético es demasiado limpio** (WER < 1 % en L0) y comparte los errores sistemáticos de la voz
-  TTS: la voz peruana pronuncia "Python" y Whisper escribe "paisan", "Docker" → "daq", "React" → "vyack".
-  Son errores reales del ASR (no se corrigen con alias) y por eso el campo `tecnologias` cae; en voz humana
-  pueden ser otros.
+- **Cuatro clips reales por tarea.** 4 entrevistas × 6 campos = 24 observaciones: un campo que pasa de 2/4 a
+  3/4 cambia su exactitud en 25 puntos. Los IC bootstrap son anchos y se reportan siempre; ninguna diferencia
+  con IC solapados (por ejemplo LLM vs. reglas) debe leerse como un resultado firme.
+- **Duración por debajo de lo pedido.** E03 y E04 duran 1:42 y 1:44, y las cuatro llamadas entre 1:19 y
+  1:37, menos que los 2 minutos mínimos del enunciado: se leyó el guion a ritmo natural, sin conversación
+  extra. Hay menos palabras por clip y, por eso, IC más anchos.
+- **El corpus sintético es demasiado limpio** (WER < 1 %) y tiene sus propios errores sistemáticos (la voz
+  peruana dice "Python" y Whisper escribe "paisan"). Por eso no se mezcla con el real.
 - **Los guiones están escritos por el mismo autor que las reglas.** Las reglas pueden estar sobreajustadas a
-  la forma de hablar de los guiones; el LLM no lo está. Las grabaciones reales (con desvíos espontáneos) son la
-  prueba justa.
+  la forma de hablar de los guiones; el LLM no lo está. Los desvíos espontáneos de las grabaciones reales
+  (muletillas, género gramatical) son una prueba más justa, pero siguen siendo lecturas de guion.
 - **El LLM es pequeño** (`qwen2.5:3b` en CPU, ~35 s por clip). Un modelo mayor rendiría más; se priorizó que
   el contenido no salga de la máquina.
 - **La regla de diagnóstico** solo ve lo que Whisper reporta: si Whisper oye mal un número **con alta
   confianza** y el precio coincide con otra entrada de la carta, el error se atribuye al hablante.
-- **Escalera:** el murmullo se arma con otras conversaciones del mismo corpus (mismas voces TTS); en la calle
-  real el ruido es más variado.
+- **Escalera:** el murmullo se arma con otras conversaciones del mismo corpus (las mismas voces del estudio);
+  en la calle real el ruido es más variado (tráfico, música, platos).
 
 ### Lo que este sistema nunca debe hacer
 - **Decidir sobre personas.** El registro de entrevista resume lo que se dijo; no evalúa ni filtra candidatos.

@@ -184,10 +184,11 @@ def _rule_text(raw, spec):
             hits = _positions(words, cue)
             if not hits:
                 continue
-            if spec.get("max_words"):        # direcciones: primera frase con número desde la clave
-                follow = next((s for s in sents[k:] if re.search(r"\d", s)), None)
-                return " ".join(follow.split()[:max_words]) if follow else None
             after = words[hits[0] + len(normalize(cue).split()):]
+            if spec.get("max_words"):        # direcciones: lo primero con un número después de la clave
+                candidates = [after] + [s.split() for s in sents[k + 1:]]
+                follow = next((c for c in candidates if any(w.isdigit() for w in c)), None)
+                return " ".join(follow[:max_words]) if follow else None
             captured = []
             for w in after[:max_words]:
                 if w in _STOP:

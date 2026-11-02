@@ -1,0 +1,142 @@
+{
+ "meta": {
+  "corpus": "real",
+  "task": "entrevista",
+  "level": "L0",
+  "model": "base",
+  "glossary": true,
+  "vad_threshold": 0.25,
+  "device_requested": "cpu",
+  "compute_type_requested": "int8",
+  "device_runtime": "cpu",
+  "compute_type_runtime": "int8_float32",
+  "gpu": null,
+  "vram_peak_mb": null,
+  "load_seconds": 2.13,
+  "audio_seconds": 485.8,
+  "asr_seconds": 54.9,
+  "seconds_per_audio_minute": 6.78,
+  "faster_whisper": "1.2.1",
+  "ctranslate2": "4.8.4",
+  "created": "2026-11-02T00:58:01+00:00",
+  "run": "real__entrevista__L0__base__cpu__int8__glosario",
+  "extractor": "rules",
+  "llm": null
+ },
+ "clips": {
+  "E01": {
+   "fields": {
+    "anios_experiencia": 4,
+    "ultimo_puesto": null,
+    "tecnologias": [
+     "Python",
+     "SQL",
+     "Power BI"
+    ],
+    "pretension_salarial": {
+     "monto": 6500,
+     "moneda": "PEN"
+    },
+    "disponibilidad": "2_semanas",
+    "nivel_ingles": "intermedio"
+   },
+   "verified": {
+    "anios_experiencia": "verificado",
+    "ultimo_puesto": "vacio",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "verificado"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 0.02
+  },
+  "E02": {
+   "fields": {
+    "anios_experiencia": 2.5,
+    "ultimo_puesto": "desarrolladora bakken",
+    "tecnologias": [
+     "AWS",
+     "Java",
+     "Spring Boot",
+     "SQL",
+     "Docker",
+     "Kubernetes"
+    ],
+    "pretension_salarial": {
+     "monto": 3000,
+     "moneda": "USD"
+    },
+    "disponibilidad": "1_mes",
+    "nivel_ingles": "avanzado"
+   },
+   "verified": {
+    "anios_experiencia": "verificado",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "verificado"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 0.01
+  },
+  "E03": {
+   "fields": {
+    "anios_experiencia": 8,
+    "ultimo_puesto": "de jefe de proyectos",
+    "tecnologias": [
+     "Jira",
+     "Excel",
+     "SAP"
+    ],
+    "pretension_salarial": {
+     "monto": 9000,
+     "moneda": "PEN"
+    },
+    "disponibilidad": "inmediata",
+    "nivel_ingles": "basico"
+   },
+   "verified": {
+    "anios_experiencia": "verificado",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "verificado",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "verificado"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 0.01
+  },
+  "E04": {
+   "fields": {
+    "anios_experiencia": 1,
+    "ultimo_puesto": "ingeniero de datos union",
+    "tecnologias": [
+     "Python",
+     "Airflow",
+     "Spark",
+     "AWS",
+     "Snowflake"
+    ],
+    "pretension_salarial": null,
+    "disponibilidad": "2_meses",
+    "nivel_ingles": null
+   },
+   "verified": {
+    "anios_experiencia": "verificado",
+    "ultimo_puesto": "verificado",
+    "tecnologias": "verificado",
+    "pretension_salarial": "vacio",
+    "disponibilidad": "verificado",
+    "nivel_ingles": "vacio"
+   },
+   "validation": null,
+   "error": null,
+   "seconds": 0.01
+  }
+ }
+}
