@@ -9,7 +9,7 @@ si **la aritmética cuadra** (y, si no cuadra, si el error fue del ASR o de quie
 > separado** y nunca mezclado, están los 10 guiones leídos por voces Edge TTS (`tts-es-PE` y 4 acentos más),
 > que sirvieron para construir el pipeline y para el eje de acentos.
 
-- **Video:** _pendiente (enlace)_
+- **Video:** https://drive.google.com/file/d/1ReiRYxXiiz6J0oZrZ4SCaSwzbZY0EjYJ/view?usp=sharing
 - **Documento del pipeline:** en la sección [Pipeline](#pipeline) de este README (diagrama Mermaid + tabla de
   decisiones). Se usa el respaldo porque la herramienta visual falló para este caso (motivo en esa sección).
 - **App pública:** https://hw05ds-rkgsctuxoksbnmhtxhykt3.streamlit.app/ (Streamlit Community Cloud)
