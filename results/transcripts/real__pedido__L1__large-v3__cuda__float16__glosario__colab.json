@@ -1,0 +1,3541 @@
+{
+ "meta": {
+  "corpus": "real",
+  "task": "pedido",
+  "level": "L1",
+  "model": "large-v3",
+  "glossary": true,
+  "vad_threshold": 0.25,
+  "device_requested": "cuda",
+  "compute_type_requested": "float16",
+  "device_runtime": "cuda",
+  "compute_type_runtime": "float16",
+  "gpu": "Tesla T4",
+  "vram_peak_mb": 4042,
+  "load_seconds": 3.0,
+  "audio_seconds": 338.3,
+  "asr_seconds": 35.3,
+  "seconds_per_audio_minute": 6.27,
+  "faster_whisper": "1.2.1",
+  "ctranslate2": "4.8.4",
+  "created": "2026-11-02T02:35:08+00:00",
+  "machine": "colab"
+ },
+ "clips": {
+  "L01": {
+   "text": "Poyería a la Brasa Real, buenas noches, le habla Adrián, ¿qué le gustaría pedir? Hola Adrián, buenas noches, ¿quería medio pollo a la brasa, por favor? Claro, medio pollo, ¿con qué lo acompaña? Con unas pocas fritas familiares y una jarra de chicha morada Perfecto, ¿algo más? A ver, espere, acá han llegado mis primos, mejor cámbienme el medio pollo por un pollo entero No hay problema, entonces queda un pollo entero en lugar del medio, ¿y las papas y la chicha se mantienen? Sí, esto se mantiene igual Muy bien, ¿a qué dirección se lo enviamos? Ya, a ver, a Avenialo, Próceres 845 En Santiago de Surco, es una casa con la puerta verde Avenialo, Próceres 845, Surco, anotado ¿Cómo va a pagar? Con llave, Borja Listo, le confirmo el pedido Un pollo entero a 69 soles, unas papas fritas familiares a 18 soles y una jarra de chicha morada a 16 soles El total sería 103 soles Gracias Perfecto, ¿cuánto se demorará? Unos 40 minutos aproximadamente, le llevo un mensaje cuando el motorizado salga Genial, muchas gracias Gracias a usted, buen provecho",
+   "segments": [
+    {
+     "start": 1.46,
+     "end": 6.14,
+     "text": "Poyería a la Brasa Real, buenas noches, le habla Adrián, ¿qué le gustaría pedir?",
+     "words": [
+      {
+       "word": " Poyería",
+       "probability": 0.764
+      },
+      {
+       "word": " a",
+       "probability": 0.011
+      },
+      {
+       "word": " la",
+       "probability": 0.99
+      },
+      {
+       "word": " Brasa",
+       "probability": 0.751
+      },
+      {
+       "word": " Real,",
+       "probability": 0.966
+      },
+      {
+       "word": " buenas",
+       "probability": 0.986
+      },
+      {
+       "word": " noches,",
+       "probability": 0.999
+      },
+      {
+       "word": " le",
+       "probability": 0.994
+      },
+      {
+       "word": " habla",
+       "probability": 0.993
+      },
+      {
+       "word": " Adrián,",
+       "probability": 0.952
+      },
+      {
+       "word": " ¿qué",
+       "probability": 0.955
+      },
+      {
+       "word": " le",
+       "probability": 0.999
+      },
+      {
+       "word": " gustaría",
+       "probability": 1.0
+      },
+      {
+       "word": " pedir?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 7.68,
+     "end": 11.74,
+     "text": "Hola Adrián, buenas noches, ¿quería medio pollo a la brasa, por favor?",
+     "words": [
+      {
+       "word": " Hola",
+       "probability": 0.992
+      },
+      {
+       "word": " Adrián,",
+       "probability": 0.997
+      },
+      {
+       "word": " buenas",
+       "probability": 1.0
+      },
+      {
+       "word": " noches,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿quería",
+       "probability": 0.872
+      },
+      {
+       "word": " medio",
+       "probability": 0.873
+      },
+      {
+       "word": " pollo",
+       "probability": 0.999
+      },
+      {
+       "word": " a",
+       "probability": 0.994
+      },
+      {
+       "word": " la",
+       "probability": 1.0
+      },
+      {
+       "word": " brasa,",
+       "probability": 0.666
+      },
+      {
+       "word": " por",
+       "probability": 1.0
+      },
+      {
+       "word": " favor?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 12.58,
+     "end": 16.16,
+     "text": "Claro, medio pollo, ¿con qué lo acompaña?",
+     "words": [
+      {
+       "word": " Claro,",
+       "probability": 0.999
+      },
+      {
+       "word": " medio",
+       "probability": 0.676
+      },
+      {
+       "word": " pollo,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿con",
+       "probability": 0.999
+      },
+      {
+       "word": " qué",
+       "probability": 0.943
+      },
+      {
+       "word": " lo",
+       "probability": 0.999
+      },
+      {
+       "word": " acompaña?",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 17.48,
+     "end": 20.7,
+     "text": "Con unas pocas fritas familiares y una jarra de chicha morada",
+     "words": [
+      {
+       "word": " Con",
+       "probability": 0.985
+      },
+      {
+       "word": " unas",
+       "probability": 0.95
+      },
+      {
+       "word": " pocas",
+       "probability": 0.677
+      },
+      {
+       "word": " fritas",
+       "probability": 0.999
+      },
+      {
+       "word": " familiares",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 0.995
+      },
+      {
+       "word": " una",
+       "probability": 0.997
+      },
+      {
+       "word": " jarra",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " chicha",
+       "probability": 0.957
+      },
+      {
+       "word": " morada",
+       "probability": 0.951
+      }
+     ]
+    },
+    {
+     "start": 22.22,
+     "end": 23.46,
+     "text": "Perfecto, ¿algo más?",
+     "words": [
+      {
+       "word": " Perfecto,",
+       "probability": 0.571
+      },
+      {
+       "word": " ¿algo",
+       "probability": 1.0
+      },
+      {
+       "word": " más?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 25.12,
+     "end": 32.1,
+     "text": "A ver, espere, acá han llegado mis primos, mejor cámbienme el medio pollo por un pollo entero",
+     "words": [
+      {
+       "word": " A",
+       "probability": 0.961
+      },
+      {
+       "word": " ver,",
+       "probability": 0.996
+      },
+      {
+       "word": " espere,",
+       "probability": 0.988
+      },
+      {
+       "word": " acá",
+       "probability": 0.474
+      },
+      {
+       "word": " han",
+       "probability": 0.321
+      },
+      {
+       "word": " llegado",
+       "probability": 0.902
+      },
+      {
+       "word": " mis",
+       "probability": 0.999
+      },
+      {
+       "word": " primos,",
+       "probability": 1.0
+      },
+      {
+       "word": " mejor",
+       "probability": 0.999
+      },
+      {
+       "word": " cámbienme",
+       "probability": 0.971
+      },
+      {
+       "word": " el",
+       "probability": 0.991
+      },
+      {
+       "word": " medio",
+       "probability": 0.997
+      },
+      {
+       "word": " pollo",
+       "probability": 0.974
+      },
+      {
+       "word": " por",
+       "probability": 0.996
+      },
+      {
+       "word": " un",
+       "probability": 1.0
+      },
+      {
+       "word": " pollo",
+       "probability": 0.996
+      },
+      {
+       "word": " entero",
+       "probability": 0.997
+      }
+     ]
+    },
+    {
+     "start": 32.1,
+     "end": 39.72,
+     "text": "No hay problema, entonces queda un pollo entero en lugar del medio, ¿y las papas y la chicha se mantienen?",
+     "words": [
+      {
+       "word": " No",
+       "probability": 0.025
+      },
+      {
+       "word": " hay",
+       "probability": 0.998
+      },
+      {
+       "word": " problema,",
+       "probability": 1.0
+      },
+      {
+       "word": " entonces",
+       "probability": 0.905
+      },
+      {
+       "word": " queda",
+       "probability": 0.699
+      },
+      {
+       "word": " un",
+       "probability": 1.0
+      },
+      {
+       "word": " pollo",
+       "probability": 1.0
+      },
+      {
+       "word": " entero",
+       "probability": 1.0
+      },
+      {
+       "word": " en",
+       "probability": 0.986
+      },
+      {
+       "word": " lugar",
+       "probability": 0.989
+      },
+      {
+       "word": " del",
+       "probability": 0.998
+      },
+      {
+       "word": " medio,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿y",
+       "probability": 0.693
+      },
+      {
+       "word": " las",
+       "probability": 1.0
+      },
+      {
+       "word": " papas",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " la",
+       "probability": 0.802
+      },
+      {
+       "word": " chicha",
+       "probability": 0.996
+      },
+      {
+       "word": " se",
+       "probability": 1.0
+      },
+      {
+       "word": " mantienen?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 41.72,
+     "end": 43.18,
+     "text": "Sí, esto se mantiene igual",
+     "words": [
+      {
+       "word": " Sí,",
+       "probability": 0.954
+      },
+      {
+       "word": " esto",
+       "probability": 0.572
+      },
+      {
+       "word": " se",
+       "probability": 1.0
+      },
+      {
+       "word": " mantiene",
+       "probability": 1.0
+      },
+      {
+       "word": " igual",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 44.0,
+     "end": 46.76,
+     "text": "Muy bien, ¿a qué dirección se lo enviamos?",
+     "words": [
+      {
+       "word": " Muy",
+       "probability": 0.994
+      },
+      {
+       "word": " bien,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿a",
+       "probability": 0.999
+      },
+      {
+       "word": " qué",
+       "probability": 1.0
+      },
+      {
+       "word": " dirección",
+       "probability": 1.0
+      },
+      {
+       "word": " se",
+       "probability": 0.999
+      },
+      {
+       "word": " lo",
+       "probability": 0.971
+      },
+      {
+       "word": " enviamos?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 48.08,
+     "end": 52.5,
+     "text": "Ya, a ver, a Avenialo, Próceres 845",
+     "words": [
+      {
+       "word": " Ya,",
+       "probability": 0.953
+      },
+      {
+       "word": " a",
+       "probability": 0.997
+      },
+      {
+       "word": " ver,",
+       "probability": 0.997
+      },
+      {
+       "word": " a",
+       "probability": 0.725
+      },
+      {
+       "word": " Avenialo,",
+       "probability": 0.63
+      },
+      {
+       "word": " Próceres",
+       "probability": 0.83
+      },
+      {
+       "word": " 845",
+       "probability": 0.899
+      }
+     ]
+    },
+    {
+     "start": 52.5,
+     "end": 56.92,
+     "text": "En Santiago de Surco, es una casa con la puerta verde",
+     "words": [
+      {
+       "word": " En",
+       "probability": 0.165
+      },
+      {
+       "word": " Santiago",
+       "probability": 0.993
+      },
+      {
+       "word": " de",
+       "probability": 0.543
+      },
+      {
+       "word": " Surco,",
+       "probability": 0.954
+      },
+      {
+       "word": " es",
+       "probability": 0.964
+      },
+      {
+       "word": " una",
+       "probability": 1.0
+      },
+      {
+       "word": " casa",
+       "probability": 1.0
+      },
+      {
+       "word": " con",
+       "probability": 0.999
+      },
+      {
+       "word": " la",
+       "probability": 0.982
+      },
+      {
+       "word": " puerta",
+       "probability": 0.879
+      },
+      {
+       "word": " verde",
+       "probability": 0.998
+      }
+     ]
+    },
+    {
+     "start": 58.24,
+     "end": 62.28,
+     "text": "Avenialo, Próceres 845, Surco, anotado",
+     "words": [
+      {
+       "word": " Avenialo,",
+       "probability": 0.25
+      },
+      {
+       "word": " Próceres",
+       "probability": 0.764
+      },
+      {
+       "word": " 845,",
+       "probability": 0.619
+      },
+      {
+       "word": " Surco,",
+       "probability": 0.998
+      },
+      {
+       "word": " anotado",
+       "probability": 0.984
+      }
+     ]
+    },
+    {
+     "start": 62.28,
+     "end": 63.56,
+     "text": "¿Cómo va a pagar?",
+     "words": [
+      {
+       "word": " ¿Cómo",
+       "probability": 0.964
+      },
+      {
+       "word": " va",
+       "probability": 0.867
+      },
+      {
+       "word": " a",
+       "probability": 0.992
+      },
+      {
+       "word": " pagar?",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 64.4,
+     "end": 65.6,
+     "text": "Con llave, Borja",
+     "words": [
+      {
+       "word": " Con",
+       "probability": 0.989
+      },
+      {
+       "word": " llave,",
+       "probability": 0.993
+      },
+      {
+       "word": " Borja",
+       "probability": 0.595
+      }
+     ]
+    },
+    {
+     "start": 66.9,
+     "end": 69.34,
+     "text": "Listo, le confirmo el pedido",
+     "words": [
+      {
+       "word": " Listo,",
+       "probability": 0.995
+      },
+      {
+       "word": " le",
+       "probability": 0.999
+      },
+      {
+       "word": " confirmo",
+       "probability": 0.995
+      },
+      {
+       "word": " el",
+       "probability": 0.989
+      },
+      {
+       "word": " pedido",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 69.34,
+     "end": 77.98,
+     "text": "Un pollo entero a 69 soles, unas papas fritas familiares a 18 soles y una jarra de chicha morada a 16 soles",
+     "words": [
+      {
+       "word": " Un",
+       "probability": 0.904
+      },
+      {
+       "word": " pollo",
+       "probability": 1.0
+      },
+      {
+       "word": " entero",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.993
+      },
+      {
+       "word": " 69",
+       "probability": 0.987
+      },
+      {
+       "word": " soles,",
+       "probability": 1.0
+      },
+      {
+       "word": " unas",
+       "probability": 0.999
+      },
+      {
+       "word": " papas",
+       "probability": 1.0
+      },
+      {
+       "word": " fritas",
+       "probability": 1.0
+      },
+      {
+       "word": " familiares",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.999
+      },
+      {
+       "word": " 18",
+       "probability": 1.0
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 0.369
+      },
+      {
+       "word": " una",
+       "probability": 0.994
+      },
+      {
+       "word": " jarra",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 0.998
+      },
+      {
+       "word": " chicha",
+       "probability": 0.997
+      },
+      {
+       "word": " morada",
+       "probability": 0.999
+      },
+      {
+       "word": " a",
+       "probability": 0.999
+      },
+      {
+       "word": " 16",
+       "probability": 1.0
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 77.98,
+     "end": 80.52,
+     "text": "El total sería 103 soles",
+     "words": [
+      {
+       "word": " El",
+       "probability": 0.886
+      },
+      {
+       "word": " total",
+       "probability": 1.0
+      },
+      {
+       "word": " sería",
+       "probability": 0.996
+      },
+      {
+       "word": " 103",
+       "probability": 0.996
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 81.66,
+     "end": 82.36,
+     "text": "Gracias",
+     "words": [
+      {
+       "word": " Gracias",
+       "probability": 0.278
+      }
+     ]
+    },
+    {
+     "start": 82.5,
+     "end": 84.94,
+     "text": "Perfecto, ¿cuánto se demorará?",
+     "words": [
+      {
+       "word": " Perfecto,",
+       "probability": 0.699
+      },
+      {
+       "word": " ¿cuánto",
+       "probability": 0.908
+      },
+      {
+       "word": " se",
+       "probability": 0.987
+      },
+      {
+       "word": " demorará?",
+       "probability": 0.926
+      }
+     ]
+    },
+    {
+     "start": 85.8,
+     "end": 91.04,
+     "text": "Unos 40 minutos aproximadamente, le llevo un mensaje cuando el motorizado salga",
+     "words": [
+      {
+       "word": " Unos",
+       "probability": 0.96
+      },
+      {
+       "word": " 40",
+       "probability": 0.901
+      },
+      {
+       "word": " minutos",
+       "probability": 0.999
+      },
+      {
+       "word": " aproximadamente,",
+       "probability": 0.984
+      },
+      {
+       "word": " le",
+       "probability": 0.99
+      },
+      {
+       "word": " llevo",
+       "probability": 0.974
+      },
+      {
+       "word": " un",
+       "probability": 0.594
+      },
+      {
+       "word": " mensaje",
+       "probability": 1.0
+      },
+      {
+       "word": " cuando",
+       "probability": 0.996
+      },
+      {
+       "word": " el",
+       "probability": 0.992
+      },
+      {
+       "word": " motorizado",
+       "probability": 0.998
+      },
+      {
+       "word": " salga",
+       "probability": 0.987
+      }
+     ]
+    },
+    {
+     "start": 92.02,
+     "end": 93.58,
+     "text": "Genial, muchas gracias",
+     "words": [
+      {
+       "word": " Genial,",
+       "probability": 0.556
+      },
+      {
+       "word": " muchas",
+       "probability": 0.996
+      },
+      {
+       "word": " gracias",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 93.58,
+     "end": 95.7,
+     "text": "Gracias a usted, buen provecho",
+     "words": [
+      {
+       "word": " Gracias",
+       "probability": 0.957
+      },
+      {
+       "word": " a",
+       "probability": 0.992
+      },
+      {
+       "word": " usted,",
+       "probability": 0.995
+      },
+      {
+       "word": " buen",
+       "probability": 0.999
+      },
+      {
+       "word": " provecho",
+       "probability": 1.0
+      }
+     ]
+    }
+   ],
+   "audio_seconds": 96.79,
+   "asr_seconds": 9.71
+  },
+  "L02": {
+   "text": "La Brasa Real, buenas tardes, ¿en qué le puedo ayudar? Buenas tardes, quisiera hacer un pedido para dos personas. Claro, dígame. Dos cuartos de pollo a la brasa, dos gaseosas personales y una ensalada. Perfecto, le comento que hoy tenemos la promoción martes brasero, que le da 10% de descuento en todo el pedido. Ah, qué bien, oiga, y pensando a lo mejor quíteme las gaseosas y póngame dos vasos de chicha morada. Entendido, sin gaseosas y con dos vasos de chicha. Entonces son dos cuartos de pollo, dos vasos de chicha y una ensalada. ¿La dirección de entrega? Jirón Huáscar, 1450, departamento 302, en Jesús María. Jirón Huáscar, 1450, departamento 302. ¿Alguna referencia? Está al costado de la farmacia. Gracias, ¿cómo desea pagar? Con tarjeta, por favor, que el motorizado lleve el POS. Perfecto, con tarjeta. ¿Le confío? Confirmo, dos cuartos de pollo a 22 soles cada uno, dos vasos de chicha morada a 6 soles cada uno y una ensalada a 9 soles. Con el descuento del martes brasero, el total sería 62,50. Muy bien, gracias. Gracias a usted, en unos 35 minutos le llega.",
+   "segments": [
+    {
+     "start": 0.5,
+     "end": 3.32,
+     "text": "La Brasa Real, buenas tardes, ¿en qué le puedo ayudar?",
+     "words": [
+      {
+       "word": " La",
+       "probability": 0.915
+      },
+      {
+       "word": " Brasa",
+       "probability": 0.913
+      },
+      {
+       "word": " Real,",
+       "probability": 0.992
+      },
+      {
+       "word": " buenas",
+       "probability": 0.998
+      },
+      {
+       "word": " tardes,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿en",
+       "probability": 0.995
+      },
+      {
+       "word": " qué",
+       "probability": 0.998
+      },
+      {
+       "word": " le",
+       "probability": 0.998
+      },
+      {
+       "word": " puedo",
+       "probability": 0.996
+      },
+      {
+       "word": " ayudar?",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 3.72,
+     "end": 6.7,
+     "text": "Buenas tardes, quisiera hacer un pedido para dos personas.",
+     "words": [
+      {
+       "word": " Buenas",
+       "probability": 0.998
+      },
+      {
+       "word": " tardes,",
+       "probability": 1.0
+      },
+      {
+       "word": " quisiera",
+       "probability": 1.0
+      },
+      {
+       "word": " hacer",
+       "probability": 1.0
+      },
+      {
+       "word": " un",
+       "probability": 1.0
+      },
+      {
+       "word": " pedido",
+       "probability": 1.0
+      },
+      {
+       "word": " para",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 0.999
+      },
+      {
+       "word": " personas.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 6.98,
+     "end": 7.84,
+     "text": "Claro, dígame.",
+     "words": [
+      {
+       "word": " Claro,",
+       "probability": 0.999
+      },
+      {
+       "word": " dígame.",
+       "probability": 0.998
+      }
+     ]
+    },
+    {
+     "start": 8.2,
+     "end": 12.22,
+     "text": "Dos cuartos de pollo a la brasa, dos gaseosas personales y una ensalada.",
+     "words": [
+      {
+       "word": " Dos",
+       "probability": 0.998
+      },
+      {
+       "word": " cuartos",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " pollo",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.083
+      },
+      {
+       "word": " la",
+       "probability": 0.984
+      },
+      {
+       "word": " brasa,",
+       "probability": 0.906
+      },
+      {
+       "word": " dos",
+       "probability": 1.0
+      },
+      {
+       "word": " gaseosas",
+       "probability": 0.975
+      },
+      {
+       "word": " personales",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 0.999
+      },
+      {
+       "word": " una",
+       "probability": 1.0
+      },
+      {
+       "word": " ensalada.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 15.97,
+     "end": 22.45,
+     "text": "Perfecto, le comento que hoy tenemos la promoción martes brasero, que le da 10% de descuento en todo el pedido.",
+     "words": [
+      {
+       "word": " Perfecto,",
+       "probability": 1.0
+      },
+      {
+       "word": " le",
+       "probability": 0.994
+      },
+      {
+       "word": " comento",
+       "probability": 0.988
+      },
+      {
+       "word": " que",
+       "probability": 1.0
+      },
+      {
+       "word": " hoy",
+       "probability": 1.0
+      },
+      {
+       "word": " tenemos",
+       "probability": 1.0
+      },
+      {
+       "word": " la",
+       "probability": 1.0
+      },
+      {
+       "word": " promoción",
+       "probability": 1.0
+      },
+      {
+       "word": " martes",
+       "probability": 0.557
+      },
+      {
+       "word": " brasero,",
+       "probability": 0.53
+      },
+      {
+       "word": " que",
+       "probability": 1.0
+      },
+      {
+       "word": " le",
+       "probability": 1.0
+      },
+      {
+       "word": " da",
+       "probability": 1.0
+      },
+      {
+       "word": " 10",
+       "probability": 0.999
+      },
+      {
+       "word": "%",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 0.999
+      },
+      {
+       "word": " descuento",
+       "probability": 1.0
+      },
+      {
+       "word": " en",
+       "probability": 1.0
+      },
+      {
+       "word": " todo",
+       "probability": 1.0
+      },
+      {
+       "word": " el",
+       "probability": 1.0
+      },
+      {
+       "word": " pedido.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 23.05,
+     "end": 28.59,
+     "text": "Ah, qué bien, oiga, y pensando a lo mejor quíteme las gaseosas y póngame dos vasos de chicha morada.",
+     "words": [
+      {
+       "word": " Ah,",
+       "probability": 0.977
+      },
+      {
+       "word": " qué",
+       "probability": 0.842
+      },
+      {
+       "word": " bien,",
+       "probability": 1.0
+      },
+      {
+       "word": " oiga,",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " pensando",
+       "probability": 0.996
+      },
+      {
+       "word": " a",
+       "probability": 0.537
+      },
+      {
+       "word": " lo",
+       "probability": 1.0
+      },
+      {
+       "word": " mejor",
+       "probability": 1.0
+      },
+      {
+       "word": " quíteme",
+       "probability": 0.745
+      },
+      {
+       "word": " las",
+       "probability": 0.998
+      },
+      {
+       "word": " gaseosas",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " póngame",
+       "probability": 0.996
+      },
+      {
+       "word": " dos",
+       "probability": 1.0
+      },
+      {
+       "word": " vasos",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " chicha",
+       "probability": 0.999
+      },
+      {
+       "word": " morada.",
+       "probability": 0.998
+      }
+     ]
+    },
+    {
+     "start": 29.39,
+     "end": 32.33,
+     "text": "Entendido, sin gaseosas y con dos vasos de chicha.",
+     "words": [
+      {
+       "word": " Entendido,",
+       "probability": 0.993
+      },
+      {
+       "word": " sin",
+       "probability": 0.982
+      },
+      {
+       "word": " gaseosas",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " con",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 1.0
+      },
+      {
+       "word": " vasos",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " chicha.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 33.35,
+     "end": 37.03,
+     "text": "Entonces son dos cuartos de pollo, dos vasos de chicha y una ensalada.",
+     "words": [
+      {
+       "word": " Entonces",
+       "probability": 0.849
+      },
+      {
+       "word": " son",
+       "probability": 0.9
+      },
+      {
+       "word": " dos",
+       "probability": 0.862
+      },
+      {
+       "word": " cuartos",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " pollo,",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 0.997
+      },
+      {
+       "word": " vasos",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 0.999
+      },
+      {
+       "word": " chicha",
+       "probability": 0.999
+      },
+      {
+       "word": " y",
+       "probability": 0.995
+      },
+      {
+       "word": " una",
+       "probability": 0.999
+      },
+      {
+       "word": " ensalada.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 37.43,
+     "end": 38.93,
+     "text": "¿La dirección de entrega?",
+     "words": [
+      {
+       "word": " ¿La",
+       "probability": 0.779
+      },
+      {
+       "word": " dirección",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " entrega?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 39.37,
+     "end": 44.05,
+     "text": "Jirón Huáscar, 1450, departamento 302, en Jesús María.",
+     "words": [
+      {
+       "word": " Jirón",
+       "probability": 0.669
+      },
+      {
+       "word": " Huáscar,",
+       "probability": 0.961
+      },
+      {
+       "word": " 1450,",
+       "probability": 0.995
+      },
+      {
+       "word": " departamento",
+       "probability": 0.897
+      },
+      {
+       "word": " 302,",
+       "probability": 1.0
+      },
+      {
+       "word": " en",
+       "probability": 0.667
+      },
+      {
+       "word": " Jesús",
+       "probability": 0.994
+      },
+      {
+       "word": " María.",
+       "probability": 0.997
+      }
+     ]
+    },
+    {
+     "start": 44.95,
+     "end": 49.27,
+     "text": "Jirón Huáscar, 1450, departamento 302.",
+     "words": [
+      {
+       "word": " Jirón",
+       "probability": 0.997
+      },
+      {
+       "word": " Huáscar,",
+       "probability": 1.0
+      },
+      {
+       "word": " 1450,",
+       "probability": 1.0
+      },
+      {
+       "word": " departamento",
+       "probability": 1.0
+      },
+      {
+       "word": " 302.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 50.17,
+     "end": 51.35,
+     "text": "¿Alguna referencia?",
+     "words": [
+      {
+       "word": " ¿Alguna",
+       "probability": 1.0
+      },
+      {
+       "word": " referencia?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 51.59,
+     "end": 52.91,
+     "text": "Está al costado de la farmacia.",
+     "words": [
+      {
+       "word": " Está",
+       "probability": 0.945
+      },
+      {
+       "word": " al",
+       "probability": 0.93
+      },
+      {
+       "word": " costado",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 0.999
+      },
+      {
+       "word": " la",
+       "probability": 1.0
+      },
+      {
+       "word": " farmacia.",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 53.85,
+     "end": 55.85,
+     "text": "Gracias, ¿cómo desea pagar?",
+     "words": [
+      {
+       "word": " Gracias,",
+       "probability": 0.999
+      },
+      {
+       "word": " ¿cómo",
+       "probability": 0.977
+      },
+      {
+       "word": " desea",
+       "probability": 0.983
+      },
+      {
+       "word": " pagar?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 56.21,
+     "end": 59.27,
+     "text": "Con tarjeta, por favor, que el motorizado lleve el POS.",
+     "words": [
+      {
+       "word": " Con",
+       "probability": 0.997
+      },
+      {
+       "word": " tarjeta,",
+       "probability": 1.0
+      },
+      {
+       "word": " por",
+       "probability": 1.0
+      },
+      {
+       "word": " favor,",
+       "probability": 1.0
+      },
+      {
+       "word": " que",
+       "probability": 1.0
+      },
+      {
+       "word": " el",
+       "probability": 0.999
+      },
+      {
+       "word": " motorizado",
+       "probability": 0.973
+      },
+      {
+       "word": " lleve",
+       "probability": 0.988
+      },
+      {
+       "word": " el",
+       "probability": 0.999
+      },
+      {
+       "word": " POS.",
+       "probability": 0.957
+      }
+     ]
+    },
+    {
+     "start": 60.35,
+     "end": 61.95,
+     "text": "Perfecto, con tarjeta.",
+     "words": [
+      {
+       "word": " Perfecto,",
+       "probability": 0.995
+      },
+      {
+       "word": " con",
+       "probability": 0.999
+      },
+      {
+       "word": " tarjeta.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 62.73,
+     "end": 63.29,
+     "text": "¿Le confío?",
+     "words": [
+      {
+       "word": " ¿Le",
+       "probability": 0.869
+      },
+      {
+       "word": " confío?",
+       "probability": 0.307
+      }
+     ]
+    },
+    {
+     "start": 63.31,
+     "end": 71.13,
+     "text": "Confirmo, dos cuartos de pollo a 22 soles cada uno, dos vasos de chicha morada a 6 soles cada uno y una ensalada a 9 soles.",
+     "words": [
+      {
+       "word": " Confirmo,",
+       "probability": 0.936
+      },
+      {
+       "word": " dos",
+       "probability": 0.663
+      },
+      {
+       "word": " cuartos",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " pollo",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.998
+      },
+      {
+       "word": " 22",
+       "probability": 0.921
+      },
+      {
+       "word": " soles",
+       "probability": 0.999
+      },
+      {
+       "word": " cada",
+       "probability": 1.0
+      },
+      {
+       "word": " uno,",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 0.998
+      },
+      {
+       "word": " vasos",
+       "probability": 0.996
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " chicha",
+       "probability": 0.999
+      },
+      {
+       "word": " morada",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 1.0
+      },
+      {
+       "word": " 6",
+       "probability": 0.968
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      },
+      {
+       "word": " cada",
+       "probability": 1.0
+      },
+      {
+       "word": " uno",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 0.915
+      },
+      {
+       "word": " una",
+       "probability": 1.0
+      },
+      {
+       "word": " ensalada",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 1.0
+      },
+      {
+       "word": " 9",
+       "probability": 0.997
+      },
+      {
+       "word": " soles.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 71.93,
+     "end": 76.05,
+     "text": "Con el descuento del martes brasero, el total sería 62,50.",
+     "words": [
+      {
+       "word": " Con",
+       "probability": 0.716
+      },
+      {
+       "word": " el",
+       "probability": 0.995
+      },
+      {
+       "word": " descuento",
+       "probability": 0.993
+      },
+      {
+       "word": " del",
+       "probability": 1.0
+      },
+      {
+       "word": " martes",
+       "probability": 0.982
+      },
+      {
+       "word": " brasero,",
+       "probability": 0.556
+      },
+      {
+       "word": " el",
+       "probability": 1.0
+      },
+      {
+       "word": " total",
+       "probability": 1.0
+      },
+      {
+       "word": " sería",
+       "probability": 1.0
+      },
+      {
+       "word": " 62",
+       "probability": 0.995
+      },
+      {
+       "word": ",50.",
+       "probability": 0.832
+      }
+     ]
+    },
+    {
+     "start": 76.51,
+     "end": 77.41,
+     "text": "Muy bien, gracias.",
+     "words": [
+      {
+       "word": " Muy",
+       "probability": 1.0
+      },
+      {
+       "word": " bien,",
+       "probability": 1.0
+      },
+      {
+       "word": " gracias.",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 78.07,
+     "end": 81.03,
+     "text": "Gracias a usted, en unos 35 minutos le llega.",
+     "words": [
+      {
+       "word": " Gracias",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.998
+      },
+      {
+       "word": " usted,",
+       "probability": 1.0
+      },
+      {
+       "word": " en",
+       "probability": 1.0
+      },
+      {
+       "word": " unos",
+       "probability": 1.0
+      },
+      {
+       "word": " 35",
+       "probability": 1.0
+      },
+      {
+       "word": " minutos",
+       "probability": 1.0
+      },
+      {
+       "word": " le",
+       "probability": 1.0
+      },
+      {
+       "word": " llega.",
+       "probability": 0.994
+      }
+     ]
+    }
+   ],
+   "audio_seconds": 82.11,
+   "asr_seconds": 9.21
+  },
+  "L03": {
+   "text": "Buenas noches, la Brasa Real, le saluda Adrián, ¿qué va a pedir? Buenas noches, un pollo entero, dos porciones de anticuchos y una gaseosa de dos litros Perfecto, con el pollo entero y la gaseosa de dos litros aplica el combo familiar, que le descuenta 12 soles Ah, excelente, aplíquelo por favor Claro, ¿le agrego unas papas fritas? No, papas no, gracias, así está bien Muy bien, dirección de entrega Calle Las Begonias, 2280 en San Isidro, es un edificio en el piso cuarto Calle Las Begonias, 2280 San Isidro, forma de pago En efectivo, voy a pagar con un billete de 200 para que el motorizado lleve vuelto Anotado, efectivo con billete de 200 Le confirmo su pedido Un pollo entero, dos porciones de anticuchos y una gaseosa de dos litros Un pollo entero a 69 soles, dos porciones de anticuchos a 24 soles y una gaseosa de dos litros a 12 soles Con el combo familiar, el total es 127 soles Perfecto, ¿demora mucho? Unos 45 minutos, porque a esta hora hay bastante pedido Está bien, gracias Gracias a usted, que lo disfrute",
+   "segments": [
+    {
+     "start": 0.3,
+     "end": 4.4,
+     "text": "Buenas noches, la Brasa Real, le saluda Adrián, ¿qué va a pedir?",
+     "words": [
+      {
+       "word": " Buenas",
+       "probability": 0.989
+      },
+      {
+       "word": " noches,",
+       "probability": 1.0
+      },
+      {
+       "word": " la",
+       "probability": 0.669
+      },
+      {
+       "word": " Brasa",
+       "probability": 0.676
+      },
+      {
+       "word": " Real,",
+       "probability": 0.998
+      },
+      {
+       "word": " le",
+       "probability": 0.609
+      },
+      {
+       "word": " saluda",
+       "probability": 0.884
+      },
+      {
+       "word": " Adrián,",
+       "probability": 0.982
+      },
+      {
+       "word": " ¿qué",
+       "probability": 0.965
+      },
+      {
+       "word": " va",
+       "probability": 0.995
+      },
+      {
+       "word": " a",
+       "probability": 1.0
+      },
+      {
+       "word": " pedir?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 4.88,
+     "end": 9.78,
+     "text": "Buenas noches, un pollo entero, dos porciones de anticuchos y una gaseosa de dos litros",
+     "words": [
+      {
+       "word": " Buenas",
+       "probability": 0.998
+      },
+      {
+       "word": " noches,",
+       "probability": 1.0
+      },
+      {
+       "word": " un",
+       "probability": 0.997
+      },
+      {
+       "word": " pollo",
+       "probability": 0.781
+      },
+      {
+       "word": " entero,",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 0.987
+      },
+      {
+       "word": " porciones",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 0.978
+      },
+      {
+       "word": " anticuchos",
+       "probability": 0.721
+      },
+      {
+       "word": " y",
+       "probability": 0.989
+      },
+      {
+       "word": " una",
+       "probability": 1.0
+      },
+      {
+       "word": " gaseosa",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 0.615
+      },
+      {
+       "word": " litros",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 11.24,
+     "end": 17.52,
+     "text": "Perfecto, con el pollo entero y la gaseosa de dos litros aplica el combo familiar, que le descuenta 12 soles",
+     "words": [
+      {
+       "word": " Perfecto,",
+       "probability": 0.589
+      },
+      {
+       "word": " con",
+       "probability": 0.999
+      },
+      {
+       "word": " el",
+       "probability": 1.0
+      },
+      {
+       "word": " pollo",
+       "probability": 1.0
+      },
+      {
+       "word": " entero",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " la",
+       "probability": 1.0
+      },
+      {
+       "word": " gaseosa",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 1.0
+      },
+      {
+       "word": " litros",
+       "probability": 1.0
+      },
+      {
+       "word": " aplica",
+       "probability": 0.989
+      },
+      {
+       "word": " el",
+       "probability": 0.999
+      },
+      {
+       "word": " combo",
+       "probability": 0.998
+      },
+      {
+       "word": " familiar,",
+       "probability": 1.0
+      },
+      {
+       "word": " que",
+       "probability": 1.0
+      },
+      {
+       "word": " le",
+       "probability": 1.0
+      },
+      {
+       "word": " descuenta",
+       "probability": 0.989
+      },
+      {
+       "word": " 12",
+       "probability": 0.834
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 17.52,
+     "end": 20.66,
+     "text": "Ah, excelente, aplíquelo por favor",
+     "words": [
+      {
+       "word": " Ah,",
+       "probability": 0.902
+      },
+      {
+       "word": " excelente,",
+       "probability": 1.0
+      },
+      {
+       "word": " aplíquelo",
+       "probability": 0.992
+      },
+      {
+       "word": " por",
+       "probability": 0.997
+      },
+      {
+       "word": " favor",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 20.66,
+     "end": 23.58,
+     "text": "Claro, ¿le agrego unas papas fritas?",
+     "words": [
+      {
+       "word": " Claro,",
+       "probability": 0.998
+      },
+      {
+       "word": " ¿le",
+       "probability": 0.995
+      },
+      {
+       "word": " agrego",
+       "probability": 0.996
+      },
+      {
+       "word": " unas",
+       "probability": 1.0
+      },
+      {
+       "word": " papas",
+       "probability": 0.999
+      },
+      {
+       "word": " fritas?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 24.0,
+     "end": 26.16,
+     "text": "No, papas no, gracias, así está bien",
+     "words": [
+      {
+       "word": " No,",
+       "probability": 1.0
+      },
+      {
+       "word": " papas",
+       "probability": 0.997
+      },
+      {
+       "word": " no,",
+       "probability": 0.999
+      },
+      {
+       "word": " gracias,",
+       "probability": 1.0
+      },
+      {
+       "word": " así",
+       "probability": 0.998
+      },
+      {
+       "word": " está",
+       "probability": 0.999
+      },
+      {
+       "word": " bien",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 27.08,
+     "end": 29.72,
+     "text": "Muy bien, dirección de entrega",
+     "words": [
+      {
+       "word": " Muy",
+       "probability": 0.805
+      },
+      {
+       "word": " bien,",
+       "probability": 1.0
+      },
+      {
+       "word": " dirección",
+       "probability": 0.988
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " entrega",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 30.26,
+     "end": 36.32,
+     "text": "Calle Las Begonias, 2280 en San Isidro, es un edificio en el piso cuarto",
+     "words": [
+      {
+       "word": " Calle",
+       "probability": 0.53
+      },
+      {
+       "word": " Las",
+       "probability": 0.966
+      },
+      {
+       "word": " Begonias,",
+       "probability": 0.825
+      },
+      {
+       "word": " 2280",
+       "probability": 0.992
+      },
+      {
+       "word": " en",
+       "probability": 0.596
+      },
+      {
+       "word": " San",
+       "probability": 0.997
+      },
+      {
+       "word": " Isidro,",
+       "probability": 0.999
+      },
+      {
+       "word": " es",
+       "probability": 0.984
+      },
+      {
+       "word": " un",
+       "probability": 1.0
+      },
+      {
+       "word": " edificio",
+       "probability": 1.0
+      },
+      {
+       "word": " en",
+       "probability": 0.996
+      },
+      {
+       "word": " el",
+       "probability": 0.998
+      },
+      {
+       "word": " piso",
+       "probability": 0.999
+      },
+      {
+       "word": " cuarto",
+       "probability": 0.79
+      }
+     ]
+    },
+    {
+     "start": 37.7,
+     "end": 44.94,
+     "text": "Calle Las Begonias, 2280 San Isidro, forma de pago",
+     "words": [
+      {
+       "word": " Calle",
+       "probability": 0.991
+      },
+      {
+       "word": " Las",
+       "probability": 1.0
+      },
+      {
+       "word": " Begonias,",
+       "probability": 1.0
+      },
+      {
+       "word": " 2280",
+       "probability": 0.974
+      },
+      {
+       "word": " San",
+       "probability": 0.561
+      },
+      {
+       "word": " Isidro,",
+       "probability": 1.0
+      },
+      {
+       "word": " forma",
+       "probability": 0.858
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " pago",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 44.94,
+     "end": 49.0,
+     "text": "En efectivo, voy a pagar con un billete de 200 para que el motorizado lleve vuelto",
+     "words": [
+      {
+       "word": " En",
+       "probability": 0.917
+      },
+      {
+       "word": " efectivo,",
+       "probability": 1.0
+      },
+      {
+       "word": " voy",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 1.0
+      },
+      {
+       "word": " pagar",
+       "probability": 1.0
+      },
+      {
+       "word": " con",
+       "probability": 1.0
+      },
+      {
+       "word": " un",
+       "probability": 0.998
+      },
+      {
+       "word": " billete",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " 200",
+       "probability": 0.987
+      },
+      {
+       "word": " para",
+       "probability": 0.994
+      },
+      {
+       "word": " que",
+       "probability": 1.0
+      },
+      {
+       "word": " el",
+       "probability": 0.997
+      },
+      {
+       "word": " motorizado",
+       "probability": 0.987
+      },
+      {
+       "word": " lleve",
+       "probability": 0.975
+      },
+      {
+       "word": " vuelto",
+       "probability": 0.748
+      }
+     ]
+    },
+    {
+     "start": 50.72,
+     "end": 52.6,
+     "text": "Anotado, efectivo con billete de 200",
+     "words": [
+      {
+       "word": " Anotado,",
+       "probability": 0.999
+      },
+      {
+       "word": " efectivo",
+       "probability": 0.995
+      },
+      {
+       "word": " con",
+       "probability": 0.979
+      },
+      {
+       "word": " billete",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " 200",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 53.36,
+     "end": 54.82,
+     "text": "Le confirmo su pedido",
+     "words": [
+      {
+       "word": " Le",
+       "probability": 0.394
+      },
+      {
+       "word": " confirmo",
+       "probability": 0.995
+      },
+      {
+       "word": " su",
+       "probability": 1.0
+      },
+      {
+       "word": " pedido",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 54.82,
+     "end": 56.14,
+     "text": "Un pollo entero, dos porciones de anticuchos y una gaseosa de dos litros",
+     "words": [
+      {
+       "word": " Un",
+       "probability": 0.598
+      },
+      {
+       "word": " pollo",
+       "probability": 0.442
+      },
+      {
+       "word": " entero,",
+       "probability": 0.38
+      },
+      {
+       "word": " dos",
+       "probability": 0.006
+      },
+      {
+       "word": " porciones",
+       "probability": 0.007
+      },
+      {
+       "word": " de",
+       "probability": 0.262
+      },
+      {
+       "word": " anticuchos",
+       "probability": 0.083
+      },
+      {
+       "word": " y",
+       "probability": 0.189
+      },
+      {
+       "word": " una",
+       "probability": 0.058
+      },
+      {
+       "word": " gaseosa",
+       "probability": 0.218
+      },
+      {
+       "word": " de",
+       "probability": 0.306
+      },
+      {
+       "word": " dos",
+       "probability": 0.01
+      },
+      {
+       "word": " litros",
+       "probability": 0.501
+      }
+     ]
+    },
+    {
+     "start": 56.14,
+     "end": 64.16,
+     "text": "Un pollo entero a 69 soles, dos porciones de anticuchos a 24 soles y una gaseosa de dos litros a 12 soles",
+     "words": [
+      {
+       "word": " Un",
+       "probability": 0.096
+      },
+      {
+       "word": " pollo",
+       "probability": 0.997
+      },
+      {
+       "word": " entero",
+       "probability": 0.999
+      },
+      {
+       "word": " a",
+       "probability": 0.974
+      },
+      {
+       "word": " 69",
+       "probability": 0.964
+      },
+      {
+       "word": " soles,",
+       "probability": 0.996
+      },
+      {
+       "word": " dos",
+       "probability": 0.877
+      },
+      {
+       "word": " porciones",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 0.958
+      },
+      {
+       "word": " anticuchos",
+       "probability": 0.995
+      },
+      {
+       "word": " a",
+       "probability": 0.999
+      },
+      {
+       "word": " 24",
+       "probability": 1.0
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 0.902
+      },
+      {
+       "word": " una",
+       "probability": 0.782
+      },
+      {
+       "word": " gaseosa",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 0.997
+      },
+      {
+       "word": " dos",
+       "probability": 0.202
+      },
+      {
+       "word": " litros",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.999
+      },
+      {
+       "word": " 12",
+       "probability": 0.985
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 64.16,
+     "end": 67.92,
+     "text": "Con el combo familiar, el total es 127 soles",
+     "words": [
+      {
+       "word": " Con",
+       "probability": 0.038
+      },
+      {
+       "word": " el",
+       "probability": 0.985
+      },
+      {
+       "word": " combo",
+       "probability": 0.986
+      },
+      {
+       "word": " familiar,",
+       "probability": 0.992
+      },
+      {
+       "word": " el",
+       "probability": 0.99
+      },
+      {
+       "word": " total",
+       "probability": 0.999
+      },
+      {
+       "word": " es",
+       "probability": 0.974
+      },
+      {
+       "word": " 127",
+       "probability": 0.964
+      },
+      {
+       "word": " soles",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 68.92,
+     "end": 70.28,
+     "text": "Perfecto, ¿demora mucho?",
+     "words": [
+      {
+       "word": " Perfecto,",
+       "probability": 0.894
+      },
+      {
+       "word": " ¿demora",
+       "probability": 0.787
+      },
+      {
+       "word": " mucho?",
+       "probability": 0.998
+      }
+     ]
+    },
+    {
+     "start": 71.22,
+     "end": 75.04,
+     "text": "Unos 45 minutos, porque a esta hora hay bastante pedido",
+     "words": [
+      {
+       "word": " Unos",
+       "probability": 0.988
+      },
+      {
+       "word": " 45",
+       "probability": 0.956
+      },
+      {
+       "word": " minutos,",
+       "probability": 0.998
+      },
+      {
+       "word": " porque",
+       "probability": 0.995
+      },
+      {
+       "word": " a",
+       "probability": 0.996
+      },
+      {
+       "word": " esta",
+       "probability": 0.997
+      },
+      {
+       "word": " hora",
+       "probability": 0.999
+      },
+      {
+       "word": " hay",
+       "probability": 0.997
+      },
+      {
+       "word": " bastante",
+       "probability": 0.996
+      },
+      {
+       "word": " pedido",
+       "probability": 0.996
+      }
+     ]
+    },
+    {
+     "start": 75.04,
+     "end": 76.48,
+     "text": "Está bien, gracias",
+     "words": [
+      {
+       "word": " Está",
+       "probability": 0.95
+      },
+      {
+       "word": " bien,",
+       "probability": 1.0
+      },
+      {
+       "word": " gracias",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 76.48,
+     "end": 78.76,
+     "text": "Gracias a usted, que lo disfrute",
+     "words": [
+      {
+       "word": " Gracias",
+       "probability": 0.991
+      },
+      {
+       "word": " a",
+       "probability": 0.998
+      },
+      {
+       "word": " usted,",
+       "probability": 0.998
+      },
+      {
+       "word": " que",
+       "probability": 0.996
+      },
+      {
+       "word": " lo",
+       "probability": 1.0
+      },
+      {
+       "word": " disfrute",
+       "probability": 0.999
+      }
+     ]
+    }
+   ],
+   "audio_seconds": 79.38,
+   "asr_seconds": 8.58
+  },
+  "L04": {
+   "text": "La Brasa Real, buenas tardes, ¿qué desea ordenar? Hola, es mi primera vez pidiendo con ustedes, quiero tres medios pollos a la brasa Bienvenido, ¿cómo su primer pedido tiene el cupón de bienvenida de 15 soles de descuento? Ah, buenísimo, y además dos papas personales y una jarra de chicha Perfecto, tres medios pollos, dos papas personales y una jarra de chicha No, perdón, me equivoqué, somos menos de lo que pensaba, que sean dos medios pollos, no tres Corregido, dos medios pollos, ¿a dónde los enviamos? Avenida Brasil 3021, en Pueblo Libre Avenida Brasil 3021, ¿cómo va a pagar? Con Plin Listo, con Plin Le confirmo, dos medios pollos a 38 soles cada uno Dos papas personales a 10 soles cada una y una jarra de chicha morada a 16 soles Con su cupón de bienvenida, el total es de 91 soles Muy bien, ¿me pueden llamar cuando esté cerca? Mi timbre no funciona Claro, el motorizado lo llama al llegar Llegan en unos 30 minutos Gracias A usted, buen provecho",
+   "segments": [
+    {
+     "start": 0.88,
+     "end": 3.74,
+     "text": "La Brasa Real, buenas tardes, ¿qué desea ordenar?",
+     "words": [
+      {
+       "word": " La",
+       "probability": 0.977
+      },
+      {
+       "word": " Brasa",
+       "probability": 0.875
+      },
+      {
+       "word": " Real,",
+       "probability": 0.99
+      },
+      {
+       "word": " buenas",
+       "probability": 1.0
+      },
+      {
+       "word": " tardes,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿qué",
+       "probability": 0.979
+      },
+      {
+       "word": " desea",
+       "probability": 0.991
+      },
+      {
+       "word": " ordenar?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 3.92,
+     "end": 8.94,
+     "text": "Hola, es mi primera vez pidiendo con ustedes, quiero tres medios pollos a la brasa",
+     "words": [
+      {
+       "word": " Hola,",
+       "probability": 1.0
+      },
+      {
+       "word": " es",
+       "probability": 1.0
+      },
+      {
+       "word": " mi",
+       "probability": 1.0
+      },
+      {
+       "word": " primera",
+       "probability": 0.998
+      },
+      {
+       "word": " vez",
+       "probability": 0.999
+      },
+      {
+       "word": " pidiendo",
+       "probability": 0.999
+      },
+      {
+       "word": " con",
+       "probability": 1.0
+      },
+      {
+       "word": " ustedes,",
+       "probability": 1.0
+      },
+      {
+       "word": " quiero",
+       "probability": 0.998
+      },
+      {
+       "word": " tres",
+       "probability": 0.933
+      },
+      {
+       "word": " medios",
+       "probability": 0.997
+      },
+      {
+       "word": " pollos",
+       "probability": 0.998
+      },
+      {
+       "word": " a",
+       "probability": 0.999
+      },
+      {
+       "word": " la",
+       "probability": 0.958
+      },
+      {
+       "word": " brasa",
+       "probability": 0.798
+      }
+     ]
+    },
+    {
+     "start": 10.16,
+     "end": 14.48,
+     "text": "Bienvenido, ¿cómo su primer pedido tiene el cupón de bienvenida de 15 soles de descuento?",
+     "words": [
+      {
+       "word": " Bienvenido,",
+       "probability": 0.817
+      },
+      {
+       "word": " ¿cómo",
+       "probability": 0.724
+      },
+      {
+       "word": " su",
+       "probability": 0.622
+      },
+      {
+       "word": " primer",
+       "probability": 1.0
+      },
+      {
+       "word": " pedido",
+       "probability": 1.0
+      },
+      {
+       "word": " tiene",
+       "probability": 0.998
+      },
+      {
+       "word": " el",
+       "probability": 1.0
+      },
+      {
+       "word": " cupón",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " bienvenida",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 0.993
+      },
+      {
+       "word": " 15",
+       "probability": 0.995
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " descuento?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 15.04,
+     "end": 19.82,
+     "text": "Ah, buenísimo, y además dos papas personales y una jarra de chicha",
+     "words": [
+      {
+       "word": " Ah,",
+       "probability": 0.988
+      },
+      {
+       "word": " buenísimo,",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " además",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 0.993
+      },
+      {
+       "word": " papas",
+       "probability": 1.0
+      },
+      {
+       "word": " personales",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " una",
+       "probability": 1.0
+      },
+      {
+       "word": " jarra",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 0.999
+      },
+      {
+       "word": " chicha",
+       "probability": 0.994
+      }
+     ]
+    },
+    {
+     "start": 21.58,
+     "end": 26.36,
+     "text": "Perfecto, tres medios pollos, dos papas personales y una jarra de chicha",
+     "words": [
+      {
+       "word": " Perfecto,",
+       "probability": 1.0
+      },
+      {
+       "word": " tres",
+       "probability": 1.0
+      },
+      {
+       "word": " medios",
+       "probability": 1.0
+      },
+      {
+       "word": " pollos,",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 1.0
+      },
+      {
+       "word": " papas",
+       "probability": 1.0
+      },
+      {
+       "word": " personales",
+       "probability": 1.0
+      },
+      {
+       "word": " y",
+       "probability": 1.0
+      },
+      {
+       "word": " una",
+       "probability": 1.0
+      },
+      {
+       "word": " jarra",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " chicha",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 27.54,
+     "end": 34.2,
+     "text": "No, perdón, me equivoqué, somos menos de lo que pensaba, que sean dos medios pollos, no tres",
+     "words": [
+      {
+       "word": " No,",
+       "probability": 0.992
+      },
+      {
+       "word": " perdón,",
+       "probability": 1.0
+      },
+      {
+       "word": " me",
+       "probability": 1.0
+      },
+      {
+       "word": " equivoqué,",
+       "probability": 1.0
+      },
+      {
+       "word": " somos",
+       "probability": 0.734
+      },
+      {
+       "word": " menos",
+       "probability": 0.949
+      },
+      {
+       "word": " de",
+       "probability": 0.999
+      },
+      {
+       "word": " lo",
+       "probability": 0.998
+      },
+      {
+       "word": " que",
+       "probability": 1.0
+      },
+      {
+       "word": " pensaba,",
+       "probability": 0.956
+      },
+      {
+       "word": " que",
+       "probability": 1.0
+      },
+      {
+       "word": " sean",
+       "probability": 1.0
+      },
+      {
+       "word": " dos",
+       "probability": 0.87
+      },
+      {
+       "word": " medios",
+       "probability": 0.993
+      },
+      {
+       "word": " pollos,",
+       "probability": 0.988
+      },
+      {
+       "word": " no",
+       "probability": 1.0
+      },
+      {
+       "word": " tres",
+       "probability": 0.997
+      }
+     ]
+    },
+    {
+     "start": 35.66,
+     "end": 38.9,
+     "text": "Corregido, dos medios pollos, ¿a dónde los enviamos?",
+     "words": [
+      {
+       "word": " Corregido,",
+       "probability": 0.79
+      },
+      {
+       "word": " dos",
+       "probability": 0.999
+      },
+      {
+       "word": " medios",
+       "probability": 1.0
+      },
+      {
+       "word": " pollos,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿a",
+       "probability": 0.995
+      },
+      {
+       "word": " dónde",
+       "probability": 0.997
+      },
+      {
+       "word": " los",
+       "probability": 1.0
+      },
+      {
+       "word": " enviamos?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 39.66,
+     "end": 43.54,
+     "text": "Avenida Brasil 3021, en Pueblo Libre",
+     "words": [
+      {
+       "word": " Avenida",
+       "probability": 0.998
+      },
+      {
+       "word": " Brasil",
+       "probability": 0.999
+      },
+      {
+       "word": " 3021,",
+       "probability": 0.869
+      },
+      {
+       "word": " en",
+       "probability": 0.999
+      },
+      {
+       "word": " Pueblo",
+       "probability": 0.999
+      },
+      {
+       "word": " Libre",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 44.46,
+     "end": 48.3,
+     "text": "Avenida Brasil 3021, ¿cómo va a pagar?",
+     "words": [
+      {
+       "word": " Avenida",
+       "probability": 0.997
+      },
+      {
+       "word": " Brasil",
+       "probability": 1.0
+      },
+      {
+       "word": " 3021,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿cómo",
+       "probability": 1.0
+      },
+      {
+       "word": " va",
+       "probability": 0.998
+      },
+      {
+       "word": " a",
+       "probability": 1.0
+      },
+      {
+       "word": " pagar?",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 48.66,
+     "end": 49.16,
+     "text": "Con Plin",
+     "words": [
+      {
+       "word": " Con",
+       "probability": 0.792
+      },
+      {
+       "word": " Plin",
+       "probability": 0.529
+      }
+     ]
+    },
+    {
+     "start": 49.88,
+     "end": 51.42,
+     "text": "Listo, con Plin",
+     "words": [
+      {
+       "word": " Listo,",
+       "probability": 0.995
+      },
+      {
+       "word": " con",
+       "probability": 0.982
+      },
+      {
+       "word": " Plin",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 51.42,
+     "end": 56.34,
+     "text": "Le confirmo, dos medios pollos a 38 soles cada uno",
+     "words": [
+      {
+       "word": " Le",
+       "probability": 0.24
+      },
+      {
+       "word": " confirmo,",
+       "probability": 0.983
+      },
+      {
+       "word": " dos",
+       "probability": 1.0
+      },
+      {
+       "word": " medios",
+       "probability": 1.0
+      },
+      {
+       "word": " pollos",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.985
+      },
+      {
+       "word": " 38",
+       "probability": 0.981
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      },
+      {
+       "word": " cada",
+       "probability": 0.834
+      },
+      {
+       "word": " uno",
+       "probability": 0.587
+      }
+     ]
+    },
+    {
+     "start": 56.36,
+     "end": 61.68,
+     "text": "Dos papas personales a 10 soles cada una y una jarra de chicha morada a 16 soles",
+     "words": [
+      {
+       "word": " Dos",
+       "probability": 0.686
+      },
+      {
+       "word": " papas",
+       "probability": 0.999
+      },
+      {
+       "word": " personales",
+       "probability": 1.0
+      },
+      {
+       "word": " a",
+       "probability": 0.953
+      },
+      {
+       "word": " 10",
+       "probability": 0.896
+      },
+      {
+       "word": " soles",
+       "probability": 0.999
+      },
+      {
+       "word": " cada",
+       "probability": 1.0
+      },
+      {
+       "word": " una",
+       "probability": 0.999
+      },
+      {
+       "word": " y",
+       "probability": 0.794
+      },
+      {
+       "word": " una",
+       "probability": 1.0
+      },
+      {
+       "word": " jarra",
+       "probability": 0.993
+      },
+      {
+       "word": " de",
+       "probability": 0.916
+      },
+      {
+       "word": " chicha",
+       "probability": 0.605
+      },
+      {
+       "word": " morada",
+       "probability": 0.999
+      },
+      {
+       "word": " a",
+       "probability": 0.999
+      },
+      {
+       "word": " 16",
+       "probability": 1.0
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 61.68,
+     "end": 65.8,
+     "text": "Con su cupón de bienvenida, el total es de 91 soles",
+     "words": [
+      {
+       "word": " Con",
+       "probability": 0.139
+      },
+      {
+       "word": " su",
+       "probability": 1.0
+      },
+      {
+       "word": " cupón",
+       "probability": 0.999
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " bienvenida,",
+       "probability": 0.999
+      },
+      {
+       "word": " el",
+       "probability": 0.994
+      },
+      {
+       "word": " total",
+       "probability": 1.0
+      },
+      {
+       "word": " es",
+       "probability": 1.0
+      },
+      {
+       "word": " de",
+       "probability": 1.0
+      },
+      {
+       "word": " 91",
+       "probability": 1.0
+      },
+      {
+       "word": " soles",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 66.6,
+     "end": 70.04,
+     "text": "Muy bien, ¿me pueden llamar cuando esté cerca? Mi timbre no funciona",
+     "words": [
+      {
+       "word": " Muy",
+       "probability": 0.997
+      },
+      {
+       "word": " bien,",
+       "probability": 1.0
+      },
+      {
+       "word": " ¿me",
+       "probability": 0.989
+      },
+      {
+       "word": " pueden",
+       "probability": 1.0
+      },
+      {
+       "word": " llamar",
+       "probability": 1.0
+      },
+      {
+       "word": " cuando",
+       "probability": 0.982
+      },
+      {
+       "word": " esté",
+       "probability": 0.995
+      },
+      {
+       "word": " cerca?",
+       "probability": 1.0
+      },
+      {
+       "word": " Mi",
+       "probability": 0.998
+      },
+      {
+       "word": " timbre",
+       "probability": 0.97
+      },
+      {
+       "word": " no",
+       "probability": 1.0
+      },
+      {
+       "word": " funciona",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 70.74,
+     "end": 73.28,
+     "text": "Claro, el motorizado lo llama al llegar",
+     "words": [
+      {
+       "word": " Claro,",
+       "probability": 0.999
+      },
+      {
+       "word": " el",
+       "probability": 1.0
+      },
+      {
+       "word": " motorizado",
+       "probability": 0.998
+      },
+      {
+       "word": " lo",
+       "probability": 0.999
+      },
+      {
+       "word": " llama",
+       "probability": 1.0
+      },
+      {
+       "word": " al",
+       "probability": 0.999
+      },
+      {
+       "word": " llegar",
+       "probability": 0.997
+      }
+     ]
+    },
+    {
+     "start": 74.5,
+     "end": 75.72,
+     "text": "Llegan en unos 30 minutos",
+     "words": [
+      {
+       "word": " Llegan",
+       "probability": 0.994
+      },
+      {
+       "word": " en",
+       "probability": 0.89
+      },
+      {
+       "word": " unos",
+       "probability": 1.0
+      },
+      {
+       "word": " 30",
+       "probability": 0.998
+      },
+      {
+       "word": " minutos",
+       "probability": 1.0
+      }
+     ]
+    },
+    {
+     "start": 76.36,
+     "end": 76.84,
+     "text": "Gracias",
+     "words": [
+      {
+       "word": " Gracias",
+       "probability": 0.999
+      }
+     ]
+    },
+    {
+     "start": 77.46,
+     "end": 79.16,
+     "text": "A usted, buen provecho",
+     "words": [
+      {
+       "word": " A",
+       "probability": 0.998
+      },
+      {
+       "word": " usted,",
+       "probability": 1.0
+      },
+      {
+       "word": " buen",
+       "probability": 0.999
+      },
+      {
+       "word": " provecho",
+       "probability": 1.0
+      }
+     ]
+    }
+   ],
+   "audio_seconds": 80.06,
+   "asr_seconds": 7.84
+  }
+ }
+}

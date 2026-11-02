@@ -13,6 +13,7 @@ import functools
 import gc
 import io
 import json
+import os
 import sys
 import threading
 import time
@@ -75,15 +76,22 @@ def audio_file(corpus, level, clip_id):
     return next((p for p in candidates if p.exists()), None)
 
 
-def run_id(corpus, task, level, model, device, compute_type, glossary, vad_threshold):
+def machine():
+    """Dónde corre: Colab define COLAB_RELEASE_TAG. Sirve para comparar CPU y GPU en la misma máquina."""
+    return "colab" if os.getenv("COLAB_RELEASE_TAG") else "local"
+
+
+def run_id(corpus, task, level, model, device, compute_type, glossary, vad_threshold, where="local"):
     rid = "__".join([corpus, task, level, model, device, compute_type, "glosario" if glossary else "plano"])
-    return rid if vad_threshold == CFG["asr"]["vad_threshold"] else f"{rid}__vad{vad_threshold}"
+    if vad_threshold != CFG["asr"]["vad_threshold"]:
+        rid += f"__vad{vad_threshold}"
+    return rid if where == "local" else f"{rid}__{where}"
 
 
 def is_reference(row):
     """Configuración de referencia de config.yaml: la que alimenta tablas principales, app y gate."""
     asr = CFG["asr"]
-    return (row["model"] == asr["model"] and row["glossary"] == asr["use_glossary"]
+    return (row["machine"] == "local" and row["model"] == asr["model"] and row["glossary"] == asr["use_glossary"]
             and row["vad_threshold"] == asr["vad_threshold"]
             and row["compute_type_requested"] == engine.resolve_compute_type(asr["compute_type"], row["device_runtime"]))
 
@@ -293,13 +301,13 @@ def transcribe_run(corpus, task, level, model, device, compute_type, glossary, v
         "corpus": corpus, "task": task, "level": level, "model": model, "glossary": glossary,
         "vad_threshold": vad_threshold, "device_requested": device, "compute_type_requested": compute_type,
         "device_runtime": first["device"], "compute_type_runtime": first["compute_type"],
-        "gpu": vram.gpu, "vram_peak_mb": vram.peak_mb,
+        "gpu": vram.gpu, "vram_peak_mb": vram.peak_mb, "machine": machine(),
         "load_seconds": first["load_seconds"], "audio_seconds": round(audio_s, 1), "asr_seconds": round(asr_s, 1),
         "seconds_per_audio_minute": round(asr_s / (audio_s / 60), 2),
         "faster_whisper": faster_whisper.__version__, "ctranslate2": ctranslate2.__version__,
         "created": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
-    rid = run_id(corpus, task, level, model, device, compute_type, glossary, vad_threshold)
+    rid = run_id(corpus, task, level, model, device, compute_type, glossary, vad_threshold, meta["machine"])
     save_json(path("transcripts") / f"{rid}.json", {"meta": meta, "clips": clips})
     print(f"{rid}: device={meta['device_runtime']} vram={meta['vram_peak_mb']} MB "
           f"{meta['seconds_per_audio_minute']} s/min")
@@ -378,6 +386,7 @@ def evaluate_asr(runs):
     for rid, data in runs.items():
         meta, per_clip = data["meta"], {}
         meta.setdefault("vad_threshold", 0.5)            # corridas previas al ajuste usaban el 0.5 de Silero
+        meta.setdefault("machine", "local")
         gold = _gold(meta["corpus"])
         for cid, clip in data["clips"].items():
             per_clip[cid] = metrics.wer_cer(gold[cid]["guion"], clip["text"])
@@ -385,7 +394,7 @@ def evaluate_asr(runs):
         terms = [t.strip() for t in CFG["glossary"][meta["task"]].split(",")]
         hits = [metrics.glossary_recall(gold[cid]["guion"], c["text"], terms) for cid, c in data["clips"].items()]
         rows.append({
-            "run": rid, **{k: meta[k] for k in ("corpus", "task", "level", "model", "glossary", "vad_threshold",
+            "run": rid, **{k: meta[k] for k in ("corpus", "task", "level", "model", "glossary", "vad_threshold", "machine",
                                                 "device_runtime", "compute_type_requested", "compute_type_runtime",
                                                 "gpu", "vram_peak_mb", "seconds_per_audio_minute", "load_seconds")},
             "n_clips": len(clips),
@@ -403,9 +412,10 @@ def _pairs(asr_rows, key):
     """Corridas idénticas salvo en `key` (p. ej. el dispositivo, la precisión o el glosario).
 
     La precisión se compara por lo pedido (int8), porque CTranslate2 reporta int8_float32 en CPU
-    e int8_float16 en GPU para la misma cuantización de pesos.
+    e int8_float16 en GPU para la misma cuantización de pesos. CPU contra GPU solo se compara dentro
+    de la misma máquina (Colab), para que la diferencia sea el dispositivo y no el procesador.
     """
-    same = ("corpus", "task", "level", "model", "glossary", "vad_threshold", "device_runtime",
+    same = ("corpus", "task", "level", "model", "glossary", "vad_threshold", "machine", "device_runtime",
             "compute_type_requested")
     groups = {}
     for row in asr_rows:
@@ -515,7 +525,7 @@ def _record_summary(meta, schema, scored, clips, validator):
     row = {"run": meta["run"], "extractor": meta["extractor"], "llm": meta.get("llm"),
            **{k: meta[k] for k in ("corpus", "task", "level", "model", "device_runtime", "glossary",
                                    "compute_type_requested")},
-           "vad_threshold": meta.get("vad_threshold", 0.5),
+           "vad_threshold": meta.get("vad_threshold", 0.5), "machine": meta.get("machine", "local"),
            "accuracy": round(metrics.mean(all_hits), 4),
            "accuracy_ci": metrics.bootstrap_ci(all_hits, metrics.mean, CFG),
            "fields": fields,
@@ -638,7 +648,7 @@ def gt_distribution():
 
 def render_summary(m):
     main = m["main_corpus"]
-    asr = [{"corpus": r["corpus"], "tarea": r["task"], "modelo": r["model"],  # el eje de acentos va aparte
+    asr = [{"corpus": r["corpus"], "tarea": r["task"], "máquina": r["machine"], "modelo": r["model"],
             "dispositivo (runtime)": r["device_runtime"], "precisión (runtime)": r["compute_type_runtime"],
             "glosario": r["glossary"], "VAD": r["vad_threshold"], "WER": r["wer"], "IC95 WER": _ci(r["wer_ci"]),
             "CER": r["cer"], "s/min audio": r["seconds_per_audio_minute"], "VRAM pico MB": r["vram_peak_mb"],
@@ -654,14 +664,16 @@ def render_summary(m):
                **{f"F1 macro {f}": v["macro_f1"] for f, v in r["fields"].items() if "macro_f1" in v},
                **{f"MAE {f}": v["mae"] for f, v in r["fields"].items() if "mae" in v}}
               for r in main_records]
-    ladder = [{"nivel": r["level"], "extractor": r["extractor"], "WER": m_wer,
+    ladder = [{"modelo": f"{r['model']} ({r['device_runtime']})", "nivel": r["level"], "extractor": r["extractor"],
+               "WER": m_wer,
                "exactitud registro": r["accuracy"], "items": r["fields"]["items"]["accuracy"],
                "total_dicho": r["fields"]["total_dicho"]["accuracy"],
                "atrapados": r["validator"]["caught"], "escapados": r["validator"]["missed"],
                "falsas alarmas": r["validator"]["false_alarms"],
                "diagnóstico ok": f"{r['validator']['diagnosis_right']}/{r['validator']['diagnosis_total']}"}
-              for r in sorted(m["records"], key=lambda r: (r["level"], r["extractor"]))
-              if r["task"] == "pedido" and r["corpus"] == main and is_reference(r)
+              for r in sorted(m["records"], key=lambda r: (r["model"], r["level"], r["extractor"]))
+              if r["task"] == "pedido" and r["corpus"] == main
+              and (is_reference(r) or r["machine"] != "local" and r["glossary"] == CFG["asr"]["use_glossary"])
               for m_wer in [next((a["wer"] for a in m["asr"] if a["run"] == r["run"]), None)]]
     accents = [{"locale": r["corpus"].removeprefix("tts-"), "tarea": r["task"], "WER": r["wer"],
                 "IC95": _ci(r["wer_ci"]), "CER": r["cer"]}
