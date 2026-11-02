@@ -1,0 +1,216 @@
+{
+ "meta": {
+  "corpus": "real",
+  "task": "pedido",
+  "level": "L0",
+  "model": "small",
+  "glossary": false,
+  "vad_threshold": 0.25,
+  "device_requested": "cpu",
+  "compute_type_requested": "int8",
+  "device_runtime": "cpu",
+  "compute_type_runtime": "int8_float32",
+  "gpu": null,
+  "vram_peak_mb": null,
+  "load_seconds": 1.78,
+  "audio_seconds": 338.3,
+  "asr_seconds": 85.7,
+  "seconds_per_audio_minute": 15.19,
+  "faster_whisper": "1.2.1",
+  "ctranslate2": "4.8.4",
+  "created": "2026-11-02T00:57:03+00:00",
+  "run": "real__pedido__L0__small__cpu__int8__plano",
+  "extractor": "rules",
+  "llm": null
+ },
+ "clips": {
+  "L01": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "entero",
+      "cantidad": 1,
+      "precio_unitario": 69
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "jarra",
+      "cantidad": 1,
+      "precio_unitario": 16
+     },
+     {
+      "producto": "papas fritas",
+      "tamano": "familiar",
+      "cantidad": 1,
+      "precio_unitario": 18
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": "avenida los proceres 845 en santiago surco",
+    "metodo_pago": null,
+    "total_dicho": 103
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "vacio",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "vacio",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "cuadra",
+    "subtotal": 103.0,
+    "descuento": 0.0,
+    "total_calculado": 103.0,
+    "total_dicho": 103,
+    "diferencia": 0.0,
+    "motivos": [],
+    "causa": null
+   },
+   "error": null,
+   "seconds": 0.0
+  },
+  "L02": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "cuarto",
+      "cantidad": 2,
+      "precio_unitario": 22
+     },
+     {
+      "producto": "ensalada",
+      "tamano": null,
+      "cantidad": 1,
+      "precio_unitario": 9
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": null,
+      "cantidad": 2,
+      "precio_unitario": 6
+     }
+    ],
+    "promocion": null,
+    "direccion_entrega": "giron huascar 1450 departamento 302 en jesus maria",
+    "metodo_pago": "tarjeta",
+    "total_dicho": 62.5
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "vacio",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "no_cuadra",
+    "subtotal": 65.0,
+    "descuento": 0.0,
+    "total_calculado": 65.0,
+    "total_dicho": 62.5,
+    "diferencia": -2.5,
+    "motivos": [],
+    "causa": "error_hablante"
+   },
+   "error": null,
+   "seconds": 0.0
+  },
+  "L03": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "entero",
+      "cantidad": 1,
+      "precio_unitario": 69
+     },
+     {
+      "producto": "anticuchos",
+      "tamano": null,
+      "cantidad": 2,
+      "precio_unitario": 24
+     },
+     {
+      "producto": "gaseosa",
+      "tamano": "grande",
+      "cantidad": 1,
+      "precio_unitario": 12
+     }
+    ],
+    "promocion": "combo familiar",
+    "direccion_entrega": "calle las begonas 2280 en san isidro",
+    "metodo_pago": "efectivo",
+    "total_dicho": 127
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "verificado",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "no_cuadra",
+    "subtotal": 129.0,
+    "descuento": 12.0,
+    "total_calculado": 117.0,
+    "total_dicho": 127,
+    "diferencia": 10.0,
+    "motivos": [],
+    "causa": "error_hablante"
+   },
+   "error": null,
+   "seconds": 0.0
+  },
+  "L04": {
+   "fields": {
+    "items": [
+     {
+      "producto": "pollo a la brasa",
+      "tamano": "medio",
+      "cantidad": 2,
+      "precio_unitario": 38
+     },
+     {
+      "producto": "papas fritas",
+      "tamano": "personal",
+      "cantidad": 2,
+      "precio_unitario": 10
+     },
+     {
+      "producto": "chicha morada",
+      "tamano": "jarra",
+      "cantidad": 1,
+      "precio_unitario": 16
+     }
+    ],
+    "promocion": "cupon de bienvenida",
+    "direccion_entrega": "avenida brasil 3021 en pueblo libre",
+    "metodo_pago": "plin",
+    "total_dicho": 91
+   },
+   "verified": {
+    "items": "verificado",
+    "promocion": "verificado",
+    "direccion_entrega": "verificado",
+    "metodo_pago": "verificado",
+    "total_dicho": "verificado"
+   },
+   "validation": {
+    "estado": "no_cuadra",
+    "subtotal": 112.0,
+    "descuento": 15.0,
+    "total_calculado": 97.0,
+    "total_dicho": 91,
+    "diferencia": -6.0,
+    "motivos": [],
+    "causa": "error_hablante"
+   },
+   "error": null,
+   "seconds": 0.0
+  }
+ }
+}
