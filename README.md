@@ -12,7 +12,7 @@ si **la aritmética cuadra** (y, si no cuadra, si el error fue del ASR o de quie
 - **Video:** _pendiente (enlace)_
 - **Documento del pipeline:** en la sección [Pipeline](#pipeline) de este README (diagrama Mermaid + tabla de
   decisiones). Se usa el respaldo porque la herramienta visual falló para este caso (motivo en esa sección).
-- **App pública:** _pendiente (Streamlit Community Cloud)_
+- **App pública:** https://hw05ds-rkgsctuxoksbnmhtxhykt3.streamlit.app/ (Streamlit Community Cloud)
 - **Resultados completos:** [`results/summary.md`](results/summary.md) · datos crudos en [`results/metrics.json`](results/metrics.json)
 
 ## Declaraciones
@@ -377,7 +377,7 @@ sintética, el efecto del glosario y del VAD están en `results/summary.md`.
 | **Servidor MCP propio** | `mcp_server.py`, `.mcp.json` | Herramientas `procesar_audio` y `extraer_de_texto`: un agente en Claude Code transcribe y extrae con **la misma función** del motor. |
 | **Eje de acentos** | `pipeline.py tts --locales ...` | El mismo guion con voces sintéticas de PE, MX, ES, AR y CO. **Son voces sintéticas, no hablantes humanos**: el resultado describe cómo el modelo trata esas voces, no acentos reales. |
 | **Separación de hablantes** | `engine.diarize`, `requirements-diarization.txt` | pyannote (`HF_TOKEN` + aceptar términos). Atribuye cada corrección del pedido a **cliente** o **vendedor**. Se activa sola cuando hay `HF_TOKEN`. |
-| **Despliegue público** | Streamlit Community Cloud | La app lee resultados cacheados, así que corre sin GPU ni Ollama (el probador usa el modelo `base` y la ruta de reglas). |
+| **Despliegue público** | [Streamlit Community Cloud](https://hw05ds-rkgsctuxoksbnmhtxhykt3.streamlit.app/) | La app lee resultados cacheados, así que corre sin GPU ni Ollama (el probador usa el modelo `base` y la ruta de reglas). |
 
 ## Herramientas de IA declaradas
 
