@@ -10,8 +10,8 @@ si **la aritmética cuadra** (y, si no cuadra, si el error fue del ASR o de quie
 > que sirvieron para construir el pipeline y para el eje de acentos.
 
 - **Video:** _pendiente (enlace)_
-- **Documento del pipeline (visual):** https://claude.ai/artifact/AwFa6AqcAgnbTutXqthZJ8 — qué corre una vez,
-  qué corre por cada audio, y la decisión y el descarte de cada paso. Respaldo en Mermaid más abajo.
+- **Documento del pipeline:** en la sección [Pipeline](#pipeline) de este README (diagrama Mermaid + tabla de
+  decisiones). Se usa el respaldo porque la herramienta visual falló para este caso (motivo en esa sección).
 - **App pública:** _pendiente (Streamlit Community Cloud)_
 - **Resultados completos:** [`results/summary.md`](results/summary.md) · datos crudos en [`results/metrics.json`](results/metrics.json)
 
@@ -41,6 +41,11 @@ si **la aritmética cuadra** (y, si no cuadra, si el error fue del ASR o de quie
 
 ## Pipeline
 
+> **Por qué Mermaid y no Notion o Miro.** El documento visual se armó como página en claude.ai, pero la
+> cuenta usada es corporativa y su política no permite compartir páginas con personas fuera de la
+> organización, así que no podía quedar públicamente visible. Por eso se usa el respaldo que permite el
+> enunciado: este diagrama, que GitHub dibuja directamente, y la tabla de decisiones de abajo.
+
 ```mermaid
 flowchart LR
   subgraph UNA_VEZ["Corre una vez (por lotes)"]
@@ -61,6 +66,20 @@ flowchart LR
     K --> O
   end
 ```
+
+| Paso | Cuándo corre | Decisión | Lo que se descartó |
+|---|---|---|---|
+| Guiones = verdad de campo | Una vez | Escribir el guion antes de grabar: ya trae los valores correctos; los desvíos se corrigen escuchando el audio | Subtítulos automáticos o la salida de Whisper como referencia (mide una máquina contra otra) |
+| Corpus | Una vez | 8 grabaciones reales con celular como corpus principal; voces Edge TTS como grupo aparte | Mezclar lo sintético en las tablas principales (es demasiado limpio) |
+| Escalera L1–L3 | Una vez | Opus 12 kbps; 300–3400 Hz a 8 kHz; murmullo de otras conversaciones a 5 dB, medido sobre tramas con voz | Ruido blanco y SNR sobre el clip entero (los silencios lo inflan) |
+| Transcripción cacheada | Una vez | Guardar texto, palabras con probabilidad, dispositivo leído en ejecución y VRAM medida; GPU en Colab | Confiar en `device: cuda` del config; transcribir en CI (no hay GPU) |
+| Métricas y gate | Una vez / en cada push | Dos capas con IC bootstrap; GitHub Actions recalcula desde la caché y falla bajo el umbral | Reportar solo WER; promediar el WER por clip |
+| ASR | Cada audio | faster-whisper con glosario como `hotwords` y VAD a 0.25 | `initial_prompt` (sale del contexto tras el primer minuto); VAD a 0.5 (borraba voz telefónica) |
+| Normalización | Cada audio | Una sola regla para WER, extracción y verificación (`seis mil quinientos` → 6500) | Comparar texto crudo (un punto o una mayúscula cuentan como error) |
+| Extracción | Cada audio | Reglas y LLM local (`qwen2.5:3b` en Ollama) sobre el mismo esquema | API en la nube (el contenido saldría de la máquina) |
+| Verificación literal | Cada audio | Valor que no aparece en la transcripción → `sin_verificar` | Aceptar correcciones silenciosas del modelo, aunque acierten |
+| Validación aritmética | Cada pedido | Σ cantidad × precio − promoción vs. total dicho; diagnóstico por carta y por confianza del total | Reemplazar el total dicho por el calculado (ocultaría el error de quien habló) |
+| Diarización | Cada pedido, con `HF_TOKEN` | pyannote atribuye cada corrección a cliente o vendedor | Activarla siempre (trae torch y no cabe en la app pública) |
 
 ## Reproducir
 
@@ -365,5 +384,4 @@ sintética, el efecto del glosario y del VAD están en `results/summary.md`.
 - **Claude Code (Claude)**: diseño del pipeline, escritura del código, guiones y documentación, revisado y
   ejecutado en esta PC.
 - **Servidores MCP conectados en Claude Code**: `voz-a-registro` (el propio, `mcp_server.py`) para probar el
-  motor desde el agente. _Agrega aquí cualquier otro servidor MCP que hayas conectado (p. ej. Notion o Miro
-  si lo usaste para el documento del pipeline)._
+  motor desde el agente.
